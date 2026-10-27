@@ -220,3 +220,44 @@ Values are mean [bootstrap 95% CI] over boards or cases.
 | verifier | empty / low-confidence rate | 0.00 / 0.03 |
 
 ---
+## 2026-10-26 17:11 | split: test | threshold 0.690 | blend 0.9 | commit a346140 | gpt-4.1-mini / text-embedding-3-small
+
+Values are mean [bootstrap 95% CI] over boards or cases.
+
+### Style ranking, whole catalog (10 boards, ~12 relevant of 120)
+
+| Board type | AUC | nDCG@10 |
+|---|---|---|
+| single-style | 0.962 [0.93, 0.98] | 0.843 [0.76, 0.92] |
+| random order | 0.500 | 0.102 [0.10, 0.11] |
+| mixed, multi-cluster memory | 0.929 [0.89, 0.97] | 0.905 [0.85, 0.96] |
+| mixed, single averaged centroid | 0.879 [0.84, 0.92] | 0.651 [0.47, 0.85] |
+
+### End-to-end, contested categories (headline) — 9 cases
+
+| Ranking | nDCG@3 | MRR | P@1 |
+|---|---|---|---|
+| random order | 0.417 [0.31, 0.56] | 0.544 [0.44, 0.67] | 0.333 [0.20, 0.50] |
+| worker order (no verifier) | 0.719 [0.48, 0.92] | 0.787 [0.57, 0.94] | 0.667 [0.33, 0.89] |
+| full pipeline | 0.882 [0.76, 1.00] | 0.889 [0.72, 1.00] | 0.778 [0.44, 1.00] |
+
+### End-to-end, all categories (inflated by single-style categories) — 30 cases
+
+| Ranking | nDCG@3 | MRR | P@1 |
+|---|---|---|---|
+| random order | 0.825 [0.72, 0.92] | 0.863 [0.78, 0.94] | 0.800 [0.68, 0.91] |
+| worker order (no verifier) | 0.890 [0.80, 0.96] | 0.919 [0.84, 0.98] | 0.867 [0.73, 0.97] |
+| full pipeline | 0.939 [0.89, 0.98] | 0.967 [0.92, 1.00] | 0.933 [0.83, 1.00] |
+
+### Components
+
+| Component | Metric | Value |
+|---|---|---|
+| clustering | mixed boards split into 2 | 0.80 |
+| clustering | mean pin purity | 0.93 |
+| planner | precision / recall / exact (n=12) | 1.00 / 1.00 / 1.00 |
+| worker | recall of relevant | 1.00 |
+| verifier | shown precision, contested / all | 0.94 / 0.98 |
+| verifier | empty / low-confidence rate | 0.00 / 0.07 |
+
+---

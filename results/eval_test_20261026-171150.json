@@ -1,0 +1,1534 @@
+{
+ "split": "test",
+ "commit": "a346140",
+ "threshold": 0.6896,
+ "blend": 0.9,
+ "catalog_ids": [
+  "pac327335",
+  "p953b2061",
+  "pa4be0752",
+  "p3652e7a3",
+  "p234addf3",
+  "pba9fb57e",
+  "p260fbf01",
+  "p89f2a32a",
+  "pc93b3229",
+  "pc149409b",
+  "pa3727a50",
+  "p5d57f1b9",
+  "pa892fed8",
+  "p08c2a5ba",
+  "p29f6fd3e",
+  "p4292bb4f",
+  "pf421949b",
+  "p8c92d148",
+  "pbbc8e4cd",
+  "p097aa5d5",
+  "p63ac913f",
+  "pf9fa9498",
+  "p500a06cf",
+  "p3ef2aeaf",
+  "p284a0ebf",
+  "p9eb44ba8",
+  "p568ba357",
+  "p93cc2acd",
+  "p8e6fc638",
+  "p27fdd9e7",
+  "p577b35c9",
+  "p51359be8",
+  "p5486ea0d",
+  "pa6cc17e5",
+  "pada9f5c1",
+  "p28808cad",
+  "p92582333",
+  "pc116c916",
+  "pbb121752",
+  "p1b1b5ea6",
+  "pd45b8f20",
+  "pc54fc64e",
+  "pd3f1ee56",
+  "pfcc244d1",
+  "pc739eb56",
+  "pe443e11f",
+  "p4477fdab",
+  "pba27d10f",
+  "p60db38d2",
+  "pc7a540d9",
+  "pfe9cec3d",
+  "pb63f03f8",
+  "pf503e851",
+  "p4522f1fb",
+  "p755e6b9f",
+  "p755ed57e",
+  "pf3e8973d",
+  "p5089ee03",
+  "pf443a979",
+  "p88846527",
+  "pa4cb5443",
+  "pb6e1c86c",
+  "pfaa999bc",
+  "peb000bee",
+  "ped432ea8",
+  "p88856a62",
+  "p01010ee0",
+  "pd12aad6d",
+  "pb45a41f4",
+  "p0a7bddef",
+  "pfadfa9f9",
+  "p35474e3f",
+  "p7e5048f9",
+  "p38d24804",
+  "pea83843d",
+  "p4e92689e",
+  "p7c5a2727",
+  "p0f7aef88",
+  "p5781f7b1",
+  "pa0706ce5",
+  "pcf053c92",
+  "pbe56af60",
+  "pa0ef7f9e",
+  "ped18f908",
+  "p57039109",
+  "p947f893b",
+  "pa1e5e9ed",
+  "pacb2e18d",
+  "p78173ce8",
+  "paa95539d",
+  "pc7010932",
+  "paadced7d",
+  "p7fb988df",
+  "p6a1a7307",
+  "p2f9a5f85",
+  "p93adcf70",
+  "p83c75c92",
+  "p93087c7f",
+  "p9c79f372",
+  "pac7fd0d5",
+  "p7e249783",
+  "pc0f62e26",
+  "pddef0e6d",
+  "pefc8d93b",
+  "p552abf12",
+  "p9b85e871",
+  "p80588c03",
+  "pa6565063",
+  "p232f8f8d",
+  "p40e019f5",
+  "p2c83ec67",
+  "p43920f8e",
+  "p90f00b10",
+  "p70f0ce6e",
+  "pfd6e378a",
+  "p031c9623",
+  "pa0cfc0e2",
+  "p2d3e80d7",
+  "pde1ae5e1",
+  "p5d8f891b"
+ ],
+ "style_ranking": {
+  "single_style": {
+   "auc": {
+    "mean": 0.962037037037037,
+    "ci95": [
+     0.932716049382716,
+     0.9840277777777778
+    ],
+    "n": 10
+   },
+   "ndcg@10": {
+    "mean": 0.8430524309101253,
+    "ci95": [
+     0.7616109197133243,
+     0.9191063067120322
+    ],
+    "n": 10
+   },
+   "random_ndcg@10": {
+    "mean": 0.1020645485366728,
+    "ci95": [
+     0.099053105647526,
+     0.10510129398701958
+    ],
+    "n": 10
+   }
+  },
+  "mixed": {
+   "multi_auc": {
+    "mean": 0.9293402777777778,
+    "ci95": [
+     0.8900173611111111,
+     0.9686631944444445
+    ],
+    "n": 5
+   },
+   "single_auc": {
+    "mean": 0.8791666666666668,
+    "ci95": [
+     0.8432291666666668,
+     0.9155381944444445
+    ],
+    "n": 5
+   },
+   "multi_ndcg@10": {
+    "mean": 0.9051218140094267,
+    "ci95": [
+     0.8527540131850809,
+     0.9555940118465089
+    ],
+    "n": 5
+   },
+   "single_ndcg@10": {
+    "mean": 0.6507038453742418,
+    "ci95": [
+     0.47124457754874366,
+     0.8474258262960668
+    ],
+    "n": 5
+   }
+  },
+  "boards": [
+   {
+    "board": "coastal_mediterranean",
+    "auc": 0.925925925925926,
+    "ndcg@10": 0.7162874455029681,
+    "random_ndcg@10": 0.1037364495554535
+   },
+   {
+    "board": "cottagecore",
+    "auc": 0.9930555555555556,
+    "ndcg@10": 1.0,
+    "random_ndcg@10": 0.09318846971960579
+   },
+   {
+    "board": "dark_academia",
+    "auc": 0.9976851851851852,
+    "ndcg@10": 1.0,
+    "random_ndcg@10": 0.0971649943194171
+   },
+   {
+    "board": "dark_moody_organic",
+    "auc": 0.8587962962962963,
+    "ndcg@10": 0.6274092458891772,
+    "random_ndcg@10": 0.10091229975486271
+   },
+   {
+    "board": "japandi",
+    "auc": 0.9660493827160493,
+    "ndcg@10": 0.8414929602590189,
+    "random_ndcg@10": 0.1011630826397018
+   },
+   {
+    "board": "maximalist_eclectic",
+    "auc": 0.9459876543209876,
+    "ndcg@10": 0.6816808362189437,
+    "random_ndcg@10": 0.10202353805716463
+   },
+   {
+    "board": "mid_century_modern",
+    "auc": 0.9776234567901234,
+    "ndcg@10": 0.8318477135310891,
+    "random_ndcg@10": 0.106437435523611
+   },
+   {
+    "board": "quiet_luxury",
+    "auc": 0.9945987654320988,
+    "ndcg@10": 0.933745776545611,
+    "random_ndcg@10": 0.09801759257923306
+   },
+   {
+    "board": "vintage_bohemian",
+    "auc": 0.9699074074074074,
+    "ndcg@10": 0.8643145546088337,
+    "random_ndcg@10": 0.10969002278701895
+   },
+   {
+    "board": "y2k_streetwear",
+    "auc": 0.9907407407407407,
+    "ndcg@10": 0.933745776545611,
+    "random_ndcg@10": 0.1083116004306595
+   }
+  ],
+  "mixed_boards": [
+   {
+    "board": "dark_academia+cottagecore",
+    "multi_auc": 0.9952256944444445,
+    "single_auc": 0.9019097222222222,
+    "multi_ndcg@10": 1.0,
+    "single_ndcg@10": 0.4642913062995817
+   },
+   {
+    "board": "japandi+maximalist_eclectic",
+    "multi_auc": 0.8910590277777778,
+    "single_auc": 0.8741319444444444,
+    "multi_ndcg@10": 0.8521705090845474,
+    "single_ndcg@10": 0.7728378251807518
+   },
+   {
+    "board": "y2k_streetwear+quiet_luxury",
+    "multi_auc": 0.9691840277777778,
+    "single_auc": 0.943142361111111,
+    "multi_ndcg@10": 0.9363792118010481,
+    "single_ndcg@10": 1.0
+   },
+   {
+    "board": "coastal_mediterranean+dark_moody_organic",
+    "multi_auc": 0.8767361111111112,
+    "single_auc": 0.8138020833333335,
+    "multi_ndcg@10": 0.905211635630449,
+    "single_ndcg@10": 0.6051399156371955
+   },
+   {
+    "board": "mid_century_modern+vintage_bohemian",
+    "multi_auc": 0.9144965277777779,
+    "single_auc": 0.8628472222222223,
+    "multi_ndcg@10": 0.8318477135310891,
+    "single_ndcg@10": 0.41125017975367983
+   }
+  ]
+ },
+ "clustering": {
+  "found_2_clusters": 0.8,
+  "mean_purity": 0.9333333333333333,
+  "boards": [
+   {
+    "board": "dark_academia+cottagecore",
+    "k": 3,
+    "purity": 0.8333333333333334
+   },
+   {
+    "board": "japandi+maximalist_eclectic",
+    "k": 2,
+    "purity": 1.0
+   },
+   {
+    "board": "y2k_streetwear+quiet_luxury",
+    "k": 2,
+    "purity": 1.0
+   },
+   {
+    "board": "coastal_mediterranean+dark_moody_organic",
+    "k": 2,
+    "purity": 0.8333333333333334
+   },
+   {
+    "board": "mid_century_modern+vintage_bohemian",
+    "k": 2,
+    "purity": 1.0
+   }
+  ]
+ },
+ "planner": {
+  "precision": 1.0,
+  "recall": 1.0,
+  "exact": 1.0,
+  "n": 12,
+  "cases": [
+   {
+    "request": "I need a new blazer for fall",
+    "expected": [
+     "blazer"
+    ],
+    "got": [
+     "blazer"
+    ]
+   },
+   {
+    "request": "find me a bag and some pants, under $250 total",
+    "expected": [
+     "bag",
+     "pants"
+    ],
+    "got": [
+     "bag",
+     "pants"
+    ]
+   },
+   {
+    "request": "a vase, a pendant light and curtains for my sunroom",
+    "expected": [
+     "curtains",
+     "pendant light",
+     "vase"
+    ],
+    "got": [
+     "curtains",
+     "pendant light",
+     "vase"
+    ]
+   },
+   {
+    "request": "something to drink my morning coffee from",
+    "expected": [
+     "mug"
+    ],
+    "got": [
+     "mug"
+    ]
+   },
+   {
+    "request": "a cozy sweater in size M",
+    "expected": [
+     "sweater"
+    ],
+    "got": [
+     "sweater"
+    ]
+   },
+   {
+    "request": "rain boots and an umbrella for a wet weekend in NYC",
+    "expected": [],
+    "got": []
+   },
+   {
+    "request": "a statement rug and an accent chair for the living room",
+    "expected": [
+     "chair",
+     "rug"
+    ],
+    "got": [
+     "chair",
+     "rug"
+    ]
+   },
+   {
+    "request": "new sneakers and a cropped top for a concert",
+    "expected": [
+     "sneaker",
+     "top"
+    ],
+    "got": [
+     "sneaker",
+     "top"
+    ]
+   },
+   {
+    "request": "bedroom refresh: bed frame, duvet and a couple of throw pillows",
+    "expected": [
+     "bed frame",
+     "duvet",
+     "pillow"
+    ],
+    "got": [
+     "bed frame",
+     "duvet",
+     "pillow"
+    ]
+   },
+   {
+    "request": "a sideboard for my dining room",
+    "expected": [
+     "credenza"
+    ],
+    "got": [
+     "credenza"
+    ]
+   },
+   {
+    "request": "a floor lamp for my reading nook",
+    "expected": [
+     "lamp"
+    ],
+    "got": [
+     "lamp"
+    ]
+   },
+   {
+    "request": "a summer dress and a light cardigan to go over it",
+    "expected": [
+     "cardigan",
+     "dress"
+    ],
+    "got": [
+     "cardigan",
+     "dress"
+    ]
+   }
+  ]
+ },
+ "retrieval": {
+  "contested": {
+   "n": 9,
+   "random": {
+    "ndcg@3": {
+     "mean": 0.4171693460760618,
+     "ci95": [
+      0.3060475410963212,
+      0.555824120962814
+     ],
+     "n": 9
+    },
+    "mrr": {
+     "mean": 0.5442992865159529,
+     "ci95": [
+      0.4364780262946927,
+      0.6736388808722142
+     ],
+     "n": 9
+    },
+    "p@1": {
+     "mean": 0.3333333333333333,
+     "ci95": [
+      0.20466666666666666,
+      0.49822222222222223
+     ],
+     "n": 9
+    }
+   },
+   "worker_order": {
+    "ndcg@3": {
+     "mean": 0.7189301479853147,
+     "ci95": [
+      0.476892261039801,
+      0.9160085495929907
+     ],
+     "n": 9
+    },
+    "mrr": {
+     "mean": 0.787037037037037,
+     "ci95": [
+      0.5740740740740741,
+      0.9444444444444444
+     ],
+     "n": 9
+    },
+    "p@1": {
+     "mean": 0.6666666666666666,
+     "ci95": [
+      0.3333333333333333,
+      0.8888888888888888
+     ],
+     "n": 9
+    }
+   },
+   "pipeline": {
+    "ndcg@3": {
+     "mean": 0.8819448166615763,
+     "ci95": [
+      0.75694556109584,
+      1.0
+     ],
+     "n": 9
+    },
+    "mrr": {
+     "mean": 0.8888888888888888,
+     "ci95": [
+      0.7222222222222222,
+      1.0
+     ],
+     "n": 9
+    },
+    "p@1": {
+     "mean": 0.7777777777777778,
+     "ci95": [
+      0.4444444444444444,
+      1.0
+     ],
+     "n": 9
+    }
+   }
+  },
+  "all": {
+   "n": 30,
+   "random": {
+    "ndcg@3": {
+     "mean": 0.8251508038228186,
+     "ci95": [
+      0.721321647588459,
+      0.9198063631812838
+     ],
+     "n": 30
+    },
+    "mrr": {
+     "mean": 0.8632897859547859,
+     "ci95": [
+      0.7785012145262143,
+      0.9383844444444445
+     ],
+     "n": 30
+    },
+    "p@1": {
+     "mean": 0.8,
+     "ci95": [
+      0.6815333333333334,
+      0.9093333333333333
+     ],
+     "n": 30
+    }
+   },
+   "worker_order": {
+    "ndcg@3": {
+     "mean": 0.8901670231626403,
+     "ci95": [
+      0.7991655022519538,
+      0.9621856372194278
+     ],
+     "n": 30
+    },
+    "mrr": {
+     "mean": 0.9194444444444444,
+     "ci95": [
+      0.8388888888888889,
+      0.9833333333333333
+     ],
+     "n": 30
+    },
+    "p@1": {
+     "mean": 0.8666666666666667,
+     "ci95": [
+      0.7333333333333333,
+      0.9666666666666667
+     ],
+     "n": 30
+    }
+   },
+   "pipeline": {
+    "ndcg@3": {
+     "mean": 0.9387932578495035,
+     "ci95": [
+      0.8872128835515646,
+      0.9795617602411514
+     ],
+     "n": 30
+    },
+    "mrr": {
+     "mean": 0.9666666666666667,
+     "ci95": [
+      0.9166666666666666,
+      1.0
+     ],
+     "n": 30
+    },
+    "p@1": {
+     "mean": 0.9333333333333333,
+     "ci95": [
+      0.8333333333333334,
+      1.0
+     ],
+     "n": 30
+    }
+   }
+  },
+  "worker_recall": 1.0,
+  "shown_precision_contested": 0.9444444444444444,
+  "shown_precision_all": 0.9833333333333333,
+  "empty_rate": 0.0,
+  "low_confidence_rate": 0.06666666666666667,
+  "planner_category_match": 1.0,
+  "cases": [
+   {
+    "style": "coastal_mediterranean",
+    "category": "curtains",
+    "contested": false,
+    "n_relevant": 2,
+    "pool": 2,
+    "planned_category": "curtains",
+    "worker_recall": 1.0,
+    "random": {
+     "p@1": 1.0,
+     "mrr": 1.0,
+     "ndcg@3": 1.0
+    },
+    "worker_order": {
+     "p@1": 1.0,
+     "mrr": 1.0,
+     "ndcg@3": 1.0
+    },
+    "pipeline": {
+     "p@1": 1.0,
+     "mrr": 1.0,
+     "ndcg@3": 0.6131471927654584
+    },
+    "shown": [
+     "pac327335"
+    ],
+    "shown_precision": 1.0,
+    "low_confidence": false
+   },
+   {
+    "style": "coastal_mediterranean",
+    "category": "pendant light",
+    "contested": false,
+    "n_relevant": 2,
+    "pool": 2,
+    "planned_category": "pendant light",
+    "worker_recall": 1.0,
+    "random": {
+     "p@1": 1.0,
+     "mrr": 1.0,
+     "ndcg@3": 1.0
+    },
+    "worker_order": {
+     "p@1": 1.0,
+     "mrr": 1.0,
+     "ndcg@3": 1.0
+    },
+    "pipeline": {
+     "p@1": 1.0,
+     "mrr": 1.0,
+     "ndcg@3": 1.0
+    },
+    "shown": [
+     "pa4be0752",
+     "p3652e7a3"
+    ],
+    "shown_precision": 1.0,
+    "low_confidence": false
+   },
+   {
+    "style": "coastal_mediterranean",
+    "category": "vase",
+    "contested": false,
+    "n_relevant": 8,
+    "pool": 8,
+    "planned_category": "vase",
+    "worker_recall": 1.0,
+    "random": {
+     "p@1": 1.0,
+     "mrr": 1.0,
+     "ndcg@3": 1.0
+    },
+    "worker_order": {
+     "p@1": 1.0,
+     "mrr": 1.0,
+     "ndcg@3": 1.0
+    },
+    "pipeline": {
+     "p@1": 1.0,
+     "mrr": 1.0,
+     "ndcg@3": 1.0
+    },
+    "shown": [
+     "pba9fb57e",
+     "pc149409b",
+     "p89f2a32a"
+    ],
+    "shown_precision": 1.0,
+    "low_confidence": false
+   },
+   {
+    "style": "cottagecore",
+    "category": "bag",
+    "contested": true,
+    "n_relevant": 2,
+    "pool": 12,
+    "planned_category": "bag",
+    "worker_recall": 1.0,
+    "random": {
+     "p@1": 0.17,
+     "mrr": 0.3775165945165943,
+     "ndcg@3": 0.2094171047101515
+    },
+    "worker_order": {
+     "p@1": 1.0,
+     "mrr": 1.0,
+     "ndcg@3": 0.6131471927654584
+    },
+    "pipeline": {
+     "p@1": 1.0,
+     "mrr": 1.0,
+     "ndcg@3": 0.6131471927654584
+    },
+    "shown": [
+     "p08c2a5ba",
+     "p93087c7f",
+     "p83c75c92"
+    ],
+    "shown_precision": 0.5,
+    "low_confidence": false
+   },
+   {
+    "style": "cottagecore",
+    "category": "cardigan",
+    "contested": false,
+    "n_relevant": 2,
+    "pool": 2,
+    "planned_category": "cardigan",
+    "worker_recall": 1.0,
+    "random": {
+     "p@1": 1.0,
+     "mrr": 1.0,
+     "ndcg@3": 1.0
+    },
+    "worker_order": {
+     "p@1": 1.0,
+     "mrr": 1.0,
+     "ndcg@3": 1.0
+    },
+    "pipeline": {
+     "p@1": 1.0,
+     "mrr": 1.0,
+     "ndcg@3": 1.0
+    },
+    "shown": [
+     "p4292bb4f",
+     "p29f6fd3e"
+    ],
+    "shown_precision": 1.0,
+    "low_confidence": false
+   },
+   {
+    "style": "cottagecore",
+    "category": "dress",
+    "contested": false,
+    "n_relevant": 7,
+    "pool": 7,
+    "planned_category": "dress",
+    "worker_recall": 1.0,
+    "random": {
+     "p@1": 1.0,
+     "mrr": 1.0,
+     "ndcg@3": 1.0
+    },
+    "worker_order": {
+     "p@1": 1.0,
+     "mrr": 1.0,
+     "ndcg@3": 0.7039180890341347
+    },
+    "pipeline": {
+     "p@1": 1.0,
+     "mrr": 1.0,
+     "ndcg@3": 1.0
+    },
+    "shown": [
+     "pf421949b",
+     "pbbc8e4cd",
+     "p500a06cf"
+    ],
+    "shown_precision": 1.0,
+    "low_confidence": false
+   },
+   {
+    "style": "dark_academia",
+    "category": "bag",
+    "contested": true,
+    "n_relevant": 2,
+    "pool": 12,
+    "planned_category": "bag",
+    "worker_recall": 1.0,
+    "random": {
+     "p@1": 0.14,
+     "mrr": 0.3637674603174599,
+     "ndcg@3": 0.20492030349358228
+    },
+    "worker_order": {
+     "p@1": 1.0,
+     "mrr": 1.0,
+     "ndcg@3": 0.9197207891481876
+    },
+    "pipeline": {
+     "p@1": 1.0,
+     "mrr": 1.0,
+     "ndcg@3": 1.0
+    },
+    "shown": [
+     "p284a0ebf",
+     "p9eb44ba8",
+     "p7e249783"
+    ],
+    "shown_precision": 1.0,
+    "low_confidence": false
+   },
+   {
+    "style": "dark_academia",
+    "category": "blazer",
+    "contested": false,
+    "n_relevant": 7,
+    "pool": 7,
+    "planned_category": "blazer",
+    "worker_recall": 1.0,
+    "random": {
+     "p@1": 1.0,
+     "mrr": 1.0,
+     "ndcg@3": 1.0
+    },
+    "worker_order": {
+     "p@1": 1.0,
+     "mrr": 1.0,
+     "ndcg@3": 1.0
+    },
+    "pipeline": {
+     "p@1": 1.0,
+     "mrr": 1.0,
+     "ndcg@3": 1.0
+    },
+    "shown": [
+     "p51359be8",
+     "p93cc2acd",
+     "p27fdd9e7"
+    ],
+    "shown_precision": 1.0,
+    "low_confidence": false
+   },
+   {
+    "style": "dark_academia",
+    "category": "pants",
+    "contested": true,
+    "n_relevant": 2,
+    "pool": 7,
+    "planned_category": "pants",
+    "worker_recall": 1.0,
+    "random": {
+     "p@1": 0.286,
+     "mrr": 0.5400666666666666,
+     "ndcg@3": 0.38325654628844746
+    },
+    "worker_order": {
+     "p@1": 1.0,
+     "mrr": 1.0,
+     "ndcg@3": 1.0
+    },
+    "pipeline": {
+     "p@1": 1.0,
+     "mrr": 1.0,
+     "ndcg@3": 1.0
+    },
+    "shown": [
+     "pada9f5c1",
+     "p28808cad",
+     "pacb2e18d"
+    ],
+    "shown_precision": 1.0,
+    "low_confidence": false
+   },
+   {
+    "style": "dark_moody_organic",
+    "category": "candle holder",
+    "contested": false,
+    "n_relevant": 8,
+    "pool": 8,
+    "planned_category": "candle holder",
+    "worker_recall": 1.0,
+    "random": {
+     "p@1": 1.0,
+     "mrr": 1.0,
+     "ndcg@3": 1.0
+    },
+    "worker_order": {
+     "p@1": 1.0,
+     "mrr": 1.0,
+     "ndcg@3": 1.0
+    },
+    "pipeline": {
+     "p@1": 1.0,
+     "mrr": 1.0,
+     "ndcg@3": 1.0
+    },
+    "shown": [
+     "pfcc244d1",
+     "pbb121752",
+     "pc116c916"
+    ],
+    "shown_precision": 1.0,
+    "low_confidence": false
+   },
+   {
+    "style": "dark_moody_organic",
+    "category": "duvet",
+    "contested": false,
+    "n_relevant": 2,
+    "pool": 2,
+    "planned_category": "duvet",
+    "worker_recall": 1.0,
+    "random": {
+     "p@1": 1.0,
+     "mrr": 1.0,
+     "ndcg@3": 1.0
+    },
+    "worker_order": {
+     "p@1": 1.0,
+     "mrr": 1.0,
+     "ndcg@3": 1.0
+    },
+    "pipeline": {
+     "p@1": 1.0,
+     "mrr": 1.0,
+     "ndcg@3": 1.0
+    },
+    "shown": [
+     "pe443e11f",
+     "pc739eb56"
+    ],
+    "shown_precision": 1.0,
+    "low_confidence": false
+   },
+   {
+    "style": "dark_moody_organic",
+    "category": "mug",
+    "contested": false,
+    "n_relevant": 2,
+    "pool": 2,
+    "planned_category": "mug",
+    "worker_recall": 1.0,
+    "random": {
+     "p@1": 1.0,
+     "mrr": 1.0,
+     "ndcg@3": 1.0
+    },
+    "worker_order": {
+     "p@1": 1.0,
+     "mrr": 1.0,
+     "ndcg@3": 1.0
+    },
+    "pipeline": {
+     "p@1": 1.0,
+     "mrr": 1.0,
+     "ndcg@3": 1.0
+    },
+    "shown": [
+     "pba27d10f",
+     "p4477fdab"
+    ],
+    "shown_precision": 1.0,
+    "low_confidence": true
+   },
+   {
+    "style": "japandi",
+    "category": "bed frame",
+    "contested": false,
+    "n_relevant": 6,
+    "pool": 6,
+    "planned_category": "bed frame",
+    "worker_recall": 1.0,
+    "random": {
+     "p@1": 1.0,
+     "mrr": 1.0,
+     "ndcg@3": 1.0
+    },
+    "worker_order": {
+     "p@1": 0.0,
+     "mrr": 0.5,
+     "ndcg@3": 0.5307212739772434
+    },
+    "pipeline": {
+     "p@1": 1.0,
+     "mrr": 1.0,
+     "ndcg@3": 1.0
+    },
+    "shown": [
+     "p755ed57e",
+     "pfe9cec3d",
+     "p755e6b9f"
+    ],
+    "shown_precision": 1.0,
+    "low_confidence": false
+   },
+   {
+    "style": "japandi",
+    "category": "bowl",
+    "contested": false,
+    "n_relevant": 2,
+    "pool": 2,
+    "planned_category": "bowl",
+    "worker_recall": 1.0,
+    "random": {
+     "p@1": 1.0,
+     "mrr": 1.0,
+     "ndcg@3": 1.0
+    },
+    "worker_order": {
+     "p@1": 1.0,
+     "mrr": 1.0,
+     "ndcg@3": 1.0
+    },
+    "pipeline": {
+     "p@1": 1.0,
+     "mrr": 1.0,
+     "ndcg@3": 1.0
+    },
+    "shown": [
+     "pf3e8973d",
+     "p5089ee03"
+    ],
+    "shown_precision": 1.0,
+    "low_confidence": false
+   },
+   {
+    "style": "japandi",
+    "category": "pillow",
+    "contested": false,
+    "n_relevant": 2,
+    "pool": 2,
+    "planned_category": "pillow",
+    "worker_recall": 1.0,
+    "random": {
+     "p@1": 1.0,
+     "mrr": 1.0,
+     "ndcg@3": 1.0
+    },
+    "worker_order": {
+     "p@1": 1.0,
+     "mrr": 1.0,
+     "ndcg@3": 1.0
+    },
+    "pipeline": {
+     "p@1": 1.0,
+     "mrr": 1.0,
+     "ndcg@3": 1.0
+    },
+    "shown": [
+     "pf443a979",
+     "p88846527"
+    ],
+    "shown_precision": 1.0,
+    "low_confidence": false
+   },
+   {
+    "style": "maximalist_eclectic",
+    "category": "chair",
+    "contested": true,
+    "n_relevant": 4,
+    "pool": 5,
+    "planned_category": "chair",
+    "worker_recall": 1.0,
+    "random": {
+     "p@1": 0.786,
+     "mrr": 0.893,
+     "ndcg@3": 0.7979332150271602
+    },
+    "worker_order": {
+     "p@1": 1.0,
+     "mrr": 1.0,
+     "ndcg@3": 1.0
+    },
+    "pipeline": {
+     "p@1": 1.0,
+     "mrr": 1.0,
+     "ndcg@3": 1.0
+    },
+    "shown": [
+     "peb000bee",
+     "p01010ee0",
+     "pa4cb5443"
+    ],
+    "shown_precision": 1.0,
+    "low_confidence": false
+   },
+   {
+    "style": "maximalist_eclectic",
+    "category": "frame",
+    "contested": false,
+    "n_relevant": 2,
+    "pool": 2,
+    "planned_category": "frame",
+    "worker_recall": 1.0,
+    "random": {
+     "p@1": 1.0,
+     "mrr": 1.0,
+     "ndcg@3": 1.0
+    },
+    "worker_order": {
+     "p@1": 1.0,
+     "mrr": 1.0,
+     "ndcg@3": 1.0
+    },
+    "pipeline": {
+     "p@1": 1.0,
+     "mrr": 1.0,
+     "ndcg@3": 0.6131471927654584
+    },
+    "shown": [
+     "pb45a41f4"
+    ],
+    "shown_precision": 1.0,
+    "low_confidence": false
+   },
+   {
+    "style": "maximalist_eclectic",
+    "category": "rug",
+    "contested": false,
+    "n_relevant": 2,
+    "pool": 2,
+    "planned_category": "rug",
+    "worker_recall": 1.0,
+    "random": {
+     "p@1": 1.0,
+     "mrr": 1.0,
+     "ndcg@3": 1.0
+    },
+    "worker_order": {
+     "p@1": 1.0,
+     "mrr": 1.0,
+     "ndcg@3": 1.0
+    },
+    "pipeline": {
+     "p@1": 1.0,
+     "mrr": 1.0,
+     "ndcg@3": 1.0
+    },
+    "shown": [
+     "pfadfa9f9",
+     "p35474e3f"
+    ],
+    "shown_precision": 1.0,
+    "low_confidence": false
+   },
+   {
+    "style": "mid_century_modern",
+    "category": "chair",
+    "contested": true,
+    "n_relevant": 1,
+    "pool": 5,
+    "planned_category": "chair",
+    "worker_recall": 1.0,
+    "random": {
+     "p@1": 0.214,
+     "mrr": 0.46963333333333274,
+     "ndcg@3": 0.4305901243071484
+    },
+    "worker_order": {
+     "p@1": 0.0,
+     "mrr": 0.5,
+     "ndcg@3": 0.6309297535714575
+    },
+    "pipeline": {
+     "p@1": 1.0,
+     "mrr": 1.0,
+     "ndcg@3": 1.0
+    },
+    "shown": [
+     "p7e5048f9",
+     "p01010ee0",
+     "peb000bee"
+    ],
+    "shown_precision": 1.0,
+    "low_confidence": false
+   },
+   {
+    "style": "mid_century_modern",
+    "category": "credenza",
+    "contested": false,
+    "n_relevant": 7,
+    "pool": 7,
+    "planned_category": "credenza",
+    "worker_recall": 1.0,
+    "random": {
+     "p@1": 1.0,
+     "mrr": 1.0,
+     "ndcg@3": 1.0
+    },
+    "worker_order": {
+     "p@1": 1.0,
+     "mrr": 1.0,
+     "ndcg@3": 1.0
+    },
+    "pipeline": {
+     "p@1": 1.0,
+     "mrr": 1.0,
+     "ndcg@3": 1.0
+    },
+    "shown": [
+     "pcf053c92",
+     "pea83843d",
+     "p5781f7b1"
+    ],
+    "shown_precision": 1.0,
+    "low_confidence": false
+   },
+   {
+    "style": "mid_century_modern",
+    "category": "lamp",
+    "contested": false,
+    "n_relevant": 2,
+    "pool": 2,
+    "planned_category": "lamp",
+    "worker_recall": 1.0,
+    "random": {
+     "p@1": 1.0,
+     "mrr": 1.0,
+     "ndcg@3": 1.0
+    },
+    "worker_order": {
+     "p@1": 1.0,
+     "mrr": 1.0,
+     "ndcg@3": 1.0
+    },
+    "pipeline": {
+     "p@1": 1.0,
+     "mrr": 1.0,
+     "ndcg@3": 1.0
+    },
+    "shown": [
+     "pa0ef7f9e",
+     "ped18f908"
+    ],
+    "shown_precision": 1.0,
+    "low_confidence": false
+   },
+   {
+    "style": "quiet_luxury",
+    "category": "loafer",
+    "contested": false,
+    "n_relevant": 2,
+    "pool": 2,
+    "planned_category": "loafer",
+    "worker_recall": 1.0,
+    "random": {
+     "p@1": 1.0,
+     "mrr": 1.0,
+     "ndcg@3": 1.0
+    },
+    "worker_order": {
+     "p@1": 1.0,
+     "mrr": 1.0,
+     "ndcg@3": 1.0
+    },
+    "pipeline": {
+     "p@1": 1.0,
+     "mrr": 1.0,
+     "ndcg@3": 1.0
+    },
+    "shown": [
+     "p947f893b",
+     "p57039109"
+    ],
+    "shown_precision": 1.0,
+    "low_confidence": false
+   },
+   {
+    "style": "quiet_luxury",
+    "category": "pants",
+    "contested": true,
+    "n_relevant": 2,
+    "pool": 7,
+    "planned_category": "pants",
+    "worker_recall": 1.0,
+    "random": {
+     "p@1": 0.296,
+     "mrr": 0.5322,
+     "ndcg@3": 0.38276091048074584
+    },
+    "worker_order": {
+     "p@1": 1.0,
+     "mrr": 1.0,
+     "ndcg@3": 1.0
+    },
+    "pipeline": {
+     "p@1": 1.0,
+     "mrr": 1.0,
+     "ndcg@3": 1.0
+    },
+    "shown": [
+     "pacb2e18d",
+     "pa1e5e9ed",
+     "pada9f5c1"
+    ],
+    "shown_precision": 1.0,
+    "low_confidence": false
+   },
+   {
+    "style": "quiet_luxury",
+    "category": "sweater",
+    "contested": false,
+    "n_relevant": 6,
+    "pool": 6,
+    "planned_category": "sweater",
+    "worker_recall": 1.0,
+    "random": {
+     "p@1": 1.0,
+     "mrr": 1.0,
+     "ndcg@3": 1.0
+    },
+    "worker_order": {
+     "p@1": 1.0,
+     "mrr": 1.0,
+     "ndcg@3": 1.0
+    },
+    "pipeline": {
+     "p@1": 1.0,
+     "mrr": 1.0,
+     "ndcg@3": 1.0
+    },
+    "shown": [
+     "pc7010932",
+     "p6a1a7307",
+     "paadced7d"
+    ],
+    "shown_precision": 1.0,
+    "low_confidence": false
+   },
+   {
+    "style": "vintage_bohemian",
+    "category": "bag",
+    "contested": true,
+    "n_relevant": 8,
+    "pool": 12,
+    "planned_category": "bag",
+    "worker_recall": 1.0,
+    "random": {
+     "p@1": 0.69,
+     "mrr": 0.8314999999999999,
+     "ndcg@3": 0.6828824573289763
+    },
+    "worker_order": {
+     "p@1": 1.0,
+     "mrr": 1.0,
+     "ndcg@3": 1.0
+    },
+    "pipeline": {
+     "p@1": 1.0,
+     "mrr": 1.0,
+     "ndcg@3": 1.0
+    },
+    "shown": [
+     "pefc8d93b",
+     "p83c75c92",
+     "pddef0e6d"
+    ],
+    "shown_precision": 1.0,
+    "low_confidence": false
+   },
+   {
+    "style": "vintage_bohemian",
+    "category": "pants",
+    "contested": true,
+    "n_relevant": 2,
+    "pool": 7,
+    "planned_category": "pants",
+    "worker_recall": 1.0,
+    "random": {
+     "p@1": 0.26,
+     "mrr": 0.5087666666666664,
+     "ndcg@3": 0.34686213050548365
+    },
+    "worker_order": {
+     "p@1": 0.0,
+     "mrr": 0.3333333333333333,
+     "ndcg@3": 0.3065735963827292
+    },
+    "pipeline": {
+     "p@1": 0.0,
+     "mrr": 0.5,
+     "ndcg@3": 0.6934264036172708
+    },
+    "shown": [
+     "p28808cad",
+     "p552abf12",
+     "p9b85e871"
+    ],
+    "shown_precision": 1.0,
+    "low_confidence": false
+   },
+   {
+    "style": "vintage_bohemian",
+    "category": "vest",
+    "contested": false,
+    "n_relevant": 2,
+    "pool": 2,
+    "planned_category": "vest",
+    "worker_recall": 1.0,
+    "random": {
+     "p@1": 1.0,
+     "mrr": 1.0,
+     "ndcg@3": 1.0
+    },
+    "worker_order": {
+     "p@1": 1.0,
+     "mrr": 1.0,
+     "ndcg@3": 1.0
+    },
+    "pipeline": {
+     "p@1": 1.0,
+     "mrr": 1.0,
+     "ndcg@3": 1.0
+    },
+    "shown": [
+     "p80588c03",
+     "pa6565063"
+    ],
+    "shown_precision": 1.0,
+    "low_confidence": false
+   },
+   {
+    "style": "y2k_streetwear",
+    "category": "pants",
+    "contested": true,
+    "n_relevant": 1,
+    "pool": 7,
+    "planned_category": "pants",
+    "worker_recall": 1.0,
+    "random": {
+     "p@1": 0.158,
+     "mrr": 0.38224285714285633,
+     "ndcg@3": 0.3159013225428609
+    },
+    "worker_order": {
+     "p@1": 0.0,
+     "mrr": 0.25,
+     "ndcg@3": 0.0
+    },
+    "pipeline": {
+     "p@1": 0.0,
+     "mrr": 0.5,
+     "ndcg@3": 0.6309297535714575
+    },
+    "shown": [
+     "pacb2e18d",
+     "p232f8f8d"
+    ],
+    "shown_precision": 1.0,
+    "low_confidence": false
+   },
+   {
+    "style": "y2k_streetwear",
+    "category": "sneaker",
+    "contested": false,
+    "n_relevant": 2,
+    "pool": 2,
+    "planned_category": "sneaker",
+    "worker_recall": 1.0,
+    "random": {
+     "p@1": 1.0,
+     "mrr": 1.0,
+     "ndcg@3": 1.0
+    },
+    "worker_order": {
+     "p@1": 1.0,
+     "mrr": 1.0,
+     "ndcg@3": 1.0
+    },
+    "pipeline": {
+     "p@1": 1.0,
+     "mrr": 1.0,
+     "ndcg@3": 1.0
+    },
+    "shown": [
+     "p43920f8e",
+     "p2c83ec67"
+    ],
+    "shown_precision": 1.0,
+    "low_confidence": true
+   },
+   {
+    "style": "y2k_streetwear",
+    "category": "top",
+    "contested": false,
+    "n_relevant": 7,
+    "pool": 7,
+    "planned_category": "top",
+    "worker_recall": 1.0,
+    "random": {
+     "p@1": 1.0,
+     "mrr": 1.0,
+     "ndcg@3": 1.0
+    },
+    "worker_order": {
+     "p@1": 1.0,
+     "mrr": 1.0,
+     "ndcg@3": 1.0
+    },
+    "pipeline": {
+     "p@1": 1.0,
+     "mrr": 1.0,
+     "ndcg@3": 1.0
+    },
+    "shown": [
+     "p031c9623",
+     "p5d8f891b",
+     "pde1ae5e1"
+    ],
+    "shown_precision": 1.0,
+    "low_confidence": false
+   }
+  ]
+ }
+}
