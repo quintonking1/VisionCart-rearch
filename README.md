@@ -4,7 +4,7 @@
 
 People curate their taste visually, on Pinterest boards and saved posts, but shopping still runs on keyword search. VisionCart turns a mood board into a shopping agent: it learns a user's styles from their pins, then finds and verifies products that match a request like *"a vase and a pendant light for my sunroom, under $250"*.
 
-This branch is a ground-up **multi-agent rebuild**. It runs on a **static local catalog** (no web requests) and **OpenAI models only** (no local models, no GPU). The original pipeline is preserved in [`legacy/`](legacy/).
+This branch is a ground-up **multi-agent rebuild**. The pipeline and evals run on a **static local catalog**; the chat demo adds a live profile that shops Uniqlo US. **OpenAI models only** (no local models, no GPU). The original pipeline is preserved in [`legacy/`](legacy/).
 
 ---
 
@@ -80,6 +80,20 @@ python scripts/build_catalog.py       # only if data/catalog is missing; caption
 python -m evals.calibrate             # dev split -> data/calibration.json (threshold + blend)
 ```
 
+**Chat demo** (ChatGPT-style web UI over the same pipeline):
+
+```bash
+python -m visioncart.web              # http://localhost:8000
+```
+
+- **Live profile (`quinn`):** style memory built from a real Pinterest board (pulled through the board's public RSS feed into `data/boards/`), and products from **Uniqlo US's live product search**. Each product photo is captioned and passes through the same style verifier as the catalog. Names, prices, sizes and links come from Uniqlo's data, never from a model.
+- **Demo profiles (`maya`, `jordan`, `sam`):** the static catalog, exactly what the evals measure.
+- **Concierge ("Vee"):** a customer-service persona in front of the orchestrator. It greets, answers non-shopping questions itself (and says plainly that it can't do orders, returns or policies), turns follow-ups like "any cheaper?" into a full request using the chat history, and wraps up from the verified results only. The planner prompt the evals measured is unchanged, and evals never call the concierge.
+- The answer streams in as the graph runs: the concierge's reply, a collapsible "Thought for Ns" trace (plan, each worker's progress, verifier counts), product carousels, then the wrap-up. Like / Save / Skip writes to style memory, which is visible under **Style memory**.
+- Chat history lives in the browser. Feedback persists in `data/memory.sqlite`; delete it to reset every profile. Re-pull the board with **Re-sync Pinterest board** in the profile menu, or `python -m visioncart.live.board quinn <board url>`.
+
+**CLI:**
+
 ```bash
 python -m visioncart.cli users
 python -m visioncart.cli ask jordan "a vase and a pendant light for my sunroom, under $250 total"
@@ -125,6 +139,7 @@ python -m evals.judge judge && python -m evals.judge agree   # LLM judge counts 
 
 ```
 visioncart/      pipeline: agents/, catalog/, memory/, graph.py (LangGraph), cli.py
+                 live/ (Pinterest board + Uniqlo worker), web/ (chat demo)
 evals/           harness, calibration, eval runner, LLM judge; the only code that reads labels
 scripts/         make_splits.py, build_catalog.py
 data/            splits, built catalog + embeddings, calibration (cache/ and *.sqlite are gitignored)

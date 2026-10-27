@@ -46,7 +46,8 @@ class ItemState(TypedDict, total=False):
 
 async def worker_node(s: ItemState, config: RunnableConfig) -> ItemState:
     seen = s.get("scored", {})
-    ids = await run_worker(s["item"], _deps(config), s.get("feedback"), exclude=set(seen))
+    worker = _deps(config).worker or run_worker
+    ids = await worker(s["item"], _deps(config), s.get("feedback"), exclude=set(seen))
     new = {x.product_id: x for x in verifier.score_candidates(ids, s["item"], _deps(config))}
     return {"scored": {**seen, **new}, "attempt": s.get("attempt", 0) + 1, "exhausted": not new}
 
@@ -54,7 +55,8 @@ async def worker_node(s: ItemState, config: RunnableConfig) -> ItemState:
 def verify_node(s: ItemState, config: RunnableConfig) -> ItemState:
     ranked = list(s["scored"].values())
     accepted, feedback = verifier.decide(ranked, _deps(config).threshold)
-    out_of_tries = s["attempt"] > settings.MAX_RETRIES or s["exhausted"]
+    max_retries = _deps(config).max_retries
+    out_of_tries = s["attempt"] > (settings.MAX_RETRIES if max_retries is None else max_retries) or s["exhausted"]
     if not accepted and out_of_tries:
         return {"accepted": verifier.fallback(ranked), "low_confidence": True, "feedback": feedback}
     return {"accepted": accepted, "feedback": feedback, "low_confidence": False}

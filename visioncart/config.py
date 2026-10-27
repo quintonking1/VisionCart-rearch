@@ -31,6 +31,15 @@ DEFAULT_THRESHOLD = 0.5    # used only until evals/calibrate.py writes CALIBRATI
 DEFAULT_BLEND = 0.5        # retrieval vs visual weight for ordering; calibrated alongside the threshold
 FEEDBACK_BIAS_SCALE = 0.05 # max score nudge from learned term weights
 
+# Live mode (web demo only; evals never use it): products from Uniqlo US's live search.
+# Board pins and fetched product photos are gitignored.
+BOARDS_DIR = ROOT / "data" / "boards"
+LIVE_DIR = ROOT / "data" / "live"
+LIVE_MAX_RETRIES = 1       # a retry scores the next batch of Uniqlo results
+LIVE_BATCH = 16            # products captioned and scored per round
+LIVE_CATEGORIES = ["t-shirt", "shirt", "polo", "sweater", "cardigan", "hoodie", "sweatshirt", "fleece",
+                   "jacket", "coat", "vest", "pants", "jeans", "shorts", "hat", "bag", "belt", "socks"]
+
 # Fields that carry ground-truth style labels. They must never reach the pipeline.
 FORBIDDEN_CATALOG_KEYS = {"style", "style_label", "style_terms", "query", "query_terms", "ground_truth"}
 

@@ -74,3 +74,15 @@ def test_presenter_drops_explanations_with_prices(make_deps):
     r = ItemResult(0, item(), [Scored("d1", 0.9, 0.0)], {"d1": "Only $20, a steal"}, 1, False)
     card = presenter.build_sections([r], deps)[0].cards[0]
     assert "$" not in card.why and card.price == deps.catalog.get("d1").price
+
+
+def test_plan_drops_sizes_that_are_not_sizes(make_deps):
+    deps = make_deps(FakeLLM())
+    items = [PlannedItem(requested_as="blazer", category="blazer", description="", cluster_id=0, max_price=None,
+                         size=s, needs_water_resistant=False) for s in ("Quinn's size", "m", "32x30", "10.5")]
+    plan = validate_plan(Plan(items=items, total_budget=None, occasion=None), deps)
+    assert [i.size for i in plan.items] == [None, "m", "32x30", "10.5"]
+
+
+def test_size_check_accepts_inch_suffix():
+    assert verifier._size("32inch") == verifier._size("32") == "32" and verifier._size(" m ") == "M"

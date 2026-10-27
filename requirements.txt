@@ -5,3 +5,5 @@ scikit-learn
 pydantic>=2
 python-dotenv
 pytest
+fastapi>=0.115
+uvicorn>=0.30

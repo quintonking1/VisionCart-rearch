@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
+from typing import Any, Callable
 
 from pydantic import BaseModel, Field
 
@@ -63,3 +64,6 @@ class Deps:
     memory: StyleMemory
     threshold: float
     blend: float = 0.0  # weight on worker retrieval score when ordering verified products
+    worker: Callable[..., Any] | None = None  # None = catalog search worker; live mode swaps in the web worker
+    max_retries: int | None = None            # None = config.MAX_RETRIES
+    progress: Callable[[str, PlannedItem, dict], None] | None = None  # UI progress events (live mode)

@@ -9,6 +9,7 @@
 """
 from __future__ import annotations
 
+import re
 from collections import Counter
 
 from pydantic import BaseModel
@@ -19,15 +20,22 @@ from visioncart.catalog.store import Product
 from visioncart.memory.feedback import feedback_bias
 
 
+def _size(s: str) -> str:
+    """'32inch' and '32 in' match '32'."""
+    return re.sub(r"\s*(INCH|IN)$", "", s.strip().upper())
+
+
 def hard_checks(p: Product, item: PlannedItem) -> list[str]:
     failures = []
     if p.category != item.category:
         failures.append("wrong category")
     if not p.in_stock:
         failures.append("out of stock")
-    if item.max_price is not None and p.price > item.max_price:
+    if item.max_price is not None and p.price is None:
+        failures.append("price unknown")
+    elif item.max_price is not None and p.price > item.max_price:
         failures.append("over budget")
-    if item.size and p.sizes and item.size.upper() not in {s.upper() for s in p.sizes}:
+    if item.size and p.sizes and _size(item.size) not in {_size(s) for s in p.sizes}:
         failures.append("size unavailable")
     if item.needs_water_resistant and not p.attributes.water_resistant:
         failures.append("not water resistant")

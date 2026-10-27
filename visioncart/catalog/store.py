@@ -26,7 +26,7 @@ class Product:
     name: str
     category: str
     image: str
-    price: float
+    price: float | None  # None only for live web products whose page shows no price
     in_stock: bool
     sizes: list[str]
     link: str | None

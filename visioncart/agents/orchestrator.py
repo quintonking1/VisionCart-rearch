@@ -1,7 +1,12 @@
 """Orchestrator: turns a free-text request into a typed plan of items to search for."""
 from __future__ import annotations
 
+import re
+
 from visioncart.agents.types import UNAVAILABLE, Deps, Plan
+
+# Letter sizes, numeric sizes (32, 10.5) and waist x inseam (32x30). Anything else ("my size") is dropped.
+_SIZE = re.compile(r"^(XXS|XS|S|M|L|XL|XXL|XXXL|\d{1,2}(\.5)?|\d{2}\s*[X/]\s*\d{2})$")
 
 SYSTEM = """You plan shopping requests for a style-matching assistant.
 Break the request into the individual items to find (one item for single-item requests).
@@ -28,6 +33,8 @@ def validate_plan(plan: Plan, deps: Deps) -> Plan:
         item.category = item.category.strip().lower()
         if item.category not in categories:
             item.category = UNAVAILABLE
+        if item.size and not _SIZE.match(item.size.strip().upper()):
+            item.size = None
         if item.cluster_id not in cluster_ids:
             item.cluster_id = default_cluster
     searchable = [i for i in plan.items if i.category != UNAVAILABLE]

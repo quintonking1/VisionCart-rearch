@@ -1,5 +1,7 @@
 data/cache/
 data/folds/
+data/boards/
+data/live/
 data/*.sqlite
 .venv/
 .env

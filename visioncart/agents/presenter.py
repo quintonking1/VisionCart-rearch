@@ -15,7 +15,7 @@ class Card:
     product_id: str
     name: str
     category: str
-    price: float
+    price: float | None
     image: str
     link: str | None
     match_score: float
@@ -64,7 +64,8 @@ def render_text(sections: list[Section]) -> str:
         if sec.note:
             lines.append(f"   {sec.note}")
         for i, c in enumerate(sec.cards, 1):
-            lines.append(f"   {i}. {c.name} - ${c.price:,.2f}  (match {c.match_score:.2f}, style: {c.cluster_name})")
+            price = f"${c.price:,.2f}" if c.price is not None else "price at store"
+            lines.append(f"   {i}. {c.name} - {price}  (match {c.match_score:.2f}, style: {c.cluster_name})")
             lines.append(f"      {c.why}")
             lines.append(f"      id={c.product_id} cluster={c.cluster_id}  image={c.image}")
     return "\n".join(lines)
