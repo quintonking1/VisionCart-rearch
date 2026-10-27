@@ -22,6 +22,7 @@ import argparse
 import asyncio
 import json
 import random
+import subprocess
 import time
 from collections import Counter
 from pathlib import Path
@@ -163,6 +164,15 @@ async def eval_retrieval(llm, store, catalog, split: str) -> dict:
     }
 
 
+def git_state() -> str:
+    """Commit the results came from, flagged if the working tree had uncommitted changes."""
+    head = subprocess.run(["git", "rev-parse", "--short", "HEAD"], capture_output=True, text=True,
+                          cwd=config.ROOT).stdout.strip()
+    dirty = subprocess.run(["git", "status", "--porcelain", "--", "visioncart", "evals", "data", "scripts"],
+                           capture_output=True, text=True, cwd=config.ROOT).stdout.strip()
+    return f"{head}{'-dirty' if dirty else ''}"
+
+
 def _fmt(s: dict) -> str:
     lo, hi = s["ci95"]
     return f"{s['mean']:.3f} [{lo:.2f}, {hi:.2f}]"
@@ -171,7 +181,7 @@ def _fmt(s: dict) -> str:
 def to_markdown(split: str, res: dict) -> str:
     sr, e2e = res["style_ranking"], res["retrieval"]
     L = [f"## {time.strftime('%Y-%m-%d %H:%M')} | split: {split} | threshold {res['threshold']:.3f} "
-         f"| blend {res['blend']:.1f} "
+         f"| blend {res['blend']:.1f} | commit {res['commit']} "
          f"| {config.CHAT_MODEL} / {config.EMBED_MODEL}", "",
          "Values are mean [bootstrap 95% CI] over boards or cases.", "",
          f"### Style ranking, whole catalog ({sr['single_style']['auc']['n']} boards, "
@@ -209,7 +219,7 @@ async def main() -> None:
     llm, store, catalog = OpenAILLM(), MemoryStore(harness.EVAL_DB), Catalog.load()
     await harness.sync_eval_boards(llm, store, args.split)
     from visioncart.graph import load_blend, load_threshold
-    res = {"split": args.split, "threshold": load_threshold(), "blend": load_blend(), "catalog_ids": [p.id for p in catalog.products],
+    res = {"split": args.split, "commit": git_state(), "threshold": load_threshold(), "blend": load_blend(), "catalog_ids": [p.id for p in catalog.products],
            "style_ranking": eval_style_ranking(store, catalog, args.split),
            "clustering": eval_clustering(store, args.split),
            "planner": await eval_planner(llm, store, catalog, args.split),
