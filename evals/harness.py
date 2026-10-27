@@ -9,6 +9,7 @@ from __future__ import annotations
 
 import json
 import math
+import os
 import random
 from pathlib import Path
 
@@ -20,7 +21,7 @@ from visioncart.memory.users import board_pins
 
 LABELS_PATH = Path(__file__).parent / "data" / "labels.json"
 EVAL_DB = config.DATA_DIR / "eval_memory.sqlite"  # kept apart from demo users' memory
-RESULTS_DIR = config.ROOT / "results"
+RESULTS_DIR = Path(os.getenv("VISIONCART_RESULTS_DIR", config.ROOT / "results"))
 
 # Fixed two-style boards for checking that clustering separates mixed taste.
 MIXED_PAIRS = [("dark_academia", "cottagecore"), ("japandi", "maximalist_eclectic"),
@@ -120,6 +121,25 @@ def bootstrap_ci(values: list[float], n: int = 2000, alpha: float = 0.05, seed: 
     rng = random.Random(seed)
     means = sorted(sum(rng.choices(vals, k=len(vals))) / len(vals) for _ in range(n))
     return means[int(alpha / 2 * n)], means[int((1 - alpha / 2) * n) - 1]
+
+
+def paired(a: list[float], b: list[float]) -> dict:
+    """Per-case a - b: mean with bootstrap CI, plus wins / losses / ties. Comparing each case
+    with itself removes between-case difficulty, which unpaired intervals cannot."""
+    d = [x - y for x, y in zip(a, b)]
+    wins, losses = sum(x > 1e-9 for x in d), sum(x < -1e-9 for x in d)
+    return {**summarize(d), "wins": wins, "losses": losses, "ties": len(d) - wins - losses,
+            "sign_p": sign_test(wins, losses)}
+
+
+def sign_test(wins: int, losses: int) -> float:
+    """Two-sided exact sign test, ties dropped."""
+    n = wins + losses
+    if n == 0:
+        return 1.0
+    k = min(wins, losses)
+    tail = sum(math.comb(n, i) for i in range(k + 1)) / 2 ** n
+    return min(1.0, 2 * tail)
 
 
 def summarize(values: list[float]) -> dict:

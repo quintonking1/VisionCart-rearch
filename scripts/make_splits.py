@@ -4,10 +4,12 @@ For each style, one pin per product type goes to a dev board and one to a test b
 (3 pins each). Every other image becomes a catalog product. Ground-truth style labels
 are written ONLY to evals/data/labels.json; data/splits.json's catalog list has none.
 
-    python scripts/make_splits.py
+    python scripts/make_splits.py                 # canonical split (seed 7) into data/
+    VISIONCART_DATA_DIR=data/folds/1 python scripts/make_splits.py --seed 101
 """
 from __future__ import annotations
 
+import argparse
 import json
 import random
 import re
@@ -27,7 +29,7 @@ def name_from_filename(fname: str) -> str:
     return stem.replace("_", " ").strip().title()
 
 
-def main() -> None:
+def main(seed: int = SEED) -> None:
     rows = json.loads((config.ROOT / "dataset" / "dataset.json").read_text())
     known = {Path(r["image_local"]).name: r for r in rows}
 
@@ -49,7 +51,7 @@ def main() -> None:
             "link": r["link"] if r else None,
         })
 
-    rng = random.Random(SEED)
+    rng = random.Random(seed)
     boards: dict[str, dict[str, list[str]]] = {}
     catalog, labels = [], {}
     for style in sorted(by_style):
@@ -66,8 +68,8 @@ def main() -> None:
                 else:
                     catalog.append({**item, "category": category})
 
-    config.DATA_DIR.mkdir(exist_ok=True)
-    config.SPLITS_PATH.write_text(json.dumps({"seed": SEED, "boards": boards, "catalog": catalog}, indent=1))
+    config.DATA_DIR.mkdir(parents=True, exist_ok=True)
+    config.SPLITS_PATH.write_text(json.dumps({"seed": seed, "boards": boards, "catalog": catalog}, indent=1))
     labels_path = config.ROOT / "evals" / "data" / "labels.json"
     labels_path.parent.mkdir(parents=True, exist_ok=True)
     labels_path.write_text(json.dumps(labels, indent=1, sort_keys=True))
@@ -75,4 +77,6 @@ def main() -> None:
 
 
 if __name__ == "__main__":
-    main()
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--seed", type=int, default=SEED)
+    main(ap.parse_args().seed)

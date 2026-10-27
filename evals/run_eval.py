@@ -94,6 +94,8 @@ def eval_style_ranking(store: MemoryStore, catalog: Catalog, split: str) -> dict
         "single_style": {k: harness.summarize([r[k] for r in single_rows]) for k in ("auc", "ndcg@10", "random_ndcg@10")},
         "mixed": {k: harness.summarize([r[k] for r in mixed_rows])
                   for k in ("multi_auc", "single_auc", "multi_ndcg@10", "single_ndcg@10")},
+        "mixed_multi_vs_single": harness.paired([r["multi_ndcg@10"] for r in mixed_rows],
+                                                [r["single_ndcg@10"] for r in mixed_rows]),
         "boards": single_rows, "mixed_boards": mixed_rows,
     }
 
@@ -116,8 +118,11 @@ async def eval_planner(llm, store, catalog, split: str) -> dict:
 
 
 def _e2e(rows: list[dict]) -> dict:
-    return {variant: {m: harness.summarize([r[variant][m] for r in rows]) for m in E2E_METRICS}
-            for variant in ("random", "worker_order", "pipeline")}
+    out = {variant: {m: harness.summarize([r[variant][m] for r in rows]) for m in E2E_METRICS}
+           for variant in ("random", "worker_order", "pipeline")}
+    out["pipeline_vs_worker"] = harness.paired([r["pipeline"]["ndcg@3"] for r in rows],
+                                               [r["worker_order"]["ndcg@3"] for r in rows])
+    return out
 
 
 async def eval_retrieval(llm, store, catalog, split: str) -> dict:
@@ -173,6 +178,12 @@ def git_state() -> str:
     return f"{head}{'-dirty' if dirty else ''}"
 
 
+def _fmt_paired(p: dict) -> str:
+    lo, hi = p["ci95"]
+    return (f"{p['mean']:+.3f} [{lo:+.2f}, {hi:+.2f}] | {p['wins']}/{p['losses']}/{p['ties']} "
+            f"| {p['sign_p']:.3f}")
+
+
 def _fmt(s: dict) -> str:
     lo, hi = s["ci95"]
     return f"{s['mean']:.3f} [{lo:.2f}, {hi:.2f}]"
@@ -191,6 +202,9 @@ def to_markdown(split: str, res: dict) -> str:
          f"| random order | 0.500 | {_fmt(sr['single_style']['random_ndcg@10'])} |",
          f"| mixed, multi-cluster memory | {_fmt(sr['mixed']['multi_auc'])} | {_fmt(sr['mixed']['multi_ndcg@10'])} |",
          f"| mixed, single averaged centroid | {_fmt(sr['mixed']['single_auc'])} | {_fmt(sr['mixed']['single_ndcg@10'])} |",
+         "", "| Paired comparison | Δ mean [95% CI] | wins/losses/ties | sign-test p |", "|---|---|---|---|",
+         f"| mixed boards nDCG@10: multi-cluster − single centroid | {_fmt_paired(sr['mixed_multi_vs_single'])} |",
+         f"| contested nDCG@3: full pipeline − worker order | {_fmt_paired(e2e['contested']['pipeline_vs_worker'])} |",
          ""]
     for title, key in [("End-to-end, contested categories (headline)", "contested"),
                        ("End-to-end, all categories (inflated by single-style categories)", "all")]:

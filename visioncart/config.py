@@ -9,10 +9,12 @@ from dotenv import load_dotenv
 ROOT = Path(__file__).resolve().parent.parent
 load_dotenv(ROOT / ".env")
 
-DATA_DIR = ROOT / "data"
+# VISIONCART_DATA_DIR points a run at another split (see evals/cross_split.py). The caption /
+# LLM cache stays shared, so each image is still described once across all splits.
+DATA_DIR = Path(os.getenv("VISIONCART_DATA_DIR", ROOT / "data"))
 SPLITS_PATH = DATA_DIR / "splits.json"
 CATALOG_DIR = DATA_DIR / "catalog"
-CACHE_DIR = DATA_DIR / "cache"
+CACHE_DIR = ROOT / "data" / "cache"
 MEMORY_DB = DATA_DIR / "memory.sqlite"
 CALIBRATION_PATH = DATA_DIR / "calibration.json"
 
