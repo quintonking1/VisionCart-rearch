@@ -1,0 +1,782 @@
+{
+ "split": "dev",
+ "threshold": 0.7232,
+ "clustering": {
+  "found_2_clusters": 0.8,
+  "mean_purity": 0.7,
+  "boards": [
+   {
+    "board": "dark_academia+cottagecore",
+    "k": 3,
+    "purity": 0.8333333333333334
+   },
+   {
+    "board": "japandi+maximalist_eclectic",
+    "k": 2,
+    "purity": 0.6666666666666666
+   },
+   {
+    "board": "y2k_streetwear+quiet_luxury",
+    "k": 2,
+    "purity": 0.5
+   },
+   {
+    "board": "coastal_mediterranean+dark_moody_organic",
+    "k": 2,
+    "purity": 0.5
+   },
+   {
+    "board": "mid_century_modern+vintage_bohemian",
+    "k": 2,
+    "purity": 1.0
+   }
+  ]
+ },
+ "planner": {
+  "precision": 1.0,
+  "recall": 1.0,
+  "exact": 1.0,
+  "cases": [
+   {
+    "request": "I need a new blazer for fall",
+    "expected": [
+     "blazer"
+    ],
+    "got": [
+     "blazer"
+    ]
+   },
+   {
+    "request": "find me a bag and some pants, under $250 total",
+    "expected": [
+     "bag",
+     "pants"
+    ],
+    "got": [
+     "bag",
+     "pants"
+    ]
+   },
+   {
+    "request": "a vase, a pendant light and curtains for my sunroom",
+    "expected": [
+     "curtains",
+     "pendant light",
+     "vase"
+    ],
+    "got": [
+     "curtains",
+     "pendant light",
+     "vase"
+    ]
+   },
+   {
+    "request": "something to drink my morning coffee from",
+    "expected": [
+     "mug"
+    ],
+    "got": [
+     "mug"
+    ]
+   },
+   {
+    "request": "a cozy sweater in size M",
+    "expected": [
+     "sweater"
+    ],
+    "got": [
+     "sweater"
+    ]
+   },
+   {
+    "request": "rain boots and an umbrella for a wet weekend in NYC",
+    "expected": [],
+    "got": []
+   },
+   {
+    "request": "a statement rug and an accent chair for the living room",
+    "expected": [
+     "chair",
+     "rug"
+    ],
+    "got": [
+     "chair",
+     "rug"
+    ]
+   },
+   {
+    "request": "new sneakers and a cropped top for a concert",
+    "expected": [
+     "sneaker",
+     "top"
+    ],
+    "got": [
+     "sneaker",
+     "top"
+    ]
+   },
+   {
+    "request": "bedroom refresh: bed frame, duvet and a couple of throw pillows",
+    "expected": [
+     "bed frame",
+     "duvet",
+     "pillow"
+    ],
+    "got": [
+     "bed frame",
+     "duvet",
+     "pillow"
+    ]
+   },
+   {
+    "request": "a sideboard for my dining room",
+    "expected": [
+     "credenza"
+    ],
+    "got": [
+     "credenza"
+    ]
+   },
+   {
+    "request": "a floor lamp for my reading nook",
+    "expected": [
+     "lamp"
+    ],
+    "got": [
+     "lamp"
+    ]
+   },
+   {
+    "request": "a summer dress and a light cardigan to go over it",
+    "expected": [
+     "cardigan",
+     "dress"
+    ],
+    "got": [
+     "cardigan",
+     "dress"
+    ]
+   }
+  ]
+ },
+ "retrieval": {
+  "n_cases": 30,
+  "worker_recall": 1.0,
+  "verifier_accepted_precision": 0.9166666666666666,
+  "empty_rate": 0.0,
+  "low_confidence_rate": 0.03333333333333333,
+  "planner_category_match": 1.0,
+  "baseline_worker_order": {
+   "p@1": 0.9,
+   "mrr": 0.9316666666666666,
+   "ndcg@3": 0.8676806984719755
+  },
+  "pipeline": {
+   "p@1": 0.9333333333333333,
+   "mrr": 0.9666666666666667,
+   "ndcg@3": 0.9309719457491242
+  },
+  "cases": [
+   {
+    "style": "coastal_mediterranean",
+    "category": "curtains",
+    "n_relevant": 2,
+    "planned_category": "curtains",
+    "worker_recall": 1.0,
+    "baseline": {
+     "p@1": 1.0,
+     "mrr": 1.0,
+     "ndcg@3": 1.0
+    },
+    "pipeline": {
+     "p@1": 1.0,
+     "mrr": 1.0,
+     "ndcg@3": 1.0
+    },
+    "accepted": 2,
+    "accepted_precision": 1.0,
+    "low_confidence": true
+   },
+   {
+    "style": "coastal_mediterranean",
+    "category": "pendant light",
+    "n_relevant": 2,
+    "planned_category": "pendant light",
+    "worker_recall": 1.0,
+    "baseline": {
+     "p@1": 1.0,
+     "mrr": 1.0,
+     "ndcg@3": 1.0
+    },
+    "pipeline": {
+     "p@1": 1.0,
+     "mrr": 1.0,
+     "ndcg@3": 1.0
+    },
+    "accepted": 2,
+    "accepted_precision": 1.0,
+    "low_confidence": false
+   },
+   {
+    "style": "coastal_mediterranean",
+    "category": "vase",
+    "n_relevant": 8,
+    "planned_category": "vase",
+    "worker_recall": 1.0,
+    "baseline": {
+     "p@1": 1.0,
+     "mrr": 1.0,
+     "ndcg@3": 1.0
+    },
+    "pipeline": {
+     "p@1": 1.0,
+     "mrr": 1.0,
+     "ndcg@3": 1.0
+    },
+    "accepted": 3,
+    "accepted_precision": 1.0,
+    "low_confidence": false
+   },
+   {
+    "style": "cottagecore",
+    "category": "bag",
+    "n_relevant": 2,
+    "planned_category": "bag",
+    "worker_recall": 1.0,
+    "baseline": {
+     "p@1": 1.0,
+     "mrr": 1.0,
+     "ndcg@3": 0.6131471927654584
+    },
+    "pipeline": {
+     "p@1": 0.0,
+     "mrr": 0.5,
+     "ndcg@3": 0.38685280723454163
+    },
+    "accepted": 3,
+    "accepted_precision": 0.3333333333333333,
+    "low_confidence": false
+   },
+   {
+    "style": "cottagecore",
+    "category": "cardigan",
+    "n_relevant": 2,
+    "planned_category": "cardigan",
+    "worker_recall": 1.0,
+    "baseline": {
+     "p@1": 1.0,
+     "mrr": 1.0,
+     "ndcg@3": 1.0
+    },
+    "pipeline": {
+     "p@1": 1.0,
+     "mrr": 1.0,
+     "ndcg@3": 1.0
+    },
+    "accepted": 2,
+    "accepted_precision": 1.0,
+    "low_confidence": false
+   },
+   {
+    "style": "cottagecore",
+    "category": "dress",
+    "n_relevant": 7,
+    "planned_category": "dress",
+    "worker_recall": 1.0,
+    "baseline": {
+     "p@1": 1.0,
+     "mrr": 1.0,
+     "ndcg@3": 1.0
+    },
+    "pipeline": {
+     "p@1": 1.0,
+     "mrr": 1.0,
+     "ndcg@3": 1.0
+    },
+    "accepted": 3,
+    "accepted_precision": 1.0,
+    "low_confidence": false
+   },
+   {
+    "style": "dark_academia",
+    "category": "bag",
+    "n_relevant": 2,
+    "planned_category": "bag",
+    "worker_recall": 1.0,
+    "baseline": {
+     "p@1": 1.0,
+     "mrr": 1.0,
+     "ndcg@3": 1.0
+    },
+    "pipeline": {
+     "p@1": 1.0,
+     "mrr": 1.0,
+     "ndcg@3": 1.0
+    },
+    "accepted": 2,
+    "accepted_precision": 1.0,
+    "low_confidence": false
+   },
+   {
+    "style": "dark_academia",
+    "category": "blazer",
+    "n_relevant": 7,
+    "planned_category": "blazer",
+    "worker_recall": 1.0,
+    "baseline": {
+     "p@1": 1.0,
+     "mrr": 1.0,
+     "ndcg@3": 0.7039180890341347
+    },
+    "pipeline": {
+     "p@1": 1.0,
+     "mrr": 1.0,
+     "ndcg@3": 1.0
+    },
+    "accepted": 3,
+    "accepted_precision": 1.0,
+    "low_confidence": false
+   },
+   {
+    "style": "dark_academia",
+    "category": "pants",
+    "n_relevant": 2,
+    "planned_category": "pants",
+    "worker_recall": 1.0,
+    "baseline": {
+     "p@1": 1.0,
+     "mrr": 1.0,
+     "ndcg@3": 1.0
+    },
+    "pipeline": {
+     "p@1": 1.0,
+     "mrr": 1.0,
+     "ndcg@3": 1.0
+    },
+    "accepted": 3,
+    "accepted_precision": 0.6666666666666666,
+    "low_confidence": false
+   },
+   {
+    "style": "dark_moody_organic",
+    "category": "candle holder",
+    "n_relevant": 8,
+    "planned_category": "candle holder",
+    "worker_recall": 1.0,
+    "baseline": {
+     "p@1": 1.0,
+     "mrr": 1.0,
+     "ndcg@3": 1.0
+    },
+    "pipeline": {
+     "p@1": 1.0,
+     "mrr": 1.0,
+     "ndcg@3": 1.0
+    },
+    "accepted": 3,
+    "accepted_precision": 1.0,
+    "low_confidence": false
+   },
+   {
+    "style": "dark_moody_organic",
+    "category": "duvet",
+    "n_relevant": 2,
+    "planned_category": "duvet",
+    "worker_recall": 1.0,
+    "baseline": {
+     "p@1": 1.0,
+     "mrr": 1.0,
+     "ndcg@3": 1.0
+    },
+    "pipeline": {
+     "p@1": 1.0,
+     "mrr": 1.0,
+     "ndcg@3": 1.0
+    },
+    "accepted": 2,
+    "accepted_precision": 1.0,
+    "low_confidence": false
+   },
+   {
+    "style": "dark_moody_organic",
+    "category": "mug",
+    "n_relevant": 2,
+    "planned_category": "mug",
+    "worker_recall": 1.0,
+    "baseline": {
+     "p@1": 1.0,
+     "mrr": 1.0,
+     "ndcg@3": 1.0
+    },
+    "pipeline": {
+     "p@1": 1.0,
+     "mrr": 1.0,
+     "ndcg@3": 1.0
+    },
+    "accepted": 2,
+    "accepted_precision": 1.0,
+    "low_confidence": false
+   },
+   {
+    "style": "japandi",
+    "category": "bed frame",
+    "n_relevant": 6,
+    "planned_category": "bed frame",
+    "worker_recall": 1.0,
+    "baseline": {
+     "p@1": 1.0,
+     "mrr": 1.0,
+     "ndcg@3": 1.0
+    },
+    "pipeline": {
+     "p@1": 1.0,
+     "mrr": 1.0,
+     "ndcg@3": 1.0
+    },
+    "accepted": 3,
+    "accepted_precision": 1.0,
+    "low_confidence": false
+   },
+   {
+    "style": "japandi",
+    "category": "bowl",
+    "n_relevant": 2,
+    "planned_category": "bowl",
+    "worker_recall": 1.0,
+    "baseline": {
+     "p@1": 1.0,
+     "mrr": 1.0,
+     "ndcg@3": 1.0
+    },
+    "pipeline": {
+     "p@1": 1.0,
+     "mrr": 1.0,
+     "ndcg@3": 1.0
+    },
+    "accepted": 2,
+    "accepted_precision": 1.0,
+    "low_confidence": false
+   },
+   {
+    "style": "japandi",
+    "category": "pillow",
+    "n_relevant": 2,
+    "planned_category": "pillow",
+    "worker_recall": 1.0,
+    "baseline": {
+     "p@1": 1.0,
+     "mrr": 1.0,
+     "ndcg@3": 1.0
+    },
+    "pipeline": {
+     "p@1": 1.0,
+     "mrr": 1.0,
+     "ndcg@3": 1.0
+    },
+    "accepted": 2,
+    "accepted_precision": 1.0,
+    "low_confidence": false
+   },
+   {
+    "style": "maximalist_eclectic",
+    "category": "chair",
+    "n_relevant": 4,
+    "planned_category": "chair",
+    "worker_recall": 1.0,
+    "baseline": {
+     "p@1": 1.0,
+     "mrr": 1.0,
+     "ndcg@3": 0.7653606369886217
+    },
+    "pipeline": {
+     "p@1": 1.0,
+     "mrr": 1.0,
+     "ndcg@3": 1.0
+    },
+    "accepted": 3,
+    "accepted_precision": 1.0,
+    "low_confidence": false
+   },
+   {
+    "style": "maximalist_eclectic",
+    "category": "frame",
+    "n_relevant": 2,
+    "planned_category": "frame",
+    "worker_recall": 1.0,
+    "baseline": {
+     "p@1": 1.0,
+     "mrr": 1.0,
+     "ndcg@3": 1.0
+    },
+    "pipeline": {
+     "p@1": 1.0,
+     "mrr": 1.0,
+     "ndcg@3": 1.0
+    },
+    "accepted": 2,
+    "accepted_precision": 1.0,
+    "low_confidence": false
+   },
+   {
+    "style": "maximalist_eclectic",
+    "category": "rug",
+    "n_relevant": 2,
+    "planned_category": "rug",
+    "worker_recall": 1.0,
+    "baseline": {
+     "p@1": 1.0,
+     "mrr": 1.0,
+     "ndcg@3": 1.0
+    },
+    "pipeline": {
+     "p@1": 1.0,
+     "mrr": 1.0,
+     "ndcg@3": 1.0
+    },
+    "accepted": 2,
+    "accepted_precision": 1.0,
+    "low_confidence": false
+   },
+   {
+    "style": "mid_century_modern",
+    "category": "chair",
+    "n_relevant": 1,
+    "planned_category": "chair",
+    "worker_recall": 1.0,
+    "baseline": {
+     "p@1": 0.0,
+     "mrr": 0.2,
+     "ndcg@3": 0.0
+    },
+    "pipeline": {
+     "p@1": 0.0,
+     "mrr": 0.5,
+     "ndcg@3": 0.6309297535714575
+    },
+    "accepted": 3,
+    "accepted_precision": 0.3333333333333333,
+    "low_confidence": false
+   },
+   {
+    "style": "mid_century_modern",
+    "category": "credenza",
+    "n_relevant": 7,
+    "planned_category": "credenza",
+    "worker_recall": 1.0,
+    "baseline": {
+     "p@1": 1.0,
+     "mrr": 1.0,
+     "ndcg@3": 1.0
+    },
+    "pipeline": {
+     "p@1": 1.0,
+     "mrr": 1.0,
+     "ndcg@3": 1.0
+    },
+    "accepted": 3,
+    "accepted_precision": 1.0,
+    "low_confidence": false
+   },
+   {
+    "style": "mid_century_modern",
+    "category": "lamp",
+    "n_relevant": 2,
+    "planned_category": "lamp",
+    "worker_recall": 1.0,
+    "baseline": {
+     "p@1": 1.0,
+     "mrr": 1.0,
+     "ndcg@3": 1.0
+    },
+    "pipeline": {
+     "p@1": 1.0,
+     "mrr": 1.0,
+     "ndcg@3": 0.6131471927654584
+    },
+    "accepted": 1,
+    "accepted_precision": 1.0,
+    "low_confidence": false
+   },
+   {
+    "style": "quiet_luxury",
+    "category": "loafer",
+    "n_relevant": 2,
+    "planned_category": "loafer",
+    "worker_recall": 1.0,
+    "baseline": {
+     "p@1": 1.0,
+     "mrr": 1.0,
+     "ndcg@3": 1.0
+    },
+    "pipeline": {
+     "p@1": 1.0,
+     "mrr": 1.0,
+     "ndcg@3": 1.0
+    },
+    "accepted": 2,
+    "accepted_precision": 1.0,
+    "low_confidence": false
+   },
+   {
+    "style": "quiet_luxury",
+    "category": "pants",
+    "n_relevant": 2,
+    "planned_category": "pants",
+    "worker_recall": 1.0,
+    "baseline": {
+     "p@1": 1.0,
+     "mrr": 1.0,
+     "ndcg@3": 0.6131471927654584
+    },
+    "pipeline": {
+     "p@1": 1.0,
+     "mrr": 1.0,
+     "ndcg@3": 0.9197207891481876
+    },
+    "accepted": 3,
+    "accepted_precision": 0.6666666666666666,
+    "low_confidence": false
+   },
+   {
+    "style": "quiet_luxury",
+    "category": "sweater",
+    "n_relevant": 6,
+    "planned_category": "sweater",
+    "worker_recall": 1.0,
+    "baseline": {
+     "p@1": 1.0,
+     "mrr": 1.0,
+     "ndcg@3": 0.7039180890341347
+    },
+    "pipeline": {
+     "p@1": 1.0,
+     "mrr": 1.0,
+     "ndcg@3": 1.0
+    },
+    "accepted": 3,
+    "accepted_precision": 1.0,
+    "low_confidence": false
+   },
+   {
+    "style": "vintage_bohemian",
+    "category": "bag",
+    "n_relevant": 8,
+    "planned_category": "bag",
+    "worker_recall": 1.0,
+    "baseline": {
+     "p@1": 1.0,
+     "mrr": 1.0,
+     "ndcg@3": 1.0
+    },
+    "pipeline": {
+     "p@1": 1.0,
+     "mrr": 1.0,
+     "ndcg@3": 1.0
+    },
+    "accepted": 3,
+    "accepted_precision": 1.0,
+    "low_confidence": false
+   },
+   {
+    "style": "vintage_bohemian",
+    "category": "pants",
+    "n_relevant": 2,
+    "planned_category": "pants",
+    "worker_recall": 1.0,
+    "baseline": {
+     "p@1": 0.0,
+     "mrr": 0.25,
+     "ndcg@3": 0.0
+    },
+    "pipeline": {
+     "p@1": 1.0,
+     "mrr": 1.0,
+     "ndcg@3": 0.6131471927654584
+    },
+    "accepted": 2,
+    "accepted_precision": 0.5,
+    "low_confidence": false
+   },
+   {
+    "style": "vintage_bohemian",
+    "category": "vest",
+    "n_relevant": 2,
+    "planned_category": "vest",
+    "worker_recall": 1.0,
+    "baseline": {
+     "p@1": 1.0,
+     "mrr": 1.0,
+     "ndcg@3": 1.0
+    },
+    "pipeline": {
+     "p@1": 1.0,
+     "mrr": 1.0,
+     "ndcg@3": 1.0
+    },
+    "accepted": 2,
+    "accepted_precision": 1.0,
+    "low_confidence": false
+   },
+   {
+    "style": "y2k_streetwear",
+    "category": "pants",
+    "n_relevant": 1,
+    "planned_category": "pants",
+    "worker_recall": 1.0,
+    "baseline": {
+     "p@1": 0.0,
+     "mrr": 0.5,
+     "ndcg@3": 0.6309297535714575
+    },
+    "pipeline": {
+     "p@1": 1.0,
+     "mrr": 1.0,
+     "ndcg@3": 1.0
+    },
+    "accepted": 1,
+    "accepted_precision": 1.0,
+    "low_confidence": false
+   },
+   {
+    "style": "y2k_streetwear",
+    "category": "sneaker",
+    "n_relevant": 2,
+    "planned_category": "sneaker",
+    "worker_recall": 1.0,
+    "baseline": {
+     "p@1": 1.0,
+     "mrr": 1.0,
+     "ndcg@3": 1.0
+    },
+    "pipeline": {
+     "p@1": 1.0,
+     "mrr": 1.0,
+     "ndcg@3": 1.0
+    },
+    "accepted": 2,
+    "accepted_precision": 1.0,
+    "low_confidence": false
+   },
+   {
+    "style": "y2k_streetwear",
+    "category": "top",
+    "n_relevant": 7,
+    "planned_category": "top",
+    "worker_recall": 1.0,
+    "baseline": {
+     "p@1": 1.0,
+     "mrr": 1.0,
+     "ndcg@3": 1.0
+    },
+    "pipeline": {
+     "p@1": 1.0,
+     "mrr": 1.0,
+     "ndcg@3": 0.7653606369886217
+    },
+    "accepted": 2,
+    "accepted_precision": 1.0,
+    "low_confidence": false
+   }
+  ]
+ }
+}
