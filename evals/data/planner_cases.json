@@ -1,0 +1,14 @@
+[
+ {"request": "I need a new blazer for fall", "expected": ["blazer"]},
+ {"request": "find me a bag and some pants, under $250 total", "expected": ["bag", "pants"]},
+ {"request": "a vase, a pendant light and curtains for my sunroom", "expected": ["vase", "pendant light", "curtains"]},
+ {"request": "something to drink my morning coffee from", "expected": ["mug"]},
+ {"request": "a cozy sweater in size M", "expected": ["sweater"]},
+ {"request": "rain boots and an umbrella for a wet weekend in NYC", "expected": []},
+ {"request": "a statement rug and an accent chair for the living room", "expected": ["rug", "chair"]},
+ {"request": "new sneakers and a cropped top for a concert", "expected": ["sneaker", "top"]},
+ {"request": "bedroom refresh: bed frame, duvet and a couple of throw pillows", "expected": ["bed frame", "duvet", "pillow"]},
+ {"request": "a sideboard for my dining room", "expected": ["credenza"]},
+ {"request": "a floor lamp for my reading nook", "expected": ["lamp"]},
+ {"request": "a summer dress and a light cardigan to go over it", "expected": ["dress", "cardigan"]}
+]

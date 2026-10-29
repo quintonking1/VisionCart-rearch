@@ -1,7 +1,12 @@
-data/*
-!data/dataset.json
+data/cache/
+data/folds/
+data/boards/
+data/live/
+data/*.sqlite
+.venv/
 .env
 .env.*
+!.env.example
 ._DS_Store
 .tmp.driveupload/
 

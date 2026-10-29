@@ -1,0 +1,83 @@
+{
+ "threshold": 0.6896,
+ "dev_f1": 0.8784,
+ "dev_auc": 0.8273,
+ "n_pairs": 178,
+ "n_positive": 120,
+ "blend": 0.9,
+ "blend_curve_contested_ndcg@3": {
+  "0.0": 0.7778,
+  "0.1": 0.7778,
+  "0.2": 0.7689,
+  "0.3": 0.7689,
+  "0.4": 0.8244,
+  "0.5": 0.8244,
+  "0.6": 0.8138,
+  "0.7": 0.8138,
+  "0.8": 0.8479,
+  "0.9": 0.8568,
+  "1.0": 0.839
+ },
+ "blend_loso": {
+  "folds": [
+   {
+    "style": "coastal_mediterranean",
+    "blend": 0.9
+   },
+   {
+    "style": "cottagecore",
+    "blend": 0.8
+   },
+   {
+    "style": "dark_academia",
+    "blend": 1.0
+   },
+   {
+    "style": "dark_moody_organic",
+    "blend": 0.9
+   },
+   {
+    "style": "japandi",
+    "blend": 0.9
+   },
+   {
+    "style": "maximalist_eclectic",
+    "blend": 0.9
+   },
+   {
+    "style": "mid_century_modern",
+    "blend": 0.9
+   },
+   {
+    "style": "quiet_luxury",
+    "blend": 0.9
+   },
+   {
+    "style": "vintage_bohemian",
+    "blend": 0.9
+   },
+   {
+    "style": "y2k_streetwear",
+    "blend": 0.9
+   }
+  ],
+  "loso_ndcg@3_all": {
+   "mean": 0.9027839508211097,
+   "ci95": [
+    0.8292748671229951,
+    0.9639906929716062
+   ],
+   "n": 30
+  },
+  "loso_ndcg@3_contested": {
+   "mean": 0.8048974384818796,
+   "ci95": [
+    0.641882769805618,
+    0.9589921948412731
+   ],
+   "n": 9
+  }
+ },
+ "split": "dev",
+ "embed_model": "text-embedding-3-small"
+}

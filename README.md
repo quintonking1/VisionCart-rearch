@@ -1,244 +1,149 @@
 # VisionCart 🎨🛍️🛒
 
-**Group Members:** Kurumi Kaneko, Quinton King, Raras Pramudita, Lance Santana
+**Original team:** Kurumi Kaneko, Quinton King, Raras Pramudita, Lance Santana
 
-## Overview
+People curate their taste visually, on Pinterest boards and saved posts, but shopping still runs on keyword search. VisionCart turns a mood board into a shopping agent: it learns a user's styles from their pins, then finds and verifies products that match a request like *"a vase and a pendant light for my sunroom, under $250"*.
 
-Modern e-commerce remains anchored to keyword-based retrieval, a modality that often fails to capture the aesthetic preferences of individual users. Consumers already curate rich visual data on platforms like Pinterest, Instagram, and TikTok, yet these vision boards are disconnected from the point of purchase. This forces users to manually translate visual inspiration into text-based search queries, creating avoidable gaps between what they envision and what they can actually find. By leveraging multimodal models and agentic reasoning, VisionCart builds a personalized, intent-driven retail agent that reduces search friction and filters out products misaligned with a user's established taste profile.
-
----
-
-## How It Works
-
-VisionCart runs a four-agent pipeline:
-
-![System Architecture](docs/visioncart_system_architecture_diagram.png)
-
-
-| Agent | What it does |
-|-------|-------------|
-| **Stylist** | Analyzes Pinterest board images with Qwen2.5-VL-7B and produces a structured style persona (colors, materials, aesthetic tags, narrative) |
-| **Procurement** | Uses an LLM (Ollama or HuggingFace) to generate aesthetic-forward search queries, then fetches live products from Google Shopping via SerpAPI |
-| **Ranker/Critic** | Scores each product on text similarity, semantic match, and (optionally) image embedding similarity; rejects poor matches and generates actionable feedback for retry |
-| **Output** | Calls a local Ollama LLM to produce a human-readable shopping summary and structured product cards |
-
-### LangGraph Retry Loop
-
-When running via `src/main-LG.py`, the pipeline adds an automatic feedback-and-retry loop orchestrated by LangGraph
-
-After the ranker/critic scores all candidates, it checks whether any product scored above **0.6**. If not, it generates a `critic_feedback` string describing what went wrong — e.g. queries were too broad, accepted products were concentrated in one category, or key style signals were missing. Procurement reads this feedback on the next pass and generates different query angles to address the gaps.
-
-This loop runs up to **3 total procurement attempts**. If the threshold is never met, the pipeline proceeds to output anyway and prepends a `LOW MATCH CONFIDENCE` warning to the summary.
+This branch is a ground-up **multi-agent rebuild**. The pipeline and evals run on a **static local catalog**; the chat demo adds a live profile that shops Uniqlo US. **OpenAI models only** (no local models, no GPU). The original pipeline is preserved in [`legacy/`](legacy/).
 
 ---
 
-## Demo
+## Results (held-out test split, run once on a frozen config)
 
-<video src="docs/visioncart_demo.mov" controls width="100%"></video>
+| What | Result |
+|---|---|
+| Contested categories, nDCG@3: random → search only → full pipeline | 0.42 → 0.72 → **0.88** [0.76, 1.00] |
+| Style recognition across the whole catalog, AUC (random = 0.5) | **0.96** [0.93, 0.98] |
+| Mixed two-style boards, nDCG@10: multi-cluster memory vs one averaged centroid | **0.91** vs 0.65 |
 
-> If the video doesn't render, [download it here](docs/visioncart_demo.mov).
+Brackets are bootstrap 95% confidence intervals. The full tables are in [`results/eval_log.md`](results/eval_log.md). [How to read the metrics](#evaluation) is below.
+
+**Known limits:** the end-to-end headline rests on 9 contested cases, so the intervals are wide. Relevance labels come from the source dataset, not yet from independent annotators. The catalog has 120 products.
 
 ---
 
-## File Structure
+## Architecture
 
 ```
-VisionCart/
-├── app.py                    ← Chainlit chat interface (frontend)
-├── requirements.txt
-├── .env                      ← API keys (not committed)
-├── src/
-│   ├── main-LC.py            ← Sequential chain pipeline (CLI)
-│   ├── main-LG.py            ← LangGraph pipeline with retry loop (CLI)
-│   ├── agents/
-│   │   ├── stylist.py        ← Qwen2.5-VL-7B vision model
-│   │   ├── procurement.py    ← LLM query gen + SerpAPI product search
-│   │   ├── ranker_critic.py  ← Scoring, filtering, and critic feedback
-│   │   └── output.py         ← Ollama narrative summary + product cards
-│   ├── tools/
-│   │   └── api.py            ← SerpAPI wrapper
-│   ├── graph/
-│   │   └── state.py          ← AgentState TypedDict
-│   └── utils/
-│       ├── pinterest_crawler.py
-│       ├── clip_embeddings.py
-│       └── helper.py
-├── tests/
-│   ├── test_eval.py          ← Style definitions + eval harness
-│   └── test_stylist_agent.py
-├── data/                     ← Downloaded Pinterest board images (runtime, git-ignored)
-├── dataset/                  ← Eval datasets and product images
-├── docs/                     ← Agent guides (see below)
-├── notebooks/                ← EDA and experimentation
-└── results/                  ← Eval output logs
+request ─▶ Orchestrator ──reads──▶ Style memory (SQLite, per user)
+              │ one Send per item (parallel)
+              ▼
+         Search worker ─▶ Verifier ─┬─▶ explain ─▶ Presenter (renders verified ids only)
+              ▲                     │
+              └── retry w/ feedback ┘  max 2 retries, then LOW MATCH CONFIDENCE fallback
+user feedback (like / save / skip) ─▶ style memory term + cluster weights
 ```
+
+**Design rule: code decides what code can decide.** The model handles judgment and language. Prices, stock, sizes and links never pass through model output.
+
+| Agent | Model | Code |
+|---|---|---|
+| **Style memory** | Describes each pin (fixed schema); writes a persona + search terms per cluster | Embeds, clusters (k-means, k = 1–4 by silhouette), persists, re-syncs only when the board changes, applies feedback |
+| **Orchestrator** | Drafts a typed plan: items, category, style cluster, budget, size, weather | Validates categories and clusters; splits the budget |
+| **Search worker** | Writes 2–3 queries per item | Hybrid BM25 + embedding search within the category; returns ids + scores |
+| **Verifier** | One-sentence "why it matches" per product, nothing else | Hard checks (category, price, stock, size, water resistance); **style gate** (calibrated threshold); **ranking** (calibrated blend) |
+| **Presenter** | — | Renders names, prices, images and links from catalog records by id |
+
+**Style gates, retrieval ranks.** A product must clear a style-fit threshold to be shown. Products that clear it are ordered mostly by search relevance (blend weight 0.9, chosen with leave-one-style-out on dev). Ranking by style score alone made results worse.
+
+**Image "embeddings":** OpenAI has no image-embedding endpoint, so each image is described once by a vision model and that description is embedded with `text-embedding-3-small`.
+- **Catalog products** are described as the single product for sale. The category is given as a hint, so a lamp in a room photo isn't described as the sofa.
+- **Board pins** are described by the overall style of the scene, because on a mood board the whole image is the inspiration.
+- The style embedding uses palette, materials, textures, era, mood and aesthetic only. Shape fields are left out so chairs don't match chairs regardless of style.
 
 ---
 
-## Setup
+## Data
 
-### 1. Clone the repo
+- **Split:** `scripts/make_splits.py` fixes it once. For each of 10 styles, one image per product type goes to a **dev board** and one to a **test board** (3 pins each). The other 120 images form the catalog.
+- **No label leakage:** style labels exist only in `evals/data/labels.json`. Catalog records have no style fields, product ids are opaque hashes, and `Catalog.load()` refuses any record that carries a label. `tests/test_leakage.py` fails if pipeline code imports `evals/`, references the labels file, or if a board pin appears in the catalog.
+- **Synthetic fields:** price, stock and sizes don't exist in the source data. They're generated from a fixed seed per product.
+- **Coverage:** 24 categories, 2–3 per style. Requests outside them (e.g. rain boots) return "the catalog has no …" rather than a forced match.
+
+**Demo users** (hardcoded, built from dev-board pins):
+
+| User | Boards |
+|---|---|
+| `maya` | dark_academia |
+| `jordan` | japandi + coastal_mediterranean |
+| `sam` | cottagecore + y2k_streetwear + quiet_luxury |
+
+---
+
+## Setup and run
 
 ```bash
-git clone https://github.com/kurumigithub/VisionCart.git
-cd VisionCart
-```
-
-### 2. Install PyTorch (do this first)
-
-PyTorch must be installed separately before the rest of the dependencies because the correct build depends on your hardware:
-
-```bash
-# NVIDIA GPU (CUDA 12.1)
-pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121
-
-# Apple Silicon (MPS)
-pip install torch torchvision
-
-# CPU only
-pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu
-```
-
-### 3. Install dependencies
-
-```bash
+python3 -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
+cp .env.example .env                  # add OPENAI_API_KEY; model names are overridable here
+python scripts/build_catalog.py       # only if data/catalog is missing; captions + embeds ~180 images
+python -m evals.calibrate             # dev split -> data/calibration.json (threshold + blend)
 ```
 
-### 4. Set up environment variables
-
-Create a `.env` file at the repo root:
+**Chat demo** (ChatGPT-style web UI over the same pipeline):
 
 ```bash
-# .env
-
-# Required for product search (all pipeline modes)
-SERPAPI_API_KEY=your_serpapi_key_here
-
-# LLM backend — choose one:
-
-# Option A: Local Ollama (recommended for local runs)
-OLLAMA_MODEL=qwen2.5:7b
-OLLAMA_HOST=http://localhost:11434   # default, can omit
-
-# Option B: HuggingFace Inference API for query generation (procurement + output)
-# Also used by the stylist agent to authenticate the Qwen2.5-VL-7B model download
-HF_TOKEN=your_huggingface_token_here
+python -m visioncart.web              # http://localhost:8000
 ```
 
-If both `OLLAMA_MODEL` and `HF_TOKEN` are set, Ollama takes priority. If neither is set, Ollama is used with the default model (`qwen2.5:7b`).
+- **Live profile (`quinn`):** style memory built from a real Pinterest board (pulled through the board's public RSS feed into `data/boards/`), and products from **Uniqlo US's live product search**. Each product photo is captioned and passes through the same style verifier as the catalog. Names, prices, sizes and links come from Uniqlo's data, never from a model.
+- **Demo profiles (`maya`, `jordan`, `sam`):** the static catalog, exactly what the evals measure.
+- **Concierge ("Vee"):** a customer-service persona in front of the orchestrator. It greets, answers non-shopping questions itself (and says plainly that it can't do orders, returns or policies), turns follow-ups like "any cheaper?" into a full request using the chat history, and wraps up from the verified results only. The planner prompt the evals measured is unchanged, and evals never call the concierge.
+- The answer streams in as the graph runs: the concierge's reply, a collapsible "Thought for Ns" trace (plan, each worker's progress, verifier counts), product carousels, then the wrap-up. Like / Save / Skip writes to style memory, which is visible under **Style memory**.
+- Chat history lives in the browser. Feedback persists in `data/memory.sqlite`; delete it to reset every profile. Re-pull the board with **Re-sync Pinterest board** in the profile menu, or `python -m visioncart.live.board quinn <board url>`.
 
-### 5. Start Ollama (if using local LLM)
+**CLI:**
 
 ```bash
-ollama pull qwen2.5:7b
-ollama serve
+python -m visioncart.cli users
+python -m visioncart.cli ask jordan "a vase and a pendant light for my sunroom, under $250 total"
+python -m visioncart.cli feedback jordan <product_id> like --cluster 0
+pytest                                # offline with a fake LLM; includes the leak guards
 ```
 
 ---
 
-## Running The Pipeline
-
-### Option A — Sequential chain (`src/main-LC.py`)
-
-Simple linear execution: stylist → procurement → ranker/critic → output. No retry logic. Best for debugging and step-by-step testing.
+## Evaluation
 
 ```bash
-# Requires: GPU (≥14 GB VRAM), SERPAPI_API_KEY, and OLLAMA_MODEL or HF_TOKEN
-python src/main-LC.py https://www.pinterest.com/username/board-name/
-python src/main-LC.py https://www.pinterest.com/username/board-name/ --max-images 1
+python -m evals.run_eval --split dev
+python -m evals.run_eval --split test          # once, on a frozen config; records the git commit
+python -m evals.judge sheet --split test       # label sheet for annotators who didn't build the system
+python -m evals.judge judge && python -m evals.judge agree   # LLM judge counts only if kappa >= 0.6
 ```
 
-The URL is a required positional argument. `--max-images` controls how many Pinterest images are downloaded (default `5`; the stylist caps usage at 5 regardless).
+**Style ranking (whole catalog).** For each board, score all 120 products by style fit, ignoring category. About 12 are correct and the rest are distractors. This tests style recognition on its own.
+- **AUC:** chance that a correct product outranks a wrong one (0.5 = random).
+- **nDCG@10:** quality of the top 10.
+- **Single-style boards:** one style per board.
+- **Mixed boards:** two styles per board. Compares multi-cluster memory with a single averaged centroid.
 
-### Option B — LangGraph with retry loop (`src/main-LG.py`)
+**End-to-end.** Send "I'm looking for a {category}" for each board and each category its style sells, then grade the 3 products shown.
+- **nDCG@3** is the headline. **MRR** measures how far down the first correct product is.
+- **Three orderings:**
+  - **random order:** the floor;
+  - **worker order:** search only, no verifier;
+  - **full pipeline:** what the user sees.
+- **Contested categories** (sold by several styles) are the headline. The all-category numbers are inflated, because when only one style sells a category every candidate is correct, and even random order scores about 0.83.
 
-Runs the same four agents as a LangGraph state graph. After the critic scores products, if the best match score is ≤ 0.6, procurement is called again with the critic's feedback — up to 3 total attempts. If the threshold is never met, the output agent prepends `LOW MATCH CONFIDENCE` to the summary.
+**Components:** clustering purity on mixed boards, planner category extraction (12 cases), worker recall, shown precision, and empty / low-confidence rates.
 
-```bash
-# Same requirements as Option A
-python src/main-LG.py
-```
-
-The board URL is currently hardcoded at line 176 of `main-LG.py` — edit it before running.
-
-**When to use which:**
-
-| | Chain (`main-LC.py`) | Graph (`main-LG.py`) |
-|--|---------------------|---------------------|
-| Retry on poor results | No | Yes (up to 3 passes) |
-| CLI argument for URL | Yes (`python ... <url>`) | No (hardcoded) |
-| Good for | Debugging, testing agents | Production-like runs |
+**Discipline:**
+- The threshold and blend are calibrated on dev only, and the blend uses leave-one-style-out.
+- The test split was run once, at commit `a346140`.
+- Further tuning needs new data to evaluate honestly.
 
 ---
 
-## Frontend (Chainlit)
+## Layout
 
-The Chainlit app provides a chat interface that runs the procurement → ranker/critic → output pipeline without the stylist agent. The user picks a predefined aesthetic style and types what they are looking for; the LLM generates queries from that combination.
-
-The Chainlit frontend implements its own single-retry variant of this loop: if `critic_feedback` is set after the first rank pass, it runs a second procurement pass and re-ranks the combined candidate pool before generating output.
-
-The Chainlit frontend skips the stylist and uses predefined style profiles instead — the user picks a style (Dark Academia, Cottagecore, etc.) and types what they are looking for.
-
-
-### Start the frontend
-
-```bash
-chainlit run app.py
 ```
-
-Then open [http://localhost:8000](http://localhost:8000) in your browser.
-
-### How it works
-
-1. **Type a product** — e.g. `bag`, `blazer`, `candle`, `shoes`
-2. **Pick a style** — choose from 10 aesthetic profiles by number or name:
-   - `1` Dark Academia
-   - `2` Quiet Luxury
-   - `3` Y2K Streetwear
-   - `4` Coastal Mediterranean
-   - `5` Maximalist Eclectic
-   - `6` Dark Moody Organic
-   - `7` Mid Century Modern
-   - `8` Vintage Bohemian
-   - `9` Japandi
-   - `10` Cottagecore
-3. **Pipeline runs automatically** — status messages stream as each stage completes:
-   - LLM generates 3 aesthetic search queries
-   - SerpAPI fetches live Google Shopping results (15 per query)
-   - Ranker/critic scores and filters candidates
-   - If critic feedback is triggered → second procurement pass with refined queries
-   - Output agent writes a shopping narrative
-4. **Product cards appear** — each accepted product shows name, price, tags, match score, and a product image
-
-### Requirements for the frontend
-
-- `SERPAPI_API_KEY` in `.env`
-- `OLLAMA_MODEL` or `HF_TOKEN` in `.env`
-- No GPU required — the stylist agent is not used
-- Ollama must be running if `OLLAMA_MODEL` is set
-
----
-
-## Verify GPU (required for full pipeline with stylist)
-
-```python
-import torch
-print(torch.cuda.is_available())    # must be True on CUDA machines
-print(torch.cuda.get_device_name(0))
+visioncart/      pipeline: agents/, catalog/, memory/, graph.py (LangGraph), cli.py
+                 live/ (Pinterest board + Uniqlo worker), web/ (chat demo)
+evals/           harness, calibration, eval runner, LLM judge; the only code that reads labels
+scripts/         make_splits.py, build_catalog.py
+data/            splits, built catalog + embeddings, calibration (cache/ and *.sqlite are gitignored)
+results/         eval_log.md + per-run JSON
+tests/           offline tests with a fake LLM
+legacy/          original pipeline (Qwen-VL, Ollama, SerpAPI, Chainlit)
 ```
-
-The stylist agent requires ≥14 GB VRAM (Google Colab T4/A100 works). The frontend and chain/graph pipelines without the stylist have no GPU requirement.
-
----
-
-## Documentation
-
-| Guide | File |
-|-------|------|
-| Sequential chain pipeline (`main-LC.py`) | [docs/chain_pipeline_guide.md](docs/chain_pipeline_guide.md) |
-| LangGraph pipeline with retry (`main-LG.py`) | [docs/graph_pipeline_guide.md](docs/graph_pipeline_guide.md) |
-| Stylist agent | [docs/stylist_agent_guide.md](docs/stylist_agent_guide.md) |
-| Procurement agent | [docs/procurement_agent_guide.md](docs/procurement_agent_guide.md) |
-| Ranker/Critic agent | [docs/ranker_critic_agent_guide.md](docs/ranker_critic_agent_guide.md) |
-| Output agent | [docs/output_agent_guide.md](docs/output_agent_guide.md) |

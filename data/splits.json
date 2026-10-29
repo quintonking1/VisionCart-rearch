@@ -1,0 +1,847 @@
+{
+ "seed": 7,
+ "boards": {
+  "coastal_mediterranean": {
+   "dev": [
+    "dataset/images/coastal_mediterranean/03_joy_100_european_flax_linen_sheer_curtain_pleated.jpg",
+    "dataset/images/coastal_mediterranean/04_rattan_lamp_shade.jpg",
+    "dataset/images/coastal_mediterranean/01_luxenhome_rustic_old_world_terracotta_vase.jpg"
+   ],
+   "test": [
+    "dataset/images/coastal_mediterranean/01_quince_european_linen_sheer_curtain_set.jpg",
+    "dataset/images/coastal_mediterranean/03_ikea_sandkorn_pendant_lamp_shade.jpg",
+    "dataset/images/coastal_mediterranean/02_terracotta_ceramic_vase.jpg"
+   ]
+  },
+  "cottagecore": {
+   "dev": [
+    "dataset/images/cottagecore/01_universal_thread_straw_scallop_woven_tote_handbag.jpg",
+    "dataset/images/cottagecore/01_bdg_becca_floral_embroidered_brushed_knit_oversized_cardigan.jpg",
+    "dataset/images/cottagecore/04_cream_floral_smocked_puff_sleeve_midi_dress.jpg"
+   ],
+   "test": [
+    "dataset/images/cottagecore/02_farmhouse_pottery_rectangle_basket_tote.jpg",
+    "dataset/images/cottagecore/03_floral_embroidery_v_neck_long_sleeve_cardigan.jpg",
+    "dataset/images/cottagecore/01_august_sky_womens_floral_smocked_midi_dress.jpg"
+   ]
+  },
+  "dark_academia": {
+   "dev": [
+    "dataset/images/dark_academia/01_hobo_medium_sheila_satchel.jpg",
+    "dataset/images/dark_academia/07_brooks_brothers_womens_wool_blend_double_breasted_herringbon.jpg",
+    "dataset/images/dark_academia/02_holland_cooper_womens_high_waisted_wide_leg_westminster_twee.jpg"
+   ],
+   "test": [
+    "dataset/images/dark_academia/02_brahmin_womens_duxbury_satchel.jpg",
+    "dataset/images/dark_academia/02_ralph_lauren_womens_herringbone_tweed_blazer.jpg",
+    "dataset/images/dark_academia/01_maje_womens_velvet_stripe_wide_leg_tweed_trousers.jpg"
+   ]
+  },
+  "dark_moody_organic": {
+   "dev": [
+    "dataset/images/dark_moody_organic/09_concrete_candle_holder_solid_black_handmade_to_fit_bath_and_.jpg",
+    "dataset/images/dark_moody_organic/01_egyptian_linens_pre_washed_linen_duvet_cover_set.jpg",
+    "dataset/images/dark_moody_organic/01_clay_in_motion_handmade_ceramic_mug.jpg"
+   ],
+   "test": [
+    "dataset/images/dark_moody_organic/07_casa_amarosa_nordic_style_c_shaped_concrete_candle_holder.jpg",
+    "dataset/images/dark_moody_organic/03_pottery_barn_belgian_flax_linen_duvet.jpg",
+    "dataset/images/dark_moody_organic/04_handmade_midnight_blue_stoneware_mug_small_ceramic_coffee_cu.jpg"
+   ]
+  },
+  "japandi": {
+   "dev": [
+    "dataset/images/japandi/10_nexera_milano_platform_bed_frame.jpg",
+    "dataset/images/japandi/04_minimalist_dinner_bowl_jazzupco_matte_taupe_4_x_big_bowls.jpg",
+    "dataset/images/japandi/02_west_elm_european_flax_linen_pillow_cover.jpg"
+   ],
+   "test": [
+    "dataset/images/japandi/01_nexera_satori_low_platform_size_bed_with_headboard.jpg",
+    "dataset/images/japandi/01_set_of_4_matte_ceramic_dinnerware_small_bowls.jpg",
+    "dataset/images/japandi/01_threshold_square_linen_throw_pillow_with_flange.jpg"
+   ]
+  },
+  "maximalist_eclectic": {
+   "dev": [
+    "dataset/images/maximalist_eclectic/09_four_hands_olson_chair.jpg",
+    "dataset/images/maximalist_eclectic/03_kate_and_laurel_gallery_wall_frame_10_piece_set.jpg",
+    "dataset/images/maximalist_eclectic/02_pottery_barn_violetta_handwoven_wool_rug.jpg"
+   ],
+   "test": [
+    "dataset/images/maximalist_eclectic/03_ember_interiors_cuno_upholstered_accent_chair.jpg",
+    "dataset/images/maximalist_eclectic/02_studio_decor_gallery_wall_frame_set.jpg",
+    "dataset/images/maximalist_eclectic/03_tales_menagerie_hand_tufted_wool_blend_rug_by_anthropologie_.jpg"
+   ]
+  },
+  "mid_century_modern": {
+   "dev": [
+    "dataset/images/mid_century_modern/01_eames_inspired_lounge_chair_iconic_mid_century_design_rosewo.jpg",
+    "dataset/images/mid_century_modern/05_crate_barrel_tate_midcentury_walnut_credenza.jpg",
+    "dataset/images/mid_century_modern/02_globe_electric_70_in_matte_brass_arc_floor_lamp.jpg"
+   ],
+   "test": [
+    "dataset/images/mid_century_modern/03_eames_lounge_chair_replica_in_fabric_upholstery_more_than_20.jpg",
+    "dataset/images/mid_century_modern/09_allmodern_williams_58_sideboard.jpg",
+    "dataset/images/mid_century_modern/01_rottogoon_67_in_modern_brushed_gold_standing_arc_floor_lamp_.jpg"
+   ]
+  },
+  "quiet_luxury": {
+   "dev": [
+    "dataset/images/quiet_luxury/02_madewell_the_bradley_lugsole_leather_loafer.jpg",
+    "dataset/images/quiet_luxury/01_abercrombie_fitch_womens_quinn_tailored_straight_pant.jpg",
+    "dataset/images/quiet_luxury/02_ann_taylor_womens_studio_collection_cashmere_ribbed_turtlene.jpg"
+   ],
+   "test": [
+    "dataset/images/quiet_luxury/04_margaux_womens_loafers_the_marlowe_loafer.jpg",
+    "dataset/images/quiet_luxury/03_womens_straight_high_rise_ponte_pant.jpg",
+    "dataset/images/quiet_luxury/01_c_by_bloomingdales_womens_cashmere_turtleneck_sweater.jpg"
+   ]
+  },
+  "vintage_bohemian": {
+   "dev": [
+    "dataset/images/vintage_bohemian/10_boho_gypsy_suede_leather_crossbody_bag.jpg",
+    "dataset/images/vintage_bohemian/04_anthropologie_pants_12_rust_color_emroidered_wide_leg.jpg",
+    "dataset/images/vintage_bohemian/04_hippie_crochet_vest_with_fringe_festival_boho_chic_women_clo.jpg"
+   ],
+   "test": [
+    "dataset/images/vintage_bohemian/04_shyanne_belle_embroidered_fringe_suede_crossbody_bag.jpg",
+    "dataset/images/vintage_bohemian/03_free_people_what_you_know_embroidered_wide_leg_pants.jpg",
+    "dataset/images/vintage_bohemian/02_boho_crochet_vest.jpg"
+   ]
+  },
+  "y2k_streetwear": {
+   "dev": [
+    "dataset/images/y2k_streetwear/04_baggy_parachute_cargo_pants_with_drawstring.jpg",
+    "dataset/images/y2k_streetwear/04_steve_madden_womens_mavis_wedge_sneakers.jpg",
+    "dataset/images/y2k_streetwear/05_ed_hardy_womens_cropped_rhinestone_butterfly_baby_tee.jpg"
+   ],
+   "test": [
+    "dataset/images/y2k_streetwear/03_bdg_womens_360_utility_low_rise_straight_leg_cotton_pants.jpg",
+    "dataset/images/y2k_streetwear/02_akira_azalea_wang_eady_block_sneaker_shoes.jpg",
+    "dataset/images/y2k_streetwear/04_aeropostale_womens_rhinestone_butterfly_graphic_tee.jpg"
+   ]
+  }
+ },
+ "catalog": [
+  {
+   "image": "dataset/images/coastal_mediterranean/02_west_elm_sheer_european_flax_linen_curtain.jpg",
+   "name": "West Elm Sheer European Flax Linen Curtain",
+   "link": "https://www.google.com/search?ibp=oshop&q=linen%20curtains%20white%20sheer&prds=catalogid:3554023143764944799%2CheadlineOfferDocid:11303200317120345876%2CimageDocid:7918455825200648560%2Cgpcid:5410529940977534987%2Cmid:576462776107519531%2Cpvt:hg&hl=en&gl=us&udm=28",
+   "category": "curtains"
+  },
+  {
+   "image": "dataset/images/coastal_mediterranean/04_pottery_barn_emery_linen_sheer_curtain.jpg",
+   "name": "Pottery Barn Emery Linen Sheer Curtain",
+   "link": "https://www.google.com/search?ibp=oshop&q=linen%20curtains%20white%20sheer&prds=catalogid:6940821028963991335%2CheadlineOfferDocid:16924870452712459043%2CimageDocid:1748761475122544471%2Cgpcid:16359667913907401683%2Cmid:576462813406959641%2Cpvt:hg&hl=en&gl=us&udm=28",
+   "category": "curtains"
+  },
+  {
+   "image": "dataset/images/coastal_mediterranean/01_ikea_kappeland_pendant_lamp_shade.jpg",
+   "name": "IKEA Kappeland Pendant Lamp Shade",
+   "link": "https://www.google.com/search?ibp=oshop&q=rattan%20pendant%20light%20shade&prds=catalogid:10830427313176788982%2CheadlineOfferDocid:10631615067290709633%2Crds:PC_5239564841334670601%7CPROD_PC_5239564841334670601%2Cgpcid:5239564841334670601%2Cmid:576462783050655805%2Cpvt:hg&hl=en&gl=us&udm=28",
+   "category": "pendant light"
+  },
+  {
+   "image": "dataset/images/coastal_mediterranean/02_allen_roth_harlow_traditional_globe_pendant_light.jpg",
+   "name": "allen + roth Harlow Traditional Globe Pendant Light",
+   "link": "https://www.google.com/search?ibp=oshop&q=rattan%20pendant%20light%20shade&prds=catalogid:6204551479478983775%2CheadlineOfferDocid:4506423834780015395%2Crds:PC_628843092778656092%7CPROD_PC_628843092778656092%2Cgpcid:628843092778656092%2Cmid:576462565042031546%2Cpvt:hg&hl=en&gl=us&udm=28",
+   "category": "pendant light"
+  },
+  {
+   "image": "dataset/images/coastal_mediterranean/03_zen_inspired_terracotta_organic_tall_vase.jpg",
+   "name": "Zen-Inspired Terracotta Organic Tall Vase",
+   "link": "https://www.google.com/search?ibp=oshop&q=terracotta%20ceramic%20vase&prds=catalogid:15230674380474658239%2CheadlineOfferDocid:16993518258161391593%2CimageDocid:7331681722708378291%2Cgpcid:17066057213755117573%2Cmid:576462828889182158%2Cpvt:hg&hl=en&gl=us&udm=28",
+   "category": "vase"
+  },
+  {
+   "image": "dataset/images/coastal_mediterranean/04_birch_lane_handcrafted_terracotta_table_vase.jpg",
+   "name": "Birch Lane Handcrafted Terracotta Table Vase",
+   "link": "https://www.google.com/search?ibp=oshop&q=terracotta%20ceramic%20vase&prds=catalogid:7341936273048173536%2CheadlineOfferDocid:16493602607548117862%2CimageDocid:13381610302120561789%2Cgpcid:17843358591620784818%2Cpvt:hg&hl=en&gl=us&udm=28",
+   "category": "vase"
+  },
+  {
+   "image": "dataset/images/coastal_mediterranean/05_creative_co_op_terracotta_vases_set_of_3.jpg",
+   "name": "Creative Co Op Terracotta Vases Set Of 3",
+   "link": null,
+   "category": "vase"
+  },
+  {
+   "image": "dataset/images/coastal_mediterranean/06_pottery_barn_artisan_handcrafted_terracotta_vase.jpg",
+   "name": "Pottery Barn Artisan Handcrafted Terracotta Vase",
+   "link": null,
+   "category": "vase"
+  },
+  {
+   "image": "dataset/images/coastal_mediterranean/07_luxenhome_rustic_farmhouse_terracotta_vase.jpg",
+   "name": "Luxenhome Rustic Farmhouse Terracotta Vase",
+   "link": null,
+   "category": "vase"
+  },
+  {
+   "image": "dataset/images/coastal_mediterranean/08_sur_la_table_citrus_bloom_terracotta_vase.jpg",
+   "name": "Sur La Table Citrus Bloom Terracotta Vase",
+   "link": null,
+   "category": "vase"
+  },
+  {
+   "image": "dataset/images/coastal_mediterranean/09_98_handmade_terracotta_vintage_ceramic_vase.jpg",
+   "name": "98 Handmade Terracotta Vintage Ceramic Vase",
+   "link": null,
+   "category": "vase"
+  },
+  {
+   "image": "dataset/images/coastal_mediterranean/10_threshold_115_painted_short_neck_decorative_vase.jpg",
+   "name": "Threshold 115 Painted Short Neck Decorative Vase",
+   "link": null,
+   "category": "vase"
+  },
+  {
+   "image": "dataset/images/cottagecore/03_picnic_time_coronado_canvas_and_willow_basket_tote.jpg",
+   "name": "Picnic Time Coronado Canvas and Willow Basket Tote",
+   "link": "https://www.google.com/search?ibp=oshop&q=wicker%20basket%20tote%20bag&prds=catalogid:9790143475090715994%2CheadlineOfferDocid:17583185357239265514%2CimageDocid:8895746966139900350%2Crds:PC_2821414651665208707%7CPROD_PC_2821414651665208707%2Cgpcid:2821414651665208707%2Cmid:576462771503599977%2Cpvt:a&hl=en&gl=us&udm=28",
+   "category": "bag"
+  },
+  {
+   "image": "dataset/images/cottagecore/04_willow_basket_tote.jpg",
+   "name": "Willow Basket Tote",
+   "link": "https://www.google.com/search?ibp=oshop&q=wicker%20basket%20tote%20bag&prds=catalogid:9154963682969261111%2CheadlineOfferDocid:2088202568409176326%2CimageDocid:10964153704548805231%2Cpvt:a&hl=en&gl=us&udm=28",
+   "category": "bag"
+  },
+  {
+   "image": "dataset/images/cottagecore/02_ann_taylor_womens_floral_embroidered_cardigan.jpg",
+   "name": "Ann Taylor Women's Floral Embroidered Cardigan",
+   "link": "https://www.google.com/search?ibp=oshop&q=floral%20embroidered%20cardigan&prds=catalogid:17523585991205173655%2CheadlineOfferDocid:17163388511158327571%2CimageDocid:17329653153673223253%2Crds:PC_1586562579057623576%7CPROD_PC_1586562579057623576%2Cgpcid:1586562579057623576%2Cmid:576462835157439907%2Cpvt:a&hl=en&gl=us&udm=28",
+   "category": "cardigan"
+  },
+  {
+   "image": "dataset/images/cottagecore/04_aqua_womens_floral_embroidered_cardigan.jpg",
+   "name": "AQUA Women's Floral Embroidered Cardigan",
+   "link": "https://www.google.com/search?ibp=oshop&q=floral%20embroidered%20cardigan&prds=catalogid:15560568617035086460%2CheadlineOfferDocid:7939752858754032779%2CimageDocid:16582216099764770615%2Crds:PC_10550595579350652878%7CPROD_PC_10550595579350652878%2Cgpcid:10550595579350652878%2Cmid:576462543212530576%2Cpvt:a&hl=en&gl=us&udm=28",
+   "category": "cardigan"
+  },
+  {
+   "image": "dataset/images/cottagecore/02_cottagecore_floral_smocked_puff_sleeve_midi_dress.jpg",
+   "name": "Cottagecore Floral Smocked Puff Sleeve Midi Dress",
+   "link": "https://www.google.com/search?ibp=oshop&q=smocked%20puff%20sleeve%20floral%20midi%20dress&prds=catalogid:18023394012269053735%2CheadlineOfferDocid:6279134193174954066%2CimageDocid:2288031404941071338%2Cgpcid:6725041682583401523%2Cmid:576462550323904641%2Cpvt:a&hl=en&gl=us&udm=28",
+   "category": "dress"
+  },
+  {
+   "image": "dataset/images/cottagecore/03_floral_short_puff_sleeve_smocked_midi_dress.jpg",
+   "name": "Floral Short Puff Sleeve Smocked Midi Dress",
+   "link": "https://www.google.com/search?ibp=oshop&q=smocked%20puff%20sleeve%20floral%20midi%20dress&prds=catalogid:17916390065859952944%2CheadlineOfferDocid:13695066905811901192%2CimageDocid:6932312059150465088%2Crds:PC_82298643031253167%7CPROD_PC_82298643031253167%2Cgpcid:82298643031253167%2Cmid:576462549355554687%2Cpvt:a&hl=en&gl=us&udm=28",
+   "category": "dress"
+  },
+  {
+   "image": "dataset/images/cottagecore/05_petal_pup_womens_petal_and_pup_franklin_dress.jpg",
+   "name": "Petal Pup Womens Petal And Pup Franklin Dress",
+   "link": null,
+   "category": "dress"
+  },
+  {
+   "image": "dataset/images/cottagecore/06_madewell_womens_smocked_puff_sleeve_dress.jpg",
+   "name": "Madewell Womens Smocked Puff Sleeve Dress",
+   "link": null,
+   "category": "dress"
+  },
+  {
+   "image": "dataset/images/cottagecore/07_express_womens_casual_floral_square_neck_puff_sleeve_smocked.jpg",
+   "name": "Express Womens Casual Floral Square Neck Puff Sleeve Smocked",
+   "link": null,
+   "category": "dress"
+  },
+  {
+   "image": "dataset/images/cottagecore/08_baltic_born_denzel_puff_sleeve_midi.jpg",
+   "name": "Baltic Born Denzel Puff Sleeve Midi",
+   "link": null,
+   "category": "dress"
+  },
+  {
+   "image": "dataset/images/cottagecore/09_august_sky_womens_puff_sleeve_smocked_floral_midi_dress.jpg",
+   "name": "August Sky Womens Puff Sleeve Smocked Floral Midi Dress",
+   "link": null,
+   "category": "dress"
+  },
+  {
+   "image": "dataset/images/cottagecore/10_pink_floral_smocked_puffed_sleeve_midi_dress.jpg",
+   "name": "Pink Floral Smocked Puffed Sleeve Midi Dress",
+   "link": null,
+   "category": "dress"
+  },
+  {
+   "image": "dataset/images/dark_academia/03_bronco_crazy_horse_leather_satchel.jpg",
+   "name": "Bronco Crazy Horse Leather Satchel",
+   "link": "https://www.google.com/search?ibp=oshop&q=leather%20satchel%20bag%20vintage%20brown&prds=catalogid:16656399860415510560%2CheadlineOfferDocid:2727241540307485355%2CimageDocid:5101092430979689984%2Cgpcid:15586531086441951635%2Cpvt:a&hl=en&gl=us&udm=28",
+   "category": "bag"
+  },
+  {
+   "image": "dataset/images/dark_academia/04_dooney_bourke_womens_sorrento_barrel_satchel_bag.jpg",
+   "name": "Dooney & Bourke Women's Sorrento Barrel Satchel Bag",
+   "link": "https://www.google.com/search?ibp=oshop&q=leather%20satchel%20bag%20vintage%20brown&prds=catalogid:4363861349091143773%2CheadlineOfferDocid:1873808246075767374%2CimageDocid:4179421925214495159%2Crds:PC_2411347414637805014%7CPROD_PC_2411347414637805014%2Cgpcid:2411347414637805014%2Cmid:576462848169857664%2Cpvt:a&hl=en&gl=us&udm=28",
+   "category": "bag"
+  },
+  {
+   "image": "dataset/images/dark_academia/01_loft_womens_herringbone_relaxed_blazer.jpg",
+   "name": "Loft Women's Herringbone Relaxed Blazer",
+   "link": "https://www.google.com/search?ibp=oshop&q=herringbone%20wool%20blazer%20women&prds=catalogid:5556032800918378538%2CheadlineOfferDocid:17985817338636146370%2CimageDocid:18037861339073994182%2Crds:PC_7387112690971126006%7CPROD_PC_7387112690971126006%2Cgpcid:7387112690971126006%2Cmid:576462834506817696%2Cpvt:a&hl=en&gl=us&udm=28",
+   "category": "blazer"
+  },
+  {
+   "image": "dataset/images/dark_academia/03_herringbone_diana_blazer.jpg",
+   "name": "Herringbone Diana Blazer",
+   "link": "https://www.google.com/search?ibp=oshop&q=herringbone%20wool%20blazer%20women&prds=catalogid:10432904201134655417%2CheadlineOfferDocid:17628623127385410286%2CimageDocid:8887544930263738533%2Cgpcid:16641814396932447338%2Cmid:576462820842186591%2Cpvt:a&hl=en&gl=us&udm=28",
+   "category": "blazer"
+  },
+  {
+   "image": "dataset/images/dark_academia/04_reiss_womens_grey_ember_herringbone_double_breasted_blazer_w.jpg",
+   "name": "Reiss Womens Grey Ember Herringbone Double-breasted Blazer Wool-cotton",
+   "link": "https://www.google.com/search?ibp=oshop&q=herringbone%20wool%20blazer%20women&prds=catalogid:7909818632927569992%2CheadlineOfferDocid:1031864575898675393%2CimageDocid:13127653312883521757%2Crds:PC_13813346647733621800%7CPROD_PC_13813346647733621800%2Cgpcid:13813346647733621800%2Cpvt:a&hl=en&gl=us&udm=28",
+   "category": "blazer"
+  },
+  {
+   "image": "dataset/images/dark_academia/05_everlane_oversized_blazer_wool.jpg",
+   "name": "Everlane Oversized Blazer Wool",
+   "link": null,
+   "category": "blazer"
+  },
+  {
+   "image": "dataset/images/dark_academia/06_polo_ralph_lauren_womens_herringbone_linen_blend_blazer.jpg",
+   "name": "Polo Ralph Lauren Womens Herringbone Linen Blend Blazer",
+   "link": null,
+   "category": "blazer"
+  },
+  {
+   "image": "dataset/images/dark_academia/08_herringbone_tweed_limited_edition_blazer_with_peak_lapels.jpg",
+   "name": "Herringbone Tweed Limited Edition Blazer With Peak Lapels",
+   "link": null,
+   "category": "blazer"
+  },
+  {
+   "image": "dataset/images/dark_academia/09_ronny_kobo_womens_birch_herringbone_blazer.jpg",
+   "name": "Ronny Kobo Womens Birch Herringbone Blazer",
+   "link": null,
+   "category": "blazer"
+  },
+  {
+   "image": "dataset/images/dark_academia/10_whistles_womens_herringbone_wool_blend_blazer.jpg",
+   "name": "Whistles Womens Herringbone Wool Blend Blazer",
+   "link": null,
+   "category": "blazer"
+  },
+  {
+   "image": "dataset/images/dark_academia/03_st_john_womens_high_waist_boucl\u00e9_tweed_wide_leg_pants.jpg",
+   "name": "St. John Women's High-Waist Boucl\u00e9 Tweed Wide-Leg Pants",
+   "link": "https://www.google.com/search?ibp=oshop&q=high%20waist%20tweed%20trousers&prds=catalogid:18125018012045239852%2CheadlineOfferDocid:13505059129925313495%2CimageDocid:13147986171357001852%2Cgpcid:10742025394020104384%2Cmid:576462872566166353%2Cpvt:a&hl=en&gl=us&udm=28",
+   "category": "pants"
+  },
+  {
+   "image": "dataset/images/dark_academia/04_endless_rose_womens_tweed_wide_leg_pants.jpg",
+   "name": "Endless Rose Women's Tweed Wide Leg Pants",
+   "link": "https://www.google.com/search?ibp=oshop&q=high%20waist%20tweed%20trousers&prds=catalogid:5690489438256662237%2CheadlineOfferDocid:914657360006699451%2CimageDocid:14993065571818463424%2Crds:PC_11195336015776073550%7CPROD_PC_11195336015776073550%2Cgpcid:11195336015776073550%2Cmid:576462498765329722%2Cpvt:a&hl=en&gl=us&udm=28",
+   "category": "pants"
+  },
+  {
+   "image": "dataset/images/dark_moody_organic/01_unique_bargains_cement_durable_stable_modern_candlestick_hol.jpg",
+   "name": "Unique Bargains Cement Durable Stable Modern Candlestick Holders",
+   "link": "https://www.google.com/search?ibp=oshop&q=matte%20black%20concrete%20candle%20holder&prds=catalogid:9919011049001209666%2CheadlineOfferDocid:1087926317250186122%2CimageDocid:14817712989562149071%2Cgpcid:3647319956792819276%2Cmid:576462887650134485%2Cpvt:hg&hl=en&gl=us&udm=28",
+   "category": "candle holder"
+  },
+  {
+   "image": "dataset/images/dark_moody_organic/02_handmade_black_concrete_candle_jar_200ml_eco_friendly_vessel.jpg",
+   "name": "Handmade Black Concrete Candle Jar: 200ml Eco-Friendly Vessel",
+   "link": "https://www.google.com/search?ibp=oshop&q=matte%20black%20concrete%20candle%20holder&prds=productid:17957119250557020796%2CheadlineOfferDocid:17957119250557020796%2CimageDocid:16710953777818085485%2Cpvt:hg&hl=en&gl=us&udm=28",
+   "category": "candle holder"
+  },
+  {
+   "image": "dataset/images/dark_moody_organic/03_concrete_candle_holder_black.jpg",
+   "name": "Concrete Candle Holder Black",
+   "link": "https://www.google.com/search?ibp=oshop&q=matte%20black%20concrete%20candle%20holder&prds=productid:3334485065627119443%2CheadlineOfferDocid:3334485065627119443%2CimageDocid:6647397415165608320%2Cpvt:hg&hl=en&gl=us&udm=28",
+   "category": "candle holder"
+  },
+  {
+   "image": "dataset/images/dark_moody_organic/04_cement_taper_candle_holders.jpg",
+   "name": "Cement Taper Candle Holders",
+   "link": "https://www.google.com/search?ibp=oshop&q=matte%20black%20concrete%20candle%20holder&prds=catalogid:14112198792287766520%2CheadlineOfferDocid:13709697640309639324%2CimageDocid:9525752938410567180%2Cgpcid:10725465610264524242%2Cmid:576462885104566027%2Cpvt:hg&hl=en&gl=us&udm=28",
+   "category": "candle holder"
+  },
+  {
+   "image": "dataset/images/dark_moody_organic/05_main_mesa_stoneware_pillar_taper_candle_holders_set_of_2.jpg",
+   "name": "Main Mesa Stoneware Pillar Taper Candle Holders Set Of 2",
+   "link": null,
+   "category": "candle holder"
+  },
+  {
+   "image": "dataset/images/dark_moody_organic/06_concrete_tealight_holder.jpg",
+   "name": "Concrete Tealight Holder",
+   "link": null,
+   "category": "candle holder"
+  },
+  {
+   "image": "dataset/images/dark_moody_organic/08_nordic_modern_8_style_concrete_candle_holder_black.jpg",
+   "name": "Nordic Modern 8 Style Concrete Candle Holder Black",
+   "link": null,
+   "category": "candle holder"
+  },
+  {
+   "image": "dataset/images/dark_moody_organic/10_black_concrete_candle_holder.jpg",
+   "name": "Black Concrete Candle Holder",
+   "link": null,
+   "category": "candle holder"
+  },
+  {
+   "image": "dataset/images/dark_moody_organic/02_quince_european_linen_duvet_cover.jpg",
+   "name": "Quince European Linen Duvet Cover",
+   "link": "https://www.google.com/search?ibp=oshop&q=black%20linen%20duvet%20cover&prds=catalogid:17327628047841786638%2CheadlineOfferDocid:6160888135560031415%2CimageDocid:2501296814403009421%2Crds:PC_13177034275022004051%7CPROD_PC_13177034275022004051%2Cgpcid:13177034275022004051%2Cmid:576462498294937200%2Cpvt:hg&hl=en&gl=us&udm=28",
+   "category": "duvet"
+  },
+  {
+   "image": "dataset/images/dark_moody_organic/04_sheet_society_eve_linen_duvet_cover.jpg",
+   "name": "Sheet Society Eve Linen Duvet Cover",
+   "link": "https://www.google.com/search?ibp=oshop&q=black%20linen%20duvet%20cover&prds=catalogid:876500740575128548%2CheadlineOfferDocid:3782417934655272867%2CimageDocid:3635671912064463670%2Crds:PC_721835815884789945%7CPROD_PC_721835815884789945%2Cgpcid:721835815884789945%2Cmid:576462778096200826%2Cpvt:hg&hl=en&gl=us&udm=28",
+   "category": "duvet"
+  },
+  {
+   "image": "dataset/images/dark_moody_organic/02_dark_raspberry_ripple_stoneware_pottery_mug.jpg",
+   "name": "Dark Raspberry Ripple Stoneware Pottery Mug",
+   "link": "https://www.google.com/search?ibp=oshop&q=dark%20stoneware%20mug%20handmade&prds=catalogid:8464179580892755239%2CheadlineOfferDocid:8696930483091315058%2CimageDocid:1959535702995825172%2Cgpcid:8562546279000454721%2Cpvt:hg&hl=en&gl=us&udm=28",
+   "category": "mug"
+  },
+  {
+   "image": "dataset/images/dark_moody_organic/03_handmade_stoneware_coffee_cup_pumpernickel_with_gold_leaf.jpg",
+   "name": "Handmade Stoneware Coffee Cup \"Pumpernickel\" with Gold Leaf",
+   "link": "https://www.google.com/search?ibp=oshop&q=dark%20stoneware%20mug%20handmade&prds=catalogid:10384893344069109384%2CheadlineOfferDocid:1654368284278329254%2CimageDocid:17877014854073406703%2Cgpcid:4655704534913026741%2Cpvt:hg&hl=en&gl=us&udm=28",
+   "category": "mug"
+  },
+  {
+   "image": "dataset/images/japandi/02_nexera_kanso_king_low_profile_wood_platform_bed_with_headboa.jpg",
+   "name": "Nexera Kanso King Low Profile Wood Platform Bed with Headboard",
+   "link": "https://www.google.com/search?ibp=oshop&q=oak%20low%20platform%20bed%20frame&prds=catalogid:8523907697168312055%2CheadlineOfferDocid:7505079802898217954%2CimageDocid:17284553661086746809%2Crds:PC_5758877701191148457%7CPROD_PC_5758877701191148457%2Cgpcid:5758877701191148457%2Cmid:576462822398817435%2Cpvt:hg&hl=en&gl=us&udm=28",
+   "category": "bed frame"
+  },
+  {
+   "image": "dataset/images/japandi/03_article_leif_modern_bedroom_furniture_platform_bed_frame.jpg",
+   "name": "Article Leif Modern Bedroom Furniture Platform Bed Frame",
+   "link": "https://www.google.com/search?ibp=oshop&q=oak%20low%20platform%20bed%20frame&prds=catalogid:5159098032716584592%2CheadlineOfferDocid:12744057967477361969%2CimageDocid:291190562334756702%2Cgpcid:16334498657203382179%2Cmid:576462846476287185%2Cpvt:hg&hl=en&gl=us&udm=28",
+   "category": "bed frame"
+  },
+  {
+   "image": "dataset/images/japandi/04_oak_tatami_floor_bed.jpg",
+   "name": "Oak Tatami Floor Bed",
+   "link": "https://www.google.com/search?ibp=oshop&q=oak%20low%20platform%20bed%20frame&prds=catalogid:2116333059508421207%2CheadlineOfferDocid:11598245614444878217%2CimageDocid:10466431809362864362%2Cgpcid:1096583019047700443%2Cmid:576462871748209221%2Cpvt:hg&hl=en&gl=us&udm=28",
+   "category": "bed frame"
+  },
+  {
+   "image": "dataset/images/japandi/05_get_laid_beds_us_low_modern_attic_bed.jpg",
+   "name": "Get Laid Beds Us Low Modern Attic Bed",
+   "link": null,
+   "category": "bed frame"
+  },
+  {
+   "image": "dataset/images/japandi/06_nor_modern_handcrafted_platform_bed.jpg",
+   "name": "Nor Modern Handcrafted Platform Bed",
+   "link": null,
+   "category": "bed frame"
+  },
+  {
+   "image": "dataset/images/japandi/07_ikea_malm_bed_frame.jpg",
+   "name": "Ikea Malm Bed Frame",
+   "link": null,
+   "category": "bed frame"
+  },
+  {
+   "image": "dataset/images/japandi/08_nexera_queen_low_platform_bed_frame_with_headboard.jpg",
+   "name": "Nexera Queen Low Platform Bed Frame With Headboard",
+   "link": null,
+   "category": "bed frame"
+  },
+  {
+   "image": "dataset/images/japandi/09_article_oak_bed_frame_minimalist_style_mid_century_modern_de.jpg",
+   "name": "Article Oak Bed Frame Minimalist Style Mid Century Modern De",
+   "link": null,
+   "category": "bed frame"
+  },
+  {
+   "image": "dataset/images/japandi/02_crate_barrel_mercer_matte_white_porcelain_low_bowls_set_of_8.jpg",
+   "name": "Crate & Barrel Mercer Matte White Porcelain Low Bowls (Set of 8)",
+   "link": "https://www.google.com/search?ibp=oshop&q=ceramic%20matte%20bowl%20set%20minimal&prds=catalogid:16657917730709673167%2CheadlineOfferDocid:409628438217275470%2CimageDocid:11674325101563045172%2Crds:PC_13427070062095292742%7CPROD_PC_13427070062095292742%2Cgpcid:13427070062095292742%2Cmid:576462849163888417%2Cpvt:hg&hl=en&gl=us&udm=28",
+   "category": "bowl"
+  },
+  {
+   "image": "dataset/images/japandi/03_open_kitchen_by_williams_sonoma_matte_coupe_bowls_set_of_8.jpg",
+   "name": "Open Kitchen by Williams Sonoma Matte Coupe Bowls (Set of 8)",
+   "link": "https://www.google.com/search?ibp=oshop&q=ceramic%20matte%20bowl%20set%20minimal&prds=catalogid:10063329407154357523%2CheadlineOfferDocid:3408884788046367513%2CimageDocid:14643633818122527425%2Cgpcid:1236618781709555610%2Cpvt:hg&hl=en&gl=us&udm=28",
+   "category": "bowl"
+  },
+  {
+   "image": "dataset/images/japandi/03_cozy_earth_linen_throw_pillow.jpg",
+   "name": "Cozy Earth Linen Throw Pillow",
+   "link": "https://www.google.com/search?ibp=oshop&q=linen%20throw%20pillow%20natural&prds=catalogid:988357227609007603%2CheadlineOfferDocid:2294523889393626656%2CimageDocid:17631809700913303800%2Cgpcid:1688047937157865939%2Cmid:576462809926770030%2Cpvt:hg&hl=en&gl=us&udm=28",
+   "category": "pillow"
+  },
+  {
+   "image": "dataset/images/japandi/04_quince_textured_wool_linen_pillow_cover.jpg",
+   "name": "Quince Textured Wool Linen Pillow Cover",
+   "link": "https://www.google.com/search?ibp=oshop&q=linen%20throw%20pillow%20natural&prds=catalogid:6930259340896051070%2CheadlineOfferDocid:15140765440675728640%2CimageDocid:18061585323855993297%2Crds:PC_11737425659078497420%7CPROD_PC_11737425659078497420%2Cgpcid:11737425659078497420%2Cmid:576462814110881577%2Cpvt:hg&hl=en&gl=us&udm=28",
+   "category": "pillow"
+  },
+  {
+   "image": "dataset/images/maximalist_eclectic/01_valencia_emerald_ultra_soft_velvet_fabric_accent_chair.jpg",
+   "name": "Valencia Emerald Ultra Soft Velvet Fabric Accent Chair",
+   "link": "https://www.google.com/search?ibp=oshop&q=emerald%20velvet%20accent%20chair&prds=catalogid:10029915757384424376%2CheadlineOfferDocid:14655988274623667198%2CimageDocid:10372686186163238409%2Crds:PC_11592251489787075227%7CPROD_PC_11592251489787075227%2Cgpcid:11592251489787075227%2Cmid:576462826395405307%2Cpvt:hg&hl=en&gl=us&udm=28",
+   "category": "chair"
+  },
+  {
+   "image": "dataset/images/maximalist_eclectic/02_rosdorf_park_emerald_velvet_accent_chair.jpg",
+   "name": "Rosdorf Park Emerald Velvet Accent Chair",
+   "link": "https://www.google.com/search?ibp=oshop&q=emerald%20velvet%20accent%20chair&prds=catalogid:936401846546034499%2CheadlineOfferDocid:17829163535511666497%2CimageDocid:1216073602513741015%2Cgpcid:12873919543108851833%2Cmid:576462502239598071%2Cpvt:hg&hl=en&gl=us&udm=28",
+   "category": "chair"
+  },
+  {
+   "image": "dataset/images/maximalist_eclectic/04_mae_accent_chair.jpg",
+   "name": "Mae Accent Chair",
+   "link": "https://www.google.com/search?ibp=oshop&q=emerald%20velvet%20accent%20chair&prds=catalogid:11368832786775156413%2CheadlineOfferDocid:17203048530032317247%2CimageDocid:10869407684041176319%2Cgpcid:721546916064200698%2Cmid:576462863778137307%2Cpvt:hg&hl=en&gl=us&udm=28",
+   "category": "chair"
+  },
+  {
+   "image": "dataset/images/maximalist_eclectic/05_steve_silver_avalon_velvet_accent_chair.jpg",
+   "name": "Steve Silver Avalon Velvet Accent Chair",
+   "link": null,
+   "category": "chair"
+  },
+  {
+   "image": "dataset/images/maximalist_eclectic/06_italy_shine_upholstered_tufted_armchair.jpg",
+   "name": "Italy Shine Upholstered Tufted Armchair",
+   "link": null,
+   "category": "chair"
+  },
+  {
+   "image": "dataset/images/maximalist_eclectic/07_safavieh_brienne_mid_century_arm_chair.jpg",
+   "name": "Safavieh Brienne Mid Century Arm Chair",
+   "link": null,
+   "category": "chair"
+  },
+  {
+   "image": "dataset/images/maximalist_eclectic/08_diamond_sofa_ava_chair.jpg",
+   "name": "Diamond Sofa Ava Chair",
+   "link": null,
+   "category": "chair"
+  },
+  {
+   "image": "dataset/images/maximalist_eclectic/10_etta_avenue_shelbi_upholstered_armchair.jpg",
+   "name": "Etta Avenue Shelbi Upholstered Armchair",
+   "link": null,
+   "category": "chair"
+  },
+  {
+   "image": "dataset/images/maximalist_eclectic/01_stylewell_traditional_gallery_wall_frame_set.jpg",
+   "name": "StyleWell Traditional Gallery Wall Frame Set",
+   "link": "https://www.google.com/search?ibp=oshop&q=gallery%20wall%20frame%20set%20gold&prds=catalogid:1657331274031962672%2CheadlineOfferDocid:963271831068438501%2CimageDocid:17027200141594777372%2Crds:PC_11279877472499605630%7CPROD_PC_11279877472499605630%2Cgpcid:11279877472499605630%2Cmid:576462732671664654%2Cpvt:hg&hl=en&gl=us&udm=28",
+   "category": "frame"
+  },
+  {
+   "image": "dataset/images/maximalist_eclectic/04_gold_frame_gallery_wall_set.jpg",
+   "name": "Gold Frame Gallery Wall Set",
+   "link": "https://www.google.com/search?ibp=oshop&q=gallery%20wall%20frame%20set%20gold&prds=catalogid:14983549754822834833%2CheadlineOfferDocid:16952097857509808968%2CimageDocid:9012397024772281543%2Crds:PC_4545054275512176470%7CPROD_PC_4545054275512176470%2Cgpcid:4545054275512176470%2Cmid:576462877668757627%2Cpvt:hg&hl=en&gl=us&udm=28",
+   "category": "frame"
+  },
+  {
+   "image": "dataset/images/maximalist_eclectic/01_quince_bold_shapes_hand_tufted_wool_rug.jpg",
+   "name": "Quince Bold Shapes Hand-Tufted Wool Rug",
+   "link": "https://www.google.com/search?ibp=oshop&q=patterned%20wool%20area%20rug%20bold&prds=catalogid:2267500606939892885%2CheadlineOfferDocid:14451100114248942921%2CimageDocid:11736212024231405673%2Crds:PC_18207759344797960619%7CPROD_PC_18207759344797960619%2Cgpcid:18207759344797960619%2Cmid:576462870422592384%2Cpvt:hg&hl=en&gl=us&udm=28",
+   "category": "rug"
+  },
+  {
+   "image": "dataset/images/maximalist_eclectic/04_west_elm_graduated_dot_wool_rug.jpg",
+   "name": "West Elm Graduated Dot Wool Rug",
+   "link": "https://www.google.com/search?ibp=oshop&q=patterned%20wool%20area%20rug%20bold&prds=catalogid:8423083146128018650%2CheadlineOfferDocid:10544821405685981713%2CimageDocid:2287703032684257672%2Cgpcid:10091240035990376375%2Cmid:576462704629854921%2Cpvt:hg&hl=en&gl=us&udm=28",
+   "category": "rug"
+  },
+  {
+   "image": "dataset/images/mid_century_modern/02_herman_miller_eames_lounge_chair_and_ottoman.jpg",
+   "name": "Herman Miller Eames Lounge Chair and Ottoman",
+   "link": "https://www.google.com/search?ibp=oshop&q=eames%20style%20lounge%20chair&prds=catalogid:2686822237734026107%2CheadlineOfferDocid:13249158256577109193%2CimageDocid:10547279236022889396%2Crds:PC_9541738175038401560%7CPROD_PC_9541738175038401560%2Cgpcid:9541738175038401560%2Cmid:576462687253694067%2Cpvt:hg&hl=en&gl=us&udm=28",
+   "category": "chair"
+  },
+  {
+   "image": "dataset/images/mid_century_modern/04_eames_lounge_chair_and_ottoman_walnut_classic.jpg",
+   "name": "Eames Lounge Chair and Ottoman - Walnut - Classic",
+   "link": "https://www.google.com/search?ibp=oshop&q=eames%20style%20lounge%20chair&prds=productid:4180223460608037532%2CheadlineOfferDocid:4180223460608037532%2CimageDocid:4836489505243035720%2Cpvt:hg&hl=en&gl=us&udm=28",
+   "category": "chair"
+  },
+  {
+   "image": "dataset/images/mid_century_modern/01_walker_edison_70_mid_century_modern_3_drawer_2_door_sideboar.jpg",
+   "name": "Walker Edison 70\" Mid Century Modern 3 Drawer, 2 Door Sideboard",
+   "link": "https://www.google.com/search?ibp=oshop&q=walnut%20credenza%20tapered%20legs&prds=catalogid:1461045764966478223%2CheadlineOfferDocid:8339705542922422490%2CimageDocid:9467703508791552154%2Crds:PC_7248509551064578779%7CPROD_PC_7248509551064578779%2Cgpcid:7248509551064578779%2Cmid:576462484293443662%2Cpvt:hg&hl=en&gl=us&udm=28",
+   "category": "credenza"
+  },
+  {
+   "image": "dataset/images/mid_century_modern/02_article_seno_71_mid_century_design_sideboard.jpg",
+   "name": "Article Seno 71\" Mid-Century Design Sideboard",
+   "link": "https://www.google.com/search?ibp=oshop&q=walnut%20credenza%20tapered%20legs&prds=catalogid:16178148901206192990%2CheadlineOfferDocid:9230226339051315467%2CimageDocid:18094151319795349356%2Crds:PC_1253422873892975665%7CPROD_PC_1253422873892975665%2Cgpcid:1253422873892975665%2Cmid:576462828137256932%2Cpvt:hg&hl=en&gl=us&udm=28",
+   "category": "credenza"
+  },
+  {
+   "image": "dataset/images/mid_century_modern/03_streamdale_walnut_sideboard_buffet_cabinet.jpg",
+   "name": "Streamdale Walnut Sideboard Buffet Cabinet",
+   "link": "https://www.google.com/search?ibp=oshop&q=walnut%20credenza%20tapered%20legs&prds=catalogid:7055156364341150452%2CheadlineOfferDocid:10801939565409420336%2CimageDocid:12170728211944817497%2Cgpcid:8737411960158095177%2Cmid:576462826505518034%2Cpvt:hg&hl=en&gl=us&udm=28",
+   "category": "credenza"
+  },
+  {
+   "image": "dataset/images/mid_century_modern/04_sauder_harvey_park_credenza.jpg",
+   "name": "Sauder Harvey Park Credenza",
+   "link": "https://www.google.com/search?ibp=oshop&q=walnut%20credenza%20tapered%20legs&prds=catalogid:7763180567216098746%2CheadlineOfferDocid:5649781855299015241%2CimageDocid:12787621354550225873%2Crds:PC_507719718309126393%7CPROD_PC_507719718309126393%2Cgpcid:507719718309126393%2Cmid:576462756639798828%2Cpvt:hg&hl=en&gl=us&udm=28",
+   "category": "credenza"
+  },
+  {
+   "image": "dataset/images/mid_century_modern/06_crawford_modern_walnut_buffet.jpg",
+   "name": "Crawford Modern Walnut Buffet",
+   "link": null,
+   "category": "credenza"
+  },
+  {
+   "image": "dataset/images/mid_century_modern/07_cyril_mid_century_walnut_3_drawer_58_in_sideboard_with_woode.jpg",
+   "name": "Cyril Mid Century Walnut 3 Drawer 58 In Sideboard With Woode",
+   "link": null,
+   "category": "credenza"
+  },
+  {
+   "image": "dataset/images/mid_century_modern/08_castlery_lily_63_mid_century_modern_design_sideboard.jpg",
+   "name": "Castlery Lily 63 Mid Century Modern Design Sideboard",
+   "link": null,
+   "category": "credenza"
+  },
+  {
+   "image": "dataset/images/mid_century_modern/10_four_sided_tapered_wood_kitchen_island_leg.jpg",
+   "name": "Four Sided Tapered Wood Kitchen Island Leg",
+   "link": null,
+   "category": "credenza"
+  },
+  {
+   "image": "dataset/images/mid_century_modern/03_nova_of_california_luna_bella_arc_floor_lamp.jpg",
+   "name": "Nova of California Luna Bella Arc Floor Lamp",
+   "link": "https://www.google.com/search?ibp=oshop&q=arc%20floor%20lamp%20brass&prds=catalogid:14038419574910590224%2CheadlineOfferDocid:13226400613342841027%2CimageDocid:14437085311361066762%2Crds:PC_18076612723191728515%7CPROD_PC_18076612723191728515%2Cgpcid:18076612723191728515%2Cmid:576462806887800032%2Cpvt:hg&hl=en&gl=us&udm=28",
+   "category": "lamp"
+  },
+  {
+   "image": "dataset/images/mid_century_modern/04_homeglam_orbita_81h_led_dimmable_retractable_arch_floor_lamp.jpg",
+   "name": "Homeglam Orbita 81\"H LED Dimmable Retractable Arch Floor Lamp",
+   "link": "https://www.google.com/search?ibp=oshop&q=arc%20floor%20lamp%20brass&prds=catalogid:17233262690327185883%2CheadlineOfferDocid:2834036962919718568%2CimageDocid:12173121206297320167%2Crds:PC_2905127914183530225%7CPROD_PC_2905127914183530225%2Cgpcid:2905127914183530225%2Cmid:576462866785191767%2Cpvt:hg&hl=en&gl=us&udm=28",
+   "category": "lamp"
+  },
+  {
+   "image": "dataset/images/quiet_luxury/01_everlane_modern_leather_loafer.jpg",
+   "name": "Everlane Modern Leather Loafer",
+   "link": "https://www.google.com/search?ibp=oshop&q=leather%20loafer%20minimal&prds=catalogid:6379482708025106389%2CheadlineOfferDocid:15628208349467890100%2CimageDocid:1228116686564620274%2Cgpcid:1513239315684548713%2Cmid:576462886416242794%2Cpvt:a&hl=en&gl=us&udm=28",
+   "category": "loafer"
+  },
+  {
+   "image": "dataset/images/quiet_luxury/03_premium_leather_minimal_loafers.jpg",
+   "name": "Premium Leather Minimal Loafers",
+   "link": "https://www.google.com/search?ibp=oshop&q=leather%20loafer%20minimal&prds=catalogid:12888605714098524656%2CheadlineOfferDocid:15269121093404825610%2CimageDocid:13135179462831041631%2Crds:PC_2154137668816616789%7CPROD_PC_2154137668816616789%2Cgpcid:2154137668816616789%2Cmid:576462878430851836%2Cpvt:a&hl=en&gl=us&udm=28",
+   "category": "loafer"
+  },
+  {
+   "image": "dataset/images/quiet_luxury/02_hm_ladies_slacks.jpg",
+   "name": "H&M Ladies Slacks",
+   "link": "https://www.google.com/search?ibp=oshop&q=straight%20leg%20tailored%20trousers%20beige&prds=catalogid:8000647351696464270%2CheadlineOfferDocid:3374237306136236068%2CimageDocid:15243872268247044877%2Crds:PC_9944266808860351565%7CPROD_PC_9944266808860351565%2Cgpcid:9944266808860351565%2Cpvt:a&hl=en&gl=us&udm=28",
+   "category": "pants"
+  },
+  {
+   "image": "dataset/images/quiet_luxury/04_lauren_ralph_lauren_straight_leg_pants.jpg",
+   "name": "Lauren Ralph Lauren Straight Leg Pants",
+   "link": "https://www.google.com/search?ibp=oshop&q=straight%20leg%20tailored%20trousers%20beige&prds=catalogid:15317683090884257749%2CheadlineOfferDocid:3403716978346132423%2CimageDocid:13510163719878043873%2Crds:PC_13996040763867762437%7CPROD_PC_13996040763867762437%2Cgpcid:13996040763867762437%2Cmid:576462841055093425%2Cpvt:a&hl=en&gl=us&udm=28",
+   "category": "pants"
+  },
+  {
+   "image": "dataset/images/quiet_luxury/03_simply_vera_vera_wang_womens_luxe_cashmere_blend_mockneck_sw.jpg",
+   "name": "Simply Vera Vera Wang Women's Luxe Cashmere Blend Mockneck Sweater",
+   "link": "https://www.google.com/search?ibp=oshop&q=camel%20cashmere%20turtleneck%20sweater&prds=catalogid:14315746296613782586%2CheadlineOfferDocid:5661576101345362455%2CimageDocid:17314450280621894936%2Crds:PC_17831228587426705049%7CPROD_PC_17831228587426705049%2Cgpcid:17831228587426705049%2Cmid:576462868338499552%2Cpvt:a&hl=en&gl=us&udm=28",
+   "category": "sweater"
+  },
+  {
+   "image": "dataset/images/quiet_luxury/04_brooks_brothers_womens_lightweight_modal_cashmere_turtleneck.jpg",
+   "name": "Brooks Brothers Women's Lightweight Modal Cashmere Turtleneck Sweater",
+   "link": "https://www.google.com/search?ibp=oshop&q=camel%20cashmere%20turtleneck%20sweater&prds=catalogid:13299555558692093812%2CheadlineOfferDocid:11507023594489410577%2CimageDocid:13269703218222137196%2Cgpcid:1284492643309079974%2Cmid:576462865769321608%2Cpvt:a&hl=en&gl=us&udm=28",
+   "category": "sweater"
+  },
+  {
+   "image": "dataset/images/quiet_luxury/05_aqua_womens_cashmere_turtleneck_sweater.jpg",
+   "name": "Aqua Womens Cashmere Turtleneck Sweater",
+   "link": null,
+   "category": "sweater"
+  },
+  {
+   "image": "dataset/images/quiet_luxury/06_essential_cashmere_turtleneck_sweater_made_in_italy.jpg",
+   "name": "Essential Cashmere Turtleneck Sweater Made In Italy",
+   "link": null,
+   "category": "sweater"
+  },
+  {
+   "image": "dataset/images/quiet_luxury/07_maisie_turtleneck_sweater_in_cashmere.jpg",
+   "name": "Maisie Turtleneck Sweater In Cashmere",
+   "link": null,
+   "category": "sweater"
+  },
+  {
+   "image": "dataset/images/quiet_luxury/08_neiman_marcus_womens_cashmere_turtleneck_top.jpg",
+   "name": "Neiman Marcus Womens Cashmere Turtleneck Top",
+   "link": null,
+   "category": "sweater"
+  },
+  {
+   "image": "dataset/images/quiet_luxury/09_banana_republic_womens_featherweight_cashmere_turtleneck.jpg",
+   "name": "Banana Republic Womens Featherweight Cashmere Turtleneck",
+   "link": null,
+   "category": "sweater"
+  },
+  {
+   "image": "dataset/images/quiet_luxury/10_lilysilk_womens_pure_cashmere_turtleneck_sweater.jpg",
+   "name": "Lilysilk Womens Pure Cashmere Turtleneck Sweater",
+   "link": null,
+   "category": "sweater"
+  },
+  {
+   "image": "dataset/images/vintage_bohemian/01_aerie_suede_fringe_crossbody_bag.jpg",
+   "name": "Aerie Suede Fringe Crossbody Bag",
+   "link": "https://www.google.com/search?ibp=oshop&q=fringe%20suede%20crossbody%20bag&prds=catalogid:17586296074506282992%2CheadlineOfferDocid:7330123677642023810%2CimageDocid:6834969501340859202%2Cgpcid:16807862081093526139%2Cpvt:a&hl=en&gl=us&udm=28",
+   "category": "bag"
+  },
+  {
+   "image": "dataset/images/vintage_bohemian/02_idyllwind_womens_camarillo_metallic_fringe_suede_crossbody_b.jpg",
+   "name": "Idyllwind Women's Camarillo Metallic Fringe Suede Crossbody Bag",
+   "link": "https://www.google.com/search?ibp=oshop&q=fringe%20suede%20crossbody%20bag&prds=catalogid:16824579207758316931%2CheadlineOfferDocid:1209932768883986110%2CimageDocid:6062613055887604299%2Cgpcid:1991977288633972230%2Cmid:576462800678055963%2Cpvt:a&hl=en&gl=us&udm=28",
+   "category": "bag"
+  },
+  {
+   "image": "dataset/images/vintage_bohemian/03_steve_madden_womens_fringe_shoulder_bag.jpg",
+   "name": "Steve Madden Women's Fringe Shoulder Bag",
+   "link": "https://www.google.com/search?ibp=oshop&q=fringe%20suede%20crossbody%20bag&prds=catalogid:6086544187836552098%2CheadlineOfferDocid:4625614697988046020%2CimageDocid:5321661268566435865%2Cgpcid:11717495238144995946%2Cmid:576462536573402172%2Cpvt:a&hl=en&gl=us&udm=28",
+   "category": "bag"
+  },
+  {
+   "image": "dataset/images/vintage_bohemian/05_coach_womens_tabby_26_crystal_beaded_fringe_shoulder_bag.jpg",
+   "name": "Coach Womens Tabby 26 Crystal Beaded Fringe Shoulder Bag",
+   "link": null,
+   "category": "bag"
+  },
+  {
+   "image": "dataset/images/vintage_bohemian/06_tayviss_fringe_shoulder_bag.jpg",
+   "name": "Tayviss Fringe Shoulder Bag",
+   "link": null,
+   "category": "bag"
+  },
+  {
+   "image": "dataset/images/vintage_bohemian/07_maje_womens_naplak_leather_miss_m_mini_bag.jpg",
+   "name": "Maje Womens Naplak Leather Miss M Mini Bag",
+   "link": null,
+   "category": "bag"
+  },
+  {
+   "image": "dataset/images/vintage_bohemian/08_wrangler_boho_fringe_suede_bag.jpg",
+   "name": "Wrangler Boho Fringe Suede Bag",
+   "link": null,
+   "category": "bag"
+  },
+  {
+   "image": "dataset/images/vintage_bohemian/09_hippie_shop_bohemian_suede_fringe_shoulder_bag.jpg",
+   "name": "Hippie Shop Bohemian Suede Fringe Shoulder Bag",
+   "link": null,
+   "category": "bag"
+  },
+  {
+   "image": "dataset/images/vintage_bohemian/01_sans_souci_embellished_ruffled_palazzo_pants.jpg",
+   "name": "Sans Souci Embellished Ruffled Palazzo Pants",
+   "link": "https://www.google.com/search?ibp=oshop&q=embroidered%20wide%20leg%20pants%20rust&prds=catalogid:11485251585429705665%2CheadlineOfferDocid:14699136381432471069%2CimageDocid:11600590426319472683%2Cpvt:a&hl=en&gl=us&udm=28",
+   "category": "pants"
+  },
+  {
+   "image": "dataset/images/vintage_bohemian/02_petal_pup_womens_petal_and_pup_neveah_pant.jpg",
+   "name": "PETAL & PUP Women's Petal and Pup Neveah Pant",
+   "link": "https://www.google.com/search?ibp=oshop&q=embroidered%20wide%20leg%20pants%20rust&prds=catalogid:4227762152600050306%2CheadlineOfferDocid:9102314195748911861%2CimageDocid:11576363199453489774%2Crds:PC_16843930603531343880%7CPROD_PC_16843930603531343880%2Cgpcid:16843930603531343880%2Cmid:576462716902483204%2Cpvt:a&hl=en&gl=us&udm=28",
+   "category": "pants"
+  },
+  {
+   "image": "dataset/images/vintage_bohemian/01_crochet_pdf_pattern_the_fest_vest_boho_crochet.jpg",
+   "name": "CROCHET PDF PATTERN, The Fest Vest, Boho crochet,",
+   "link": "https://www.google.com/search?ibp=oshop&q=crochet%20vest%20boho%20festival&prds=productid:10272560335074470223%2CheadlineOfferDocid:10272560335074470223%2CimageDocid:9878066269119541433%2Crds:LO_10272560335074470223%7CPROD_LO_10272560335074470223%2Cpvt:a&hl=en&gl=us&udm=28",
+   "category": "vest"
+  },
+  {
+   "image": "dataset/images/vintage_bohemian/03_missguided_bohemian_crochet_lace_vest_waistcoat.jpg",
+   "name": "Missguided Bohemian Crochet Lace Vest Waistcoat",
+   "link": "https://www.google.com/search?ibp=oshop&q=crochet%20vest%20boho%20festival&prds=catalogid:18145492503622383592%2CheadlineOfferDocid:14164131306844564987%2CimageDocid:1502852877204102209%2Cgpcid:16235917136501285729%2Cmid:576462862593242134%2Cpvt:a&hl=en&gl=us&udm=28",
+   "category": "vest"
+  },
+  {
+   "image": "dataset/images/y2k_streetwear/01_hollister_womens_low_rise_baggy_cargo_pants.jpg",
+   "name": "Hollister Women's Low-Rise Baggy Cargo Pants",
+   "link": "https://www.google.com/search?ibp=oshop&q=low%20rise%20cargo%20pants%20y2k&prds=catalogid:12812984416930199285%2CheadlineOfferDocid:7812569992128579058%2CimageDocid:4185390118668452155%2Cgpcid:13511430693700360922%2Cmid:576462875007909533%2Cpvt:a&hl=en&gl=us&udm=28",
+   "category": "pants"
+  },
+  {
+   "image": "dataset/images/y2k_streetwear/02_y2k_cargo_pants.jpg",
+   "name": "Y2k Cargo Pants",
+   "link": "https://www.google.com/search?ibp=oshop&q=low%20rise%20cargo%20pants%20y2k&prds=catalogid:9502166360918879256%2CheadlineOfferDocid:12252080523583446322%2CimageDocid:1386740047428563401%2Crds:PC_11356270187965731454%7CPROD_PC_11356270187965731454%2Cgpcid:11356270187965731454%2Cmid:576462543154468086%2Cpvt:a&hl=en&gl=us&udm=28",
+   "category": "pants"
+  },
+  {
+   "image": "dataset/images/y2k_streetwear/01_converse_women_all_star_lift_double_stack_platform.jpg",
+   "name": "Converse Women All Star Lift Double Stack Platform",
+   "link": "https://www.google.com/search?ibp=oshop&q=platform%20chunky%20sneaker%20silver&prds=catalogid:3874328736541702977%2CheadlineOfferDocid:12870189709751089740%2CimageDocid:15147652008922349456%2Crds:PC_14088820895481366791%7CPROD_PC_14088820895481366791%2Cgpcid:14088820895481366791%2Cmid:576462869256788784%2Cpvt:a&hl=en&gl=us&udm=28",
+   "category": "sneaker"
+  },
+  {
+   "image": "dataset/images/y2k_streetwear/03_lamoda_venus_chunky_platform_sneakers.jpg",
+   "name": "LAMODA Venus Chunky Platform Sneakers",
+   "link": "https://www.google.com/search?ibp=oshop&q=platform%20chunky%20sneaker%20silver&prds=catalogid:1417109676307174088%2CheadlineOfferDocid:13680459881722598868%2CimageDocid:18390072447567857830%2Cgpcid:5554589528647699144%2Cmid:576462771298328221%2Cpvt:a&hl=en&gl=us&udm=28",
+   "category": "sneaker"
+  },
+  {
+   "image": "dataset/images/y2k_streetwear/01_ed_hardy_skull_butterfly_baby_tee.jpg",
+   "name": "Ed Hardy Skull Butterfly Baby Tee",
+   "link": "https://www.google.com/search?ibp=oshop&q=rhinestone%20butterfly%20graphic%20baby%20tee&prds=catalogid:7701666342187796891%2CheadlineOfferDocid:13992846259574981576%2CimageDocid:5859328140648736800%2Cgpcid:3940475914755388759%2Cmid:576462862014289213%2Cpvt:a&hl=en&gl=us&udm=28",
+   "category": "top"
+  },
+  {
+   "image": "dataset/images/y2k_streetwear/02_glam_faux_diamond_sparkle_butterfly_t_shirt.jpg",
+   "name": "Glam Faux Diamond Sparkle Butterfly T-Shirt",
+   "link": "https://www.google.com/search?ibp=oshop&q=rhinestone%20butterfly%20graphic%20baby%20tee&prds=catalogid:6075004478034751737%2CheadlineOfferDocid:16247175966502718574%2CimageDocid:2457040969823411770%2Cgpcid:11386030071850988770%2Cmid:576462543683131361%2Cpvt:a&hl=en&gl=us&udm=28",
+   "category": "top"
+  },
+  {
+   "image": "dataset/images/y2k_streetwear/03_baby_toddler_girl_jumping_beans_flutter_embellished_tee_todd.jpg",
+   "name": "Baby & Toddler Girl Jumping Beans Flutter Embellished Tee, Toddler Girl's, Size: 18 Months, Shine Butterfly Pink",
+   "link": "https://www.google.com/search?ibp=oshop&q=rhinestone%20butterfly%20graphic%20baby%20tee&prds=productid:16116363031671613896%2CheadlineOfferDocid:16116363031671613896%2CimageDocid:9545691610533212289%2Cpvt:a&hl=en&gl=us&udm=28",
+   "category": "top"
+  },
+  {
+   "image": "dataset/images/y2k_streetwear/06_y2k_90s_black_rhinestone_butterfly_crop_top_punk_grunge_fair.jpg",
+   "name": "Y2K 90S Black Rhinestone Butterfly Crop Top Punk Grunge Fair",
+   "link": null,
+   "category": "top"
+  },
+  {
+   "image": "dataset/images/y2k_streetwear/07_girls_rhinestone_butterfly_ruched_side_graphic_tee_white_7_8.jpg",
+   "name": "Girls Rhinestone Butterfly Ruched Side Graphic Tee White 7 8",
+   "link": null,
+   "category": "top"
+  },
+  {
+   "image": "dataset/images/y2k_streetwear/08_kidpik_girls_sequin_butterfly_graphic_tee.jpg",
+   "name": "Kidpik Girls Sequin Butterfly Graphic Tee",
+   "link": null,
+   "category": "top"
+  },
+  {
+   "image": "dataset/images/y2k_streetwear/09_ido_baby_girls_butterflies_t_shirt.jpg",
+   "name": "Ido Baby Girls Butterflies T Shirt",
+   "link": null,
+   "category": "top"
+  },
+  {
+   "image": "dataset/images/y2k_streetwear/10_city_threads_glittery_butterfly_super_comfy_kids_clothing_so.jpg",
+   "name": "City Threads Glittery Butterfly Super Comfy Kids Clothing So",
+   "link": null,
+   "category": "top"
+  }
+ ]
+}

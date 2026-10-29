@@ -1,0 +1,722 @@
+{
+ "dataset/images/coastal_mediterranean/01_ikea_kappeland_pendant_lamp_shade.jpg": {
+  "category": "pendant light",
+  "style": "coastal_mediterranean"
+ },
+ "dataset/images/coastal_mediterranean/01_luxenhome_rustic_old_world_terracotta_vase.jpg": {
+  "category": "vase",
+  "style": "coastal_mediterranean"
+ },
+ "dataset/images/coastal_mediterranean/01_quince_european_linen_sheer_curtain_set.jpg": {
+  "category": "curtains",
+  "style": "coastal_mediterranean"
+ },
+ "dataset/images/coastal_mediterranean/02_allen_roth_harlow_traditional_globe_pendant_light.jpg": {
+  "category": "pendant light",
+  "style": "coastal_mediterranean"
+ },
+ "dataset/images/coastal_mediterranean/02_terracotta_ceramic_vase.jpg": {
+  "category": "vase",
+  "style": "coastal_mediterranean"
+ },
+ "dataset/images/coastal_mediterranean/02_west_elm_sheer_european_flax_linen_curtain.jpg": {
+  "category": "curtains",
+  "style": "coastal_mediterranean"
+ },
+ "dataset/images/coastal_mediterranean/03_ikea_sandkorn_pendant_lamp_shade.jpg": {
+  "category": "pendant light",
+  "style": "coastal_mediterranean"
+ },
+ "dataset/images/coastal_mediterranean/03_joy_100_european_flax_linen_sheer_curtain_pleated.jpg": {
+  "category": "curtains",
+  "style": "coastal_mediterranean"
+ },
+ "dataset/images/coastal_mediterranean/03_zen_inspired_terracotta_organic_tall_vase.jpg": {
+  "category": "vase",
+  "style": "coastal_mediterranean"
+ },
+ "dataset/images/coastal_mediterranean/04_birch_lane_handcrafted_terracotta_table_vase.jpg": {
+  "category": "vase",
+  "style": "coastal_mediterranean"
+ },
+ "dataset/images/coastal_mediterranean/04_pottery_barn_emery_linen_sheer_curtain.jpg": {
+  "category": "curtains",
+  "style": "coastal_mediterranean"
+ },
+ "dataset/images/coastal_mediterranean/04_rattan_lamp_shade.jpg": {
+  "category": "pendant light",
+  "style": "coastal_mediterranean"
+ },
+ "dataset/images/coastal_mediterranean/05_creative_co_op_terracotta_vases_set_of_3.jpg": {
+  "category": "vase",
+  "style": "coastal_mediterranean"
+ },
+ "dataset/images/coastal_mediterranean/06_pottery_barn_artisan_handcrafted_terracotta_vase.jpg": {
+  "category": "vase",
+  "style": "coastal_mediterranean"
+ },
+ "dataset/images/coastal_mediterranean/07_luxenhome_rustic_farmhouse_terracotta_vase.jpg": {
+  "category": "vase",
+  "style": "coastal_mediterranean"
+ },
+ "dataset/images/coastal_mediterranean/08_sur_la_table_citrus_bloom_terracotta_vase.jpg": {
+  "category": "vase",
+  "style": "coastal_mediterranean"
+ },
+ "dataset/images/coastal_mediterranean/09_98_handmade_terracotta_vintage_ceramic_vase.jpg": {
+  "category": "vase",
+  "style": "coastal_mediterranean"
+ },
+ "dataset/images/coastal_mediterranean/10_threshold_115_painted_short_neck_decorative_vase.jpg": {
+  "category": "vase",
+  "style": "coastal_mediterranean"
+ },
+ "dataset/images/cottagecore/01_august_sky_womens_floral_smocked_midi_dress.jpg": {
+  "category": "dress",
+  "style": "cottagecore"
+ },
+ "dataset/images/cottagecore/01_bdg_becca_floral_embroidered_brushed_knit_oversized_cardigan.jpg": {
+  "category": "cardigan",
+  "style": "cottagecore"
+ },
+ "dataset/images/cottagecore/01_universal_thread_straw_scallop_woven_tote_handbag.jpg": {
+  "category": "bag",
+  "style": "cottagecore"
+ },
+ "dataset/images/cottagecore/02_ann_taylor_womens_floral_embroidered_cardigan.jpg": {
+  "category": "cardigan",
+  "style": "cottagecore"
+ },
+ "dataset/images/cottagecore/02_cottagecore_floral_smocked_puff_sleeve_midi_dress.jpg": {
+  "category": "dress",
+  "style": "cottagecore"
+ },
+ "dataset/images/cottagecore/02_farmhouse_pottery_rectangle_basket_tote.jpg": {
+  "category": "bag",
+  "style": "cottagecore"
+ },
+ "dataset/images/cottagecore/03_floral_embroidery_v_neck_long_sleeve_cardigan.jpg": {
+  "category": "cardigan",
+  "style": "cottagecore"
+ },
+ "dataset/images/cottagecore/03_floral_short_puff_sleeve_smocked_midi_dress.jpg": {
+  "category": "dress",
+  "style": "cottagecore"
+ },
+ "dataset/images/cottagecore/03_picnic_time_coronado_canvas_and_willow_basket_tote.jpg": {
+  "category": "bag",
+  "style": "cottagecore"
+ },
+ "dataset/images/cottagecore/04_aqua_womens_floral_embroidered_cardigan.jpg": {
+  "category": "cardigan",
+  "style": "cottagecore"
+ },
+ "dataset/images/cottagecore/04_cream_floral_smocked_puff_sleeve_midi_dress.jpg": {
+  "category": "dress",
+  "style": "cottagecore"
+ },
+ "dataset/images/cottagecore/04_willow_basket_tote.jpg": {
+  "category": "bag",
+  "style": "cottagecore"
+ },
+ "dataset/images/cottagecore/05_petal_pup_womens_petal_and_pup_franklin_dress.jpg": {
+  "category": "dress",
+  "style": "cottagecore"
+ },
+ "dataset/images/cottagecore/06_madewell_womens_smocked_puff_sleeve_dress.jpg": {
+  "category": "dress",
+  "style": "cottagecore"
+ },
+ "dataset/images/cottagecore/07_express_womens_casual_floral_square_neck_puff_sleeve_smocked.jpg": {
+  "category": "dress",
+  "style": "cottagecore"
+ },
+ "dataset/images/cottagecore/08_baltic_born_denzel_puff_sleeve_midi.jpg": {
+  "category": "dress",
+  "style": "cottagecore"
+ },
+ "dataset/images/cottagecore/09_august_sky_womens_puff_sleeve_smocked_floral_midi_dress.jpg": {
+  "category": "dress",
+  "style": "cottagecore"
+ },
+ "dataset/images/cottagecore/10_pink_floral_smocked_puffed_sleeve_midi_dress.jpg": {
+  "category": "dress",
+  "style": "cottagecore"
+ },
+ "dataset/images/dark_academia/01_hobo_medium_sheila_satchel.jpg": {
+  "category": "bag",
+  "style": "dark_academia"
+ },
+ "dataset/images/dark_academia/01_loft_womens_herringbone_relaxed_blazer.jpg": {
+  "category": "blazer",
+  "style": "dark_academia"
+ },
+ "dataset/images/dark_academia/01_maje_womens_velvet_stripe_wide_leg_tweed_trousers.jpg": {
+  "category": "pants",
+  "style": "dark_academia"
+ },
+ "dataset/images/dark_academia/02_brahmin_womens_duxbury_satchel.jpg": {
+  "category": "bag",
+  "style": "dark_academia"
+ },
+ "dataset/images/dark_academia/02_holland_cooper_womens_high_waisted_wide_leg_westminster_twee.jpg": {
+  "category": "pants",
+  "style": "dark_academia"
+ },
+ "dataset/images/dark_academia/02_ralph_lauren_womens_herringbone_tweed_blazer.jpg": {
+  "category": "blazer",
+  "style": "dark_academia"
+ },
+ "dataset/images/dark_academia/03_bronco_crazy_horse_leather_satchel.jpg": {
+  "category": "bag",
+  "style": "dark_academia"
+ },
+ "dataset/images/dark_academia/03_herringbone_diana_blazer.jpg": {
+  "category": "blazer",
+  "style": "dark_academia"
+ },
+ "dataset/images/dark_academia/03_st_john_womens_high_waist_boucl\u00e9_tweed_wide_leg_pants.jpg": {
+  "category": "pants",
+  "style": "dark_academia"
+ },
+ "dataset/images/dark_academia/04_dooney_bourke_womens_sorrento_barrel_satchel_bag.jpg": {
+  "category": "bag",
+  "style": "dark_academia"
+ },
+ "dataset/images/dark_academia/04_endless_rose_womens_tweed_wide_leg_pants.jpg": {
+  "category": "pants",
+  "style": "dark_academia"
+ },
+ "dataset/images/dark_academia/04_reiss_womens_grey_ember_herringbone_double_breasted_blazer_w.jpg": {
+  "category": "blazer",
+  "style": "dark_academia"
+ },
+ "dataset/images/dark_academia/05_everlane_oversized_blazer_wool.jpg": {
+  "category": "blazer",
+  "style": "dark_academia"
+ },
+ "dataset/images/dark_academia/06_polo_ralph_lauren_womens_herringbone_linen_blend_blazer.jpg": {
+  "category": "blazer",
+  "style": "dark_academia"
+ },
+ "dataset/images/dark_academia/07_brooks_brothers_womens_wool_blend_double_breasted_herringbon.jpg": {
+  "category": "blazer",
+  "style": "dark_academia"
+ },
+ "dataset/images/dark_academia/08_herringbone_tweed_limited_edition_blazer_with_peak_lapels.jpg": {
+  "category": "blazer",
+  "style": "dark_academia"
+ },
+ "dataset/images/dark_academia/09_ronny_kobo_womens_birch_herringbone_blazer.jpg": {
+  "category": "blazer",
+  "style": "dark_academia"
+ },
+ "dataset/images/dark_academia/10_whistles_womens_herringbone_wool_blend_blazer.jpg": {
+  "category": "blazer",
+  "style": "dark_academia"
+ },
+ "dataset/images/dark_moody_organic/01_clay_in_motion_handmade_ceramic_mug.jpg": {
+  "category": "mug",
+  "style": "dark_moody_organic"
+ },
+ "dataset/images/dark_moody_organic/01_egyptian_linens_pre_washed_linen_duvet_cover_set.jpg": {
+  "category": "duvet",
+  "style": "dark_moody_organic"
+ },
+ "dataset/images/dark_moody_organic/01_unique_bargains_cement_durable_stable_modern_candlestick_hol.jpg": {
+  "category": "candle holder",
+  "style": "dark_moody_organic"
+ },
+ "dataset/images/dark_moody_organic/02_dark_raspberry_ripple_stoneware_pottery_mug.jpg": {
+  "category": "mug",
+  "style": "dark_moody_organic"
+ },
+ "dataset/images/dark_moody_organic/02_handmade_black_concrete_candle_jar_200ml_eco_friendly_vessel.jpg": {
+  "category": "candle holder",
+  "style": "dark_moody_organic"
+ },
+ "dataset/images/dark_moody_organic/02_quince_european_linen_duvet_cover.jpg": {
+  "category": "duvet",
+  "style": "dark_moody_organic"
+ },
+ "dataset/images/dark_moody_organic/03_concrete_candle_holder_black.jpg": {
+  "category": "candle holder",
+  "style": "dark_moody_organic"
+ },
+ "dataset/images/dark_moody_organic/03_handmade_stoneware_coffee_cup_pumpernickel_with_gold_leaf.jpg": {
+  "category": "mug",
+  "style": "dark_moody_organic"
+ },
+ "dataset/images/dark_moody_organic/03_pottery_barn_belgian_flax_linen_duvet.jpg": {
+  "category": "duvet",
+  "style": "dark_moody_organic"
+ },
+ "dataset/images/dark_moody_organic/04_cement_taper_candle_holders.jpg": {
+  "category": "candle holder",
+  "style": "dark_moody_organic"
+ },
+ "dataset/images/dark_moody_organic/04_handmade_midnight_blue_stoneware_mug_small_ceramic_coffee_cu.jpg": {
+  "category": "mug",
+  "style": "dark_moody_organic"
+ },
+ "dataset/images/dark_moody_organic/04_sheet_society_eve_linen_duvet_cover.jpg": {
+  "category": "duvet",
+  "style": "dark_moody_organic"
+ },
+ "dataset/images/dark_moody_organic/05_main_mesa_stoneware_pillar_taper_candle_holders_set_of_2.jpg": {
+  "category": "candle holder",
+  "style": "dark_moody_organic"
+ },
+ "dataset/images/dark_moody_organic/06_concrete_tealight_holder.jpg": {
+  "category": "candle holder",
+  "style": "dark_moody_organic"
+ },
+ "dataset/images/dark_moody_organic/07_casa_amarosa_nordic_style_c_shaped_concrete_candle_holder.jpg": {
+  "category": "candle holder",
+  "style": "dark_moody_organic"
+ },
+ "dataset/images/dark_moody_organic/08_nordic_modern_8_style_concrete_candle_holder_black.jpg": {
+  "category": "candle holder",
+  "style": "dark_moody_organic"
+ },
+ "dataset/images/dark_moody_organic/09_concrete_candle_holder_solid_black_handmade_to_fit_bath_and_.jpg": {
+  "category": "candle holder",
+  "style": "dark_moody_organic"
+ },
+ "dataset/images/dark_moody_organic/10_black_concrete_candle_holder.jpg": {
+  "category": "candle holder",
+  "style": "dark_moody_organic"
+ },
+ "dataset/images/japandi/01_nexera_satori_low_platform_size_bed_with_headboard.jpg": {
+  "category": "bed frame",
+  "style": "japandi"
+ },
+ "dataset/images/japandi/01_set_of_4_matte_ceramic_dinnerware_small_bowls.jpg": {
+  "category": "bowl",
+  "style": "japandi"
+ },
+ "dataset/images/japandi/01_threshold_square_linen_throw_pillow_with_flange.jpg": {
+  "category": "pillow",
+  "style": "japandi"
+ },
+ "dataset/images/japandi/02_crate_barrel_mercer_matte_white_porcelain_low_bowls_set_of_8.jpg": {
+  "category": "bowl",
+  "style": "japandi"
+ },
+ "dataset/images/japandi/02_nexera_kanso_king_low_profile_wood_platform_bed_with_headboa.jpg": {
+  "category": "bed frame",
+  "style": "japandi"
+ },
+ "dataset/images/japandi/02_west_elm_european_flax_linen_pillow_cover.jpg": {
+  "category": "pillow",
+  "style": "japandi"
+ },
+ "dataset/images/japandi/03_article_leif_modern_bedroom_furniture_platform_bed_frame.jpg": {
+  "category": "bed frame",
+  "style": "japandi"
+ },
+ "dataset/images/japandi/03_cozy_earth_linen_throw_pillow.jpg": {
+  "category": "pillow",
+  "style": "japandi"
+ },
+ "dataset/images/japandi/03_open_kitchen_by_williams_sonoma_matte_coupe_bowls_set_of_8.jpg": {
+  "category": "bowl",
+  "style": "japandi"
+ },
+ "dataset/images/japandi/04_minimalist_dinner_bowl_jazzupco_matte_taupe_4_x_big_bowls.jpg": {
+  "category": "bowl",
+  "style": "japandi"
+ },
+ "dataset/images/japandi/04_oak_tatami_floor_bed.jpg": {
+  "category": "bed frame",
+  "style": "japandi"
+ },
+ "dataset/images/japandi/04_quince_textured_wool_linen_pillow_cover.jpg": {
+  "category": "pillow",
+  "style": "japandi"
+ },
+ "dataset/images/japandi/05_get_laid_beds_us_low_modern_attic_bed.jpg": {
+  "category": "bed frame",
+  "style": "japandi"
+ },
+ "dataset/images/japandi/06_nor_modern_handcrafted_platform_bed.jpg": {
+  "category": "bed frame",
+  "style": "japandi"
+ },
+ "dataset/images/japandi/07_ikea_malm_bed_frame.jpg": {
+  "category": "bed frame",
+  "style": "japandi"
+ },
+ "dataset/images/japandi/08_nexera_queen_low_platform_bed_frame_with_headboard.jpg": {
+  "category": "bed frame",
+  "style": "japandi"
+ },
+ "dataset/images/japandi/09_article_oak_bed_frame_minimalist_style_mid_century_modern_de.jpg": {
+  "category": "bed frame",
+  "style": "japandi"
+ },
+ "dataset/images/japandi/10_nexera_milano_platform_bed_frame.jpg": {
+  "category": "bed frame",
+  "style": "japandi"
+ },
+ "dataset/images/maximalist_eclectic/01_quince_bold_shapes_hand_tufted_wool_rug.jpg": {
+  "category": "rug",
+  "style": "maximalist_eclectic"
+ },
+ "dataset/images/maximalist_eclectic/01_stylewell_traditional_gallery_wall_frame_set.jpg": {
+  "category": "frame",
+  "style": "maximalist_eclectic"
+ },
+ "dataset/images/maximalist_eclectic/01_valencia_emerald_ultra_soft_velvet_fabric_accent_chair.jpg": {
+  "category": "chair",
+  "style": "maximalist_eclectic"
+ },
+ "dataset/images/maximalist_eclectic/02_pottery_barn_violetta_handwoven_wool_rug.jpg": {
+  "category": "rug",
+  "style": "maximalist_eclectic"
+ },
+ "dataset/images/maximalist_eclectic/02_rosdorf_park_emerald_velvet_accent_chair.jpg": {
+  "category": "chair",
+  "style": "maximalist_eclectic"
+ },
+ "dataset/images/maximalist_eclectic/02_studio_decor_gallery_wall_frame_set.jpg": {
+  "category": "frame",
+  "style": "maximalist_eclectic"
+ },
+ "dataset/images/maximalist_eclectic/03_ember_interiors_cuno_upholstered_accent_chair.jpg": {
+  "category": "chair",
+  "style": "maximalist_eclectic"
+ },
+ "dataset/images/maximalist_eclectic/03_kate_and_laurel_gallery_wall_frame_10_piece_set.jpg": {
+  "category": "frame",
+  "style": "maximalist_eclectic"
+ },
+ "dataset/images/maximalist_eclectic/03_tales_menagerie_hand_tufted_wool_blend_rug_by_anthropologie_.jpg": {
+  "category": "rug",
+  "style": "maximalist_eclectic"
+ },
+ "dataset/images/maximalist_eclectic/04_gold_frame_gallery_wall_set.jpg": {
+  "category": "frame",
+  "style": "maximalist_eclectic"
+ },
+ "dataset/images/maximalist_eclectic/04_mae_accent_chair.jpg": {
+  "category": "chair",
+  "style": "maximalist_eclectic"
+ },
+ "dataset/images/maximalist_eclectic/04_west_elm_graduated_dot_wool_rug.jpg": {
+  "category": "rug",
+  "style": "maximalist_eclectic"
+ },
+ "dataset/images/maximalist_eclectic/05_steve_silver_avalon_velvet_accent_chair.jpg": {
+  "category": "chair",
+  "style": "maximalist_eclectic"
+ },
+ "dataset/images/maximalist_eclectic/06_italy_shine_upholstered_tufted_armchair.jpg": {
+  "category": "chair",
+  "style": "maximalist_eclectic"
+ },
+ "dataset/images/maximalist_eclectic/07_safavieh_brienne_mid_century_arm_chair.jpg": {
+  "category": "chair",
+  "style": "maximalist_eclectic"
+ },
+ "dataset/images/maximalist_eclectic/08_diamond_sofa_ava_chair.jpg": {
+  "category": "chair",
+  "style": "maximalist_eclectic"
+ },
+ "dataset/images/maximalist_eclectic/09_four_hands_olson_chair.jpg": {
+  "category": "chair",
+  "style": "maximalist_eclectic"
+ },
+ "dataset/images/maximalist_eclectic/10_etta_avenue_shelbi_upholstered_armchair.jpg": {
+  "category": "chair",
+  "style": "maximalist_eclectic"
+ },
+ "dataset/images/mid_century_modern/01_eames_inspired_lounge_chair_iconic_mid_century_design_rosewo.jpg": {
+  "category": "chair",
+  "style": "mid_century_modern"
+ },
+ "dataset/images/mid_century_modern/01_rottogoon_67_in_modern_brushed_gold_standing_arc_floor_lamp_.jpg": {
+  "category": "lamp",
+  "style": "mid_century_modern"
+ },
+ "dataset/images/mid_century_modern/01_walker_edison_70_mid_century_modern_3_drawer_2_door_sideboar.jpg": {
+  "category": "credenza",
+  "style": "mid_century_modern"
+ },
+ "dataset/images/mid_century_modern/02_article_seno_71_mid_century_design_sideboard.jpg": {
+  "category": "credenza",
+  "style": "mid_century_modern"
+ },
+ "dataset/images/mid_century_modern/02_globe_electric_70_in_matte_brass_arc_floor_lamp.jpg": {
+  "category": "lamp",
+  "style": "mid_century_modern"
+ },
+ "dataset/images/mid_century_modern/02_herman_miller_eames_lounge_chair_and_ottoman.jpg": {
+  "category": "chair",
+  "style": "mid_century_modern"
+ },
+ "dataset/images/mid_century_modern/03_eames_lounge_chair_replica_in_fabric_upholstery_more_than_20.jpg": {
+  "category": "chair",
+  "style": "mid_century_modern"
+ },
+ "dataset/images/mid_century_modern/03_nova_of_california_luna_bella_arc_floor_lamp.jpg": {
+  "category": "lamp",
+  "style": "mid_century_modern"
+ },
+ "dataset/images/mid_century_modern/03_streamdale_walnut_sideboard_buffet_cabinet.jpg": {
+  "category": "credenza",
+  "style": "mid_century_modern"
+ },
+ "dataset/images/mid_century_modern/04_eames_lounge_chair_and_ottoman_walnut_classic.jpg": {
+  "category": "chair",
+  "style": "mid_century_modern"
+ },
+ "dataset/images/mid_century_modern/04_homeglam_orbita_81h_led_dimmable_retractable_arch_floor_lamp.jpg": {
+  "category": "lamp",
+  "style": "mid_century_modern"
+ },
+ "dataset/images/mid_century_modern/04_sauder_harvey_park_credenza.jpg": {
+  "category": "credenza",
+  "style": "mid_century_modern"
+ },
+ "dataset/images/mid_century_modern/05_crate_barrel_tate_midcentury_walnut_credenza.jpg": {
+  "category": "credenza",
+  "style": "mid_century_modern"
+ },
+ "dataset/images/mid_century_modern/06_crawford_modern_walnut_buffet.jpg": {
+  "category": "credenza",
+  "style": "mid_century_modern"
+ },
+ "dataset/images/mid_century_modern/07_cyril_mid_century_walnut_3_drawer_58_in_sideboard_with_woode.jpg": {
+  "category": "credenza",
+  "style": "mid_century_modern"
+ },
+ "dataset/images/mid_century_modern/08_castlery_lily_63_mid_century_modern_design_sideboard.jpg": {
+  "category": "credenza",
+  "style": "mid_century_modern"
+ },
+ "dataset/images/mid_century_modern/09_allmodern_williams_58_sideboard.jpg": {
+  "category": "credenza",
+  "style": "mid_century_modern"
+ },
+ "dataset/images/mid_century_modern/10_four_sided_tapered_wood_kitchen_island_leg.jpg": {
+  "category": "credenza",
+  "style": "mid_century_modern"
+ },
+ "dataset/images/quiet_luxury/01_abercrombie_fitch_womens_quinn_tailored_straight_pant.jpg": {
+  "category": "pants",
+  "style": "quiet_luxury"
+ },
+ "dataset/images/quiet_luxury/01_c_by_bloomingdales_womens_cashmere_turtleneck_sweater.jpg": {
+  "category": "sweater",
+  "style": "quiet_luxury"
+ },
+ "dataset/images/quiet_luxury/01_everlane_modern_leather_loafer.jpg": {
+  "category": "loafer",
+  "style": "quiet_luxury"
+ },
+ "dataset/images/quiet_luxury/02_ann_taylor_womens_studio_collection_cashmere_ribbed_turtlene.jpg": {
+  "category": "sweater",
+  "style": "quiet_luxury"
+ },
+ "dataset/images/quiet_luxury/02_hm_ladies_slacks.jpg": {
+  "category": "pants",
+  "style": "quiet_luxury"
+ },
+ "dataset/images/quiet_luxury/02_madewell_the_bradley_lugsole_leather_loafer.jpg": {
+  "category": "loafer",
+  "style": "quiet_luxury"
+ },
+ "dataset/images/quiet_luxury/03_premium_leather_minimal_loafers.jpg": {
+  "category": "loafer",
+  "style": "quiet_luxury"
+ },
+ "dataset/images/quiet_luxury/03_simply_vera_vera_wang_womens_luxe_cashmere_blend_mockneck_sw.jpg": {
+  "category": "sweater",
+  "style": "quiet_luxury"
+ },
+ "dataset/images/quiet_luxury/03_womens_straight_high_rise_ponte_pant.jpg": {
+  "category": "pants",
+  "style": "quiet_luxury"
+ },
+ "dataset/images/quiet_luxury/04_brooks_brothers_womens_lightweight_modal_cashmere_turtleneck.jpg": {
+  "category": "sweater",
+  "style": "quiet_luxury"
+ },
+ "dataset/images/quiet_luxury/04_lauren_ralph_lauren_straight_leg_pants.jpg": {
+  "category": "pants",
+  "style": "quiet_luxury"
+ },
+ "dataset/images/quiet_luxury/04_margaux_womens_loafers_the_marlowe_loafer.jpg": {
+  "category": "loafer",
+  "style": "quiet_luxury"
+ },
+ "dataset/images/quiet_luxury/05_aqua_womens_cashmere_turtleneck_sweater.jpg": {
+  "category": "sweater",
+  "style": "quiet_luxury"
+ },
+ "dataset/images/quiet_luxury/06_essential_cashmere_turtleneck_sweater_made_in_italy.jpg": {
+  "category": "sweater",
+  "style": "quiet_luxury"
+ },
+ "dataset/images/quiet_luxury/07_maisie_turtleneck_sweater_in_cashmere.jpg": {
+  "category": "sweater",
+  "style": "quiet_luxury"
+ },
+ "dataset/images/quiet_luxury/08_neiman_marcus_womens_cashmere_turtleneck_top.jpg": {
+  "category": "sweater",
+  "style": "quiet_luxury"
+ },
+ "dataset/images/quiet_luxury/09_banana_republic_womens_featherweight_cashmere_turtleneck.jpg": {
+  "category": "sweater",
+  "style": "quiet_luxury"
+ },
+ "dataset/images/quiet_luxury/10_lilysilk_womens_pure_cashmere_turtleneck_sweater.jpg": {
+  "category": "sweater",
+  "style": "quiet_luxury"
+ },
+ "dataset/images/vintage_bohemian/01_aerie_suede_fringe_crossbody_bag.jpg": {
+  "category": "bag",
+  "style": "vintage_bohemian"
+ },
+ "dataset/images/vintage_bohemian/01_crochet_pdf_pattern_the_fest_vest_boho_crochet.jpg": {
+  "category": "vest",
+  "style": "vintage_bohemian"
+ },
+ "dataset/images/vintage_bohemian/01_sans_souci_embellished_ruffled_palazzo_pants.jpg": {
+  "category": "pants",
+  "style": "vintage_bohemian"
+ },
+ "dataset/images/vintage_bohemian/02_boho_crochet_vest.jpg": {
+  "category": "vest",
+  "style": "vintage_bohemian"
+ },
+ "dataset/images/vintage_bohemian/02_idyllwind_womens_camarillo_metallic_fringe_suede_crossbody_b.jpg": {
+  "category": "bag",
+  "style": "vintage_bohemian"
+ },
+ "dataset/images/vintage_bohemian/02_petal_pup_womens_petal_and_pup_neveah_pant.jpg": {
+  "category": "pants",
+  "style": "vintage_bohemian"
+ },
+ "dataset/images/vintage_bohemian/03_free_people_what_you_know_embroidered_wide_leg_pants.jpg": {
+  "category": "pants",
+  "style": "vintage_bohemian"
+ },
+ "dataset/images/vintage_bohemian/03_missguided_bohemian_crochet_lace_vest_waistcoat.jpg": {
+  "category": "vest",
+  "style": "vintage_bohemian"
+ },
+ "dataset/images/vintage_bohemian/03_steve_madden_womens_fringe_shoulder_bag.jpg": {
+  "category": "bag",
+  "style": "vintage_bohemian"
+ },
+ "dataset/images/vintage_bohemian/04_anthropologie_pants_12_rust_color_emroidered_wide_leg.jpg": {
+  "category": "pants",
+  "style": "vintage_bohemian"
+ },
+ "dataset/images/vintage_bohemian/04_hippie_crochet_vest_with_fringe_festival_boho_chic_women_clo.jpg": {
+  "category": "vest",
+  "style": "vintage_bohemian"
+ },
+ "dataset/images/vintage_bohemian/04_shyanne_belle_embroidered_fringe_suede_crossbody_bag.jpg": {
+  "category": "bag",
+  "style": "vintage_bohemian"
+ },
+ "dataset/images/vintage_bohemian/05_coach_womens_tabby_26_crystal_beaded_fringe_shoulder_bag.jpg": {
+  "category": "bag",
+  "style": "vintage_bohemian"
+ },
+ "dataset/images/vintage_bohemian/06_tayviss_fringe_shoulder_bag.jpg": {
+  "category": "bag",
+  "style": "vintage_bohemian"
+ },
+ "dataset/images/vintage_bohemian/07_maje_womens_naplak_leather_miss_m_mini_bag.jpg": {
+  "category": "bag",
+  "style": "vintage_bohemian"
+ },
+ "dataset/images/vintage_bohemian/08_wrangler_boho_fringe_suede_bag.jpg": {
+  "category": "bag",
+  "style": "vintage_bohemian"
+ },
+ "dataset/images/vintage_bohemian/09_hippie_shop_bohemian_suede_fringe_shoulder_bag.jpg": {
+  "category": "bag",
+  "style": "vintage_bohemian"
+ },
+ "dataset/images/vintage_bohemian/10_boho_gypsy_suede_leather_crossbody_bag.jpg": {
+  "category": "bag",
+  "style": "vintage_bohemian"
+ },
+ "dataset/images/y2k_streetwear/01_converse_women_all_star_lift_double_stack_platform.jpg": {
+  "category": "sneaker",
+  "style": "y2k_streetwear"
+ },
+ "dataset/images/y2k_streetwear/01_ed_hardy_skull_butterfly_baby_tee.jpg": {
+  "category": "top",
+  "style": "y2k_streetwear"
+ },
+ "dataset/images/y2k_streetwear/01_hollister_womens_low_rise_baggy_cargo_pants.jpg": {
+  "category": "pants",
+  "style": "y2k_streetwear"
+ },
+ "dataset/images/y2k_streetwear/02_akira_azalea_wang_eady_block_sneaker_shoes.jpg": {
+  "category": "sneaker",
+  "style": "y2k_streetwear"
+ },
+ "dataset/images/y2k_streetwear/02_glam_faux_diamond_sparkle_butterfly_t_shirt.jpg": {
+  "category": "top",
+  "style": "y2k_streetwear"
+ },
+ "dataset/images/y2k_streetwear/02_y2k_cargo_pants.jpg": {
+  "category": "pants",
+  "style": "y2k_streetwear"
+ },
+ "dataset/images/y2k_streetwear/03_baby_toddler_girl_jumping_beans_flutter_embellished_tee_todd.jpg": {
+  "category": "top",
+  "style": "y2k_streetwear"
+ },
+ "dataset/images/y2k_streetwear/03_bdg_womens_360_utility_low_rise_straight_leg_cotton_pants.jpg": {
+  "category": "pants",
+  "style": "y2k_streetwear"
+ },
+ "dataset/images/y2k_streetwear/03_lamoda_venus_chunky_platform_sneakers.jpg": {
+  "category": "sneaker",
+  "style": "y2k_streetwear"
+ },
+ "dataset/images/y2k_streetwear/04_aeropostale_womens_rhinestone_butterfly_graphic_tee.jpg": {
+  "category": "top",
+  "style": "y2k_streetwear"
+ },
+ "dataset/images/y2k_streetwear/04_baggy_parachute_cargo_pants_with_drawstring.jpg": {
+  "category": "pants",
+  "style": "y2k_streetwear"
+ },
+ "dataset/images/y2k_streetwear/04_steve_madden_womens_mavis_wedge_sneakers.jpg": {
+  "category": "sneaker",
+  "style": "y2k_streetwear"
+ },
+ "dataset/images/y2k_streetwear/05_ed_hardy_womens_cropped_rhinestone_butterfly_baby_tee.jpg": {
+  "category": "top",
+  "style": "y2k_streetwear"
+ },
+ "dataset/images/y2k_streetwear/06_y2k_90s_black_rhinestone_butterfly_crop_top_punk_grunge_fair.jpg": {
+  "category": "top",
+  "style": "y2k_streetwear"
+ },
+ "dataset/images/y2k_streetwear/07_girls_rhinestone_butterfly_ruched_side_graphic_tee_white_7_8.jpg": {
+  "category": "top",
+  "style": "y2k_streetwear"
+ },
+ "dataset/images/y2k_streetwear/08_kidpik_girls_sequin_butterfly_graphic_tee.jpg": {
+  "category": "top",
+  "style": "y2k_streetwear"
+ },
+ "dataset/images/y2k_streetwear/09_ido_baby_girls_butterflies_t_shirt.jpg": {
+  "category": "top",
+  "style": "y2k_streetwear"
+ },
+ "dataset/images/y2k_streetwear/10_city_threads_glittery_butterfly_super_comfy_kids_clothing_so.jpg": {
+  "category": "top",
+  "style": "y2k_streetwear"
+ }
+}
